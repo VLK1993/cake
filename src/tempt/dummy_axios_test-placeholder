@@ -1,0 +1,21 @@
+<template>
+ <div>
+  <h1 id="target"></h1>
+ </div>
+</template>
+
+<script>
+ export default {
+  name: "axios_test",
+  components: {},
+  methods: {
+   SomeMethodName() {
+    // axios code here.
+   }
+  },
+  mounted() {
+   // Whatever you named the method in "methods" above, you can call here and in other places.
+   this.SomeMethodName();
+  }
+ };
+</script>
