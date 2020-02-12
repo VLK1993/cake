@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+//import axios from 'axios';
 
 //import todos from '/json/todos.json';
 
@@ -21,13 +21,8 @@ export default {
     return{
       todos:[]
     }
-  },
-  created(){
-    try{
-      const res = axios.get();
-      
-    }
-
   }
+
+  
 }
 </script>
