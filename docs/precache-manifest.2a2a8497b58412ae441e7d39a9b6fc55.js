@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2cd0f9b2f9a0c4d96a25",
+    "revision": "47957993a07aba069340",
     "url": "/cake/css/app.98552026.css"
   },
   {
@@ -136,12 +136,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/list/mei_c2.png"
   },
   {
-    "revision": "6ac041ea23c5e10e115b637498e3c05c",
+    "revision": "7bdfd61f2bbc8c5cb5cd0c7d2e42384f",
     "url": "/cake/index.html"
   },
   {
-    "revision": "2cd0f9b2f9a0c4d96a25",
-    "url": "/cake/js/app.47bc9348.js"
+    "revision": "47957993a07aba069340",
+    "url": "/cake/js/app.c2eef581.js"
   },
   {
     "revision": "7f279fd2bc5464afc71f",

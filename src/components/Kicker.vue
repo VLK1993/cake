@@ -17,7 +17,7 @@
             <div class="kickerInfoWrapper" id="kickerInfoWrapper">
                 <div class="kickerInfo" v-for="kicker of kickers" :key="kicker.id" v-bind:data-kickerinfo="kicker.id">
                     <div class="kickerInfoImage">
-                        <img v-bind:src="'/img/character/kickers/'+kicker.id+'.jpg'">
+                        <img v-bind:src="'img/character/kickers/'+kicker.id+'.jpg'">
                     </div>
                     <div class="kickerInfoText">
                         <div class="kickerInfoName">{{kicker.name}}</div>
