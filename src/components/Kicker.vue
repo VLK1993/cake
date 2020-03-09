@@ -245,7 +245,7 @@ export default {
   },
   async created(){
     try{
-      const res = await axios.get('http://localhost:8080/json/kickers.json');
+      const res = await axios.get('https://vlk1993.github.io/cake/json/kickers.json');
       this.kickers = res.data.kickers;
     }
     catch(e){
