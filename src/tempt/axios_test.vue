@@ -32,7 +32,7 @@ export default {
   },
   async created(){
     try{
-      const res = await axios.get('https://vlk1993.github.io/cake/docs/json/kickers.json');
+      const res = await axios.get('https://vlk1993.github.io/cake/json/kickers.json');
       this.valks = res.data.valks;
     }
     catch(e){
