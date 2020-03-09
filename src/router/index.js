@@ -1,9 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../components/Home.vue";
-import Valkyrja from "../components/Valkyrja.vue";
-import Stigmata from "../components/Stigmata.vue";
-import Weapon from "../components/Weapon.vue";
+import Kicker from "../components/Kicker.vue";
+import Disc from "../components/Disc.vue";
 import axios_test from "../tempt/axios_test.vue";
 import Test_parent from "../tempt/Test_parent.vue";
 
@@ -16,19 +15,14 @@ const routes = [
     component: Home
   },
   {
-    path: "/valkyrja",
-    name: "Valkyrja",
-    component: Valkyrja
+    path: "/kicker",
+    name: "Kicker",
+    component: Kicker
   },
   {
-    path: "/stigmata",
-    name: "Stigmata",
-    component: Stigmata
-  },
-  {
-    path: "/weapon",
-    name: "Weapon",
-    component: Weapon
+    path: "/disc",
+    name: "Disc",
+    component: Disc
   },
   {
     path:"/axios_test",

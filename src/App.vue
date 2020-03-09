@@ -2,10 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/valkyrja">Valkyria</router-link> |
-      <router-link to="/stigmata">Stigmata</router-link> |
-      <router-link to="/weapon">Weapon</router-link> |
-      <router-link to="/test_parent">Test_parent</router-link> |
+      <router-link to="/kicker">Kicker</router-link> |
+      <router-link to="/disc">Disc</router-link> |
     </div>
     <router-view />
   </div>

@@ -1,16 +1,36 @@
 {
-    "todos":[
+    "valks":
+	[
         {
-            "id": 0,
-            "name":"Go to the gym"
+			"id":"kiana",
+            "name":"Kiana Kaslana",
+			"characters": [
+				{
+				"id": "pt",
+				"type": "mechanical"
+				}
+			]
         },
         {
-            "id":1,
-            "name": "Walk the dog"
+			"id":"mei",
+            "name": "Raiden Mei",
+			"characters": [
+				{
+				"id": "c2",
+				"type": "biological"
+				}
+			
+			]
         },
         {
-            "id":2,
-            "name":"get some pizza"
+			"id":"bronya",
+            "name":"Bronya Zaychik",
+			"characters":[
+				{
+				"id": "c1",
+				"type": "extraordinary"
+				}	
+			]
         }
     ]
 }

@@ -1,5 +1,6 @@
 <template>
-    <h1>Weapon</h1>
+    <h1>Discs
+    </h1>
 </template>
 <script>
 export default {

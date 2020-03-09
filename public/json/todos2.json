@@ -2,32 +2,38 @@
     "valks":
 	[
         {
-			"id":"kiana",
+            "id": 1,
+			"char_id":"kiana",
             "name":"Kiana Kaslana",
 			"characters": [
 				{
-				"id": "pt",
+				"id":1,
+				"char_id": "pt",
 				"type": "mechanical"
 				}
 			]
         },
         {
-			"id":"mei",
+            "id": 2,
+			"char_id":"mei",
             "name": "Raiden Mei",
 			"characters": [
 				{
-				"id": "c2",
+				"id":1,
+				"char_id": "c2",
 				"type": "biological"
 				}
 			
 			]
         },
         {
-			"id":"bronya",
+            "id": 3,
+			"char_id":"bronya",
             "name":"Bronya Zaychik",
 			"characters":[
 				{
-				"id": "c1",
+				"id":1,
+				"char_id": "c1",
 				"type": "extraordinary"
 				}	
 			]

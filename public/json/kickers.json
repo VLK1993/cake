@@ -1,0 +1,319 @@
+{
+    "kickers":
+	[
+        {
+			"id":"tsubame",
+            "name":"Tsubame",
+			"skills": [
+				{
+				"id": "sk",
+				"skillName":"Buster Glide",
+				"description": "自身の移動速度を20％上昇させ、周囲に攻撃判定のある竜巻を約15秒間展開するスペシャルスキル。"
+				},
+				{
+				"id": "ks",
+				"skillName":"Sonic Rush",
+				"description": "前方に突進しつつ、攻撃力の約2倍で斬りつけるスキル。相手が被ダメージ減少バフ（シールド）を使用していた場合は、威力が飛躍的に向上し、バフを解除することができる。"
+				},
+				{
+				"id": "ab",
+				"skillName":"Accel Charge",
+				"description": "HPが50%以下になると、ダッシュゲージの回復量が50%上昇するアビリティ。"
+				},
+				{
+				"id":"dc",
+				"skillName":"Disc Compatibility",
+				"description":"Quick with Charge ATK Disc, slow with TRAP and HEAL Disc"
+				}
+			]
+        },
+        {
+			"id":"ruriha",
+            "name": "Ruriha",
+			"skills": [
+				{
+				"id": "sk",
+				"skillName": "Cure Light Stage",
+				"description": "Regenerate 20% of HP for all allies every 1 second (10 seconds)"
+				},
+				{
+				"id": "ks",
+				"skillName":"Back-Step Shot",
+				"description": "Quickly moves backwards from recoil while dealing small paralysis damage to one enemy in front"
+				},
+				{
+				"id": "ab",
+				"skillName":"#neversurrender",
+				"description": "Damage taken reduced by 40% when HEAL type Disc Skill is used (3 seconds)"
+				},
+				{
+				"id":"dc",
+				"skillName":"Disc Compatibility",
+				"description":"Quick with ATK(Charge) Disc, slow with TRAP and HEAL Disc"
+				}
+			
+			]
+        },
+        {
+			"id":"coco",
+            "name":"Coco",
+			"skills":[
+				{
+				"id": "sk",
+				"skillName": "Coco Swing Tornado",
+				"description":"Whips up a giant tornado to draw in opponents & slams them down, dealing large damage"
+				},
+				{
+				"id": "ks",
+				"skillName":"Shock Dive",
+				"description": "Jumps forward & delivers a slam ranged attack. Inflicts medium damage to nearby opponents"
+				},
+				{
+				"id": "ab",
+				"skillName":"Coco Rhythm",
+				"description": "Damage afflicted by attacking enemy reduced by 40% (2 seconds)"
+				},
+				{
+				"id":"dc",
+				"skillName":"Disc Compatibility",
+				"description":"Quick with Spherical AoE ATK and TRAP discs, but slow with Long-range ATK Discs"
+				}
+			]
+        },
+		{
+			"id":"anna",
+            "name":"Anna",
+			"skills":[
+				{
+				"id": "sk",
+				"skillName": "Aeroprison",
+				"description":"Creates a cage that detains the whole opponent team, blocks any of their attacks (5 seconds)"
+				},
+				{
+				"id": "ks",
+				"skillName":"Binding Ray",
+				"description": "Restrains enemy & deals small continuous damage while player is still (3 seconds)"
+				},
+				{
+				"id": "ab",
+				"skillName":"Star Chaser",
+				"description": "Movement speed increases by 20% while locked on to opponents"
+				},
+				{
+				"id":"dc",
+				"skillName":"Disc Compatibility",
+				"description":"Quick with MOVE Discs, but slow with close range and charge ATK Discs"
+				}
+			]
+        },
+		{
+			"id":"buzzy",
+            "name":"Buzzy",
+			"skills":[
+				{
+				"id": "sk",
+				"skillName": "Crew Protection",
+				"description":"Deploys a barrier which cuts damage to all allies by 100% (5 seconds)"
+				},
+				{
+				"id": "ks",
+				"skillName":"Front Barrier",
+				"description": "Builds a barrier that blocks long-range attacks by opponents in front (6 seconds)"
+				},
+				{
+				"id": "ab",
+				"skillName":"BB in Da House",
+				"description": "On death, deploys a one-time barrier that blocks any damage to all teammates"
+				},
+				{
+				"id":"dc",
+				"skillName":"Disc Compatibility",
+				"description":"Quick with close range ATK, BUFF, and MOVE Discs, but slow with WARP Discs"
+				}
+			]
+        },	
+		{
+			"id":"diatrus",
+            "name":"Diatrus",
+			"skills":[
+				{
+				"id": "sk",
+				"skillName": "Mega Graviton",
+				"description":"Generates a gravity field across the map, stopping the opponent team from flying (7 seconds)"
+				},
+				{
+				"id": "ks",
+				"skillName":"Meteor Impact",
+				"description": "Punches nearby opponent, dealing small damage and knocking them away"
+				},
+				{
+				"id": "ab",
+				"skillName":"Boot Nanomachine",
+				"description": "If HP falls below 30%, HP recovers 3% every 2 seconds"
+				},
+				{
+				"id":"dc",
+				"skillName":"Disc Compatibility",
+				"description":"Quick with charge ATK and BUFF Discs, but slow with MOVE Discs"
+				}
+			]
+        },			
+		{
+			"id":"grenhawk",
+            "name":"Grenhawk",
+			"skills":[
+				{
+				"id": "sk",
+				"skillName": "Operation Wing",
+				"description":"Increases movement speed by 30% & attack speed by 30% for all allies (12 seconds)"
+				},
+				{
+				"id": "ks",
+				"skillName":"Slow Shot",
+				"description": "Deals small damage to one enemy in front and reduces movement speed temporarily (5 seconds)"
+				},
+				{
+				"id": "ab",
+				"skillName":"Battlefield Memories",
+				"description": "Attack increases by 30% when HP falls below 50%"
+				},
+				{
+				"id":"dc",
+				"skillName":"Disc Compatibility",
+				"description":"Quick with BUFF Discs, but slow with spherical AoE and charge ATK Discs"
+				}
+			]
+        },
+		{
+			"id":"jay",
+            "name":"Jay",
+			"skills":[
+				{
+				"id": "sk",
+				"skillName": "Halcynation Graffiti",
+				"description":"Disguises battle & map information for the opposing team (12 seconds)"
+				},
+				{
+				"id": "ks",
+				"skillName":"Stealth Paint",
+				"description": "Disappear from mini map and field and become untargetable (6 seconds)"
+				},
+				{
+				"id": "ab",
+				"skillName":"Present 4 U",
+				"description": "On death, sets a massive damage bomb trap that knocks away nearby opponents (2 seconds)"
+				},
+				{
+				"id":"dc",
+				"skillName":"Disc Compatibility",
+				"description":"Quick with WARP Discs, but slow with BUFF Discs"
+				}
+			]
+        },	
+		{
+			"id":"kite",
+            "name":"Kite",
+			"skills":[
+				{
+				"id": "sk",
+				"skillName": "Wind-Fanged Throwing Star",
+				"description":"An arcane infinite-style attack that delivers a single devastating frontal blow"
+				},
+				{
+				"id": "ks",
+				"skillName":"Art of Illusion",
+				"description": "Creates a substitute on the spot and warps forward (4 seconds)"
+				},
+				{
+				"id": "ab",
+				"skillName":"Mystery Moment",
+				"description": "Perform Perfect Evade to remove cooldown for 'Art of Illusion'"
+				},
+				{
+				"id":"dc",
+				"skillName":"Disc Compatibility",
+				"description":"Quick with Spherical AoE ATK Discs, but slow with Charge ATK Discs"
+				}
+			]
+        },
+		{
+			"id":"owlbert",
+            "name":"Owlbert",
+			"skills":[
+				{
+				"id": "sk",
+				"skillName": "Formation Cloud",
+				"description":"Deploys drone that emits smoke screen for all allies, making them untargetable (15 seconds)"
+				},
+				{
+				"id": "ks",
+				"skillName":"Hacking Drone",
+				"description": "Deploys drone that on contact with an enemy, suppressing skills (10 seconds)"
+				},
+				{
+				"id": "ab",
+				"skillName":"Trap Theory",
+				"description": "Effect duration of TRAP type Disc Skills increases by 2.5% with each use (up to 50%)"
+				},
+				{
+				"id":"dc",
+				"skillName":"Disc Compatibility",
+				"description":"Quick with TRAP Discs, but slow with close range ATK Discs"
+				}
+			]
+        },
+		{
+			"id":"pitophy",
+            "name":"Pitophy",
+			"skills":[
+				{
+				"id": "sk",
+				"skillName": "Missile Party",
+				"description":"Launches 12 small damage guided missiles forward"
+				},
+				{
+				"id": "ks",
+				"skillName":"Reverse Joker",
+				"description": "Dashes forward a short distance from recoil while dealing small damage to an enemy behind"
+				},
+				{
+				"id": "ab",
+				"skillName":"Damage Raiser",
+				"description": "Dealt damage increases 15% each time you take an opponent out, but resets when you are killed"
+				},
+				{
+				"id":"dc",
+				"skillName":"Disc Compatibility",
+				"description":"Quick with Long-range ATK Discs, but slow with HEAL Discs"
+				}
+			]
+        },
+		{
+			"id":"yuyan",
+            "name":"Yuyan",
+			"skills":[
+				{
+				"id": "sk",
+				"skillName": "Panda Rush",
+				"description":"Temporary automatic high-speed movement with x3 attack speed increase (10 seconds)"
+				},
+				{
+				"id": "ks",
+				"skillName":"Nunchaku Nirvana",
+				"description": "Nunchaku deals damage to one enemy in front and forcibly draws them to you"
+				},
+				{
+				"id": "ab",
+				"skillName":"God Combo Strike",
+				"description": "Normal attack increases by 10% each timeone hits (1 seconds, max 50%)"
+				},
+				{
+				"id":"dc",
+				"skillName":"Disc Compatibility",
+				"description":"Quick with close range ATK Discs, but slow with TRAP Discs"
+				}
+			]
+        }			
+		
+    ]
+}
