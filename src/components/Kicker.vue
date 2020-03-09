@@ -6,7 +6,7 @@
                 <li v-for="kicker of kickers" :key="kicker.id">
                     <div class="kickerWrapper" v-bind:data-kicker="kicker.id" v-on:click.capture="selectKicker($event)">
                         <div class="kickerName">{{kicker.name}}</div>
-                        <img v-bind:src="'/img/character/kickerList/'+kicker.id+'.jpg'">
+                        <img v-bind:src="'img/character/kickerList/'+kicker.id+'.jpg'">
                         <div class="kickerBG"></div>
                     </div>
                 </li>
@@ -245,7 +245,7 @@ export default {
   },
   async created(){
     try{
-        const res = await axios.get('/json/kickers.json');
+        const res = await axios.get('json/kickers.json');
         //const res = await axios.get('https://vlk1993.github.io/cake/json/kickers.json');
       this.kickers = res.data.kickers;
     }
