@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "47957993a07aba069340",
-    "url": "/cake/css/app.98552026.css"
+    "revision": "bf77066507dabf74e897",
+    "url": "/cake/css/app.e13b36b7.css"
   },
   {
     "revision": "f4a8696c4b4ee96e56834f881cda2837",
@@ -136,19 +136,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/list/mei_c2.png"
   },
   {
-    "revision": "7bdfd61f2bbc8c5cb5cd0c7d2e42384f",
+    "revision": "0cc921c639813dafb10cddcc1d5bb2e8",
     "url": "/cake/index.html"
   },
   {
-    "revision": "47957993a07aba069340",
-    "url": "/cake/js/app.c2eef581.js"
+    "revision": "bf77066507dabf74e897",
+    "url": "/cake/js/app.b7af33a4.js"
   },
   {
     "revision": "7f279fd2bc5464afc71f",
     "url": "/cake/js/chunk-vendors.b0d59017.js"
   },
   {
-    "revision": "ae241cfaed33f958c8426df7e66771f8",
+    "revision": "43dd17ac065bd12715bea294c587da2a",
     "url": "/cake/json/kickers.json"
   },
   {

@@ -24,7 +24,7 @@
                         <div class="kickerInfoSkill">
                             <ul>
                                 <li v-for="skill of kicker.skills" :key="skill.id">
-                                    <div class="skillName">{{skill.skillName}}</div>
+                                    <div class="skillName" v-bind:class="skill.id" >{{skill.skillName}}</div>
                                     <div class="skillDescription">{{skill.description}}</div>
                                 </li>
                             </ul>
@@ -142,7 +142,17 @@ ul, li {
                     padding-top:5px;
                     padding-bottom:5px;
                     background-color:black;
+                    color:#FFDC00;
                     font-weight: bold;
+                    &.ks::before {
+                        content:"Kicker Skill - ";
+                    }
+                    &.sk::before {
+                        content:"Special Skill - ";
+                    }
+                    &.ab::before {
+                        content:"Ability - ";
+                    }
                 }
                 .skillDescription {
                     padding-left:10px;
@@ -165,14 +175,20 @@ ul, li {
 
 .pageContainer {
     width:100%;
-    background-color:#F5F5F5;
+
+    #kickerContainer {
+        max-width:1366px;
+        margin:auto;
+        background-color: #F5F5F5;
+    }
 }
+
 .kickerSkill {
     display:none;
 }
 .kickerGrid {
     display:grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 
 
     .kickerWrapper {
@@ -199,6 +215,7 @@ ul, li {
         &:hover .kickerName {
             color:white;
             background-color:black;
+            font-weight:bold;
         };
         &:hover .kickerBG {
                 background-color:rgb(235, 235, 235);
@@ -208,9 +225,11 @@ ul, li {
 
 }
 
+
+/* MEDIA */
 @media screen and (max-width:768px) {
 .kickerGrid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .kickerInfoHolder .kickerInfo {
@@ -228,6 +247,17 @@ ul, li {
 }
 
 }
+@media screen and (max-width:426px) {
+.kickerGrid {
+    grid-template-columns: repeat(3, 1fr);
+    .kickerWrapper img {
+        width: 30vw;
+    }
+}
+
+}
+
+
 
 </style>
 

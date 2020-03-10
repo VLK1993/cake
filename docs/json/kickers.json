@@ -8,22 +8,22 @@
 				{
 				"id": "sk",
 				"skillName":"Buster Glide",
-				"description": "自身の移動速度を20％上昇させ、周囲に攻撃判定のある竜巻を約15秒間展開するスペシャルスキル。"
+				"description": "Movement speed increase 20%. Opponents will be knocked upward and small damage (15 seconds)"
 				},
 				{
 				"id": "ks",
 				"skillName":"Sonic Rush",
-				"description": "前方に突進しつつ、攻撃力の約2倍で斬りつけるスキル。相手が被ダメージ減少バフ（シールド）を使用していた場合は、威力が飛躍的に向上し、バフを解除することができる。"
+				"description": "Deals medium slash damage to one enemy in front. Cancels damage reduction of enemy and increases dealt damage"
 				},
 				{
 				"id": "ab",
 				"skillName":"Accel Charge",
-				"description": "HPが50%以下になると、ダッシュゲージの回復量が50%上昇するアビリティ。"
+				"description": "Dash guage heal increases by 50% when HP is below 50%"
 				},
 				{
 				"id":"dc",
 				"skillName":"Disc Compatibility",
-				"description":"Quick with Charge ATK Disc, slow with TRAP and HEAL Disc"
+				"description":"Quick with ATK (Rush) Disc, but slow with TRAP and HEAL Discs"
 				}
 			]
         },
@@ -49,7 +49,7 @@
 				{
 				"id":"dc",
 				"skillName":"Disc Compatibility",
-				"description":"Quick with ATK(Charge) Disc, slow with TRAP and HEAL Disc"
+				"description":"Quick with HEAL Disc, but slow with ATK (Circumference) Disc"
 				}
 			
 			]
@@ -76,13 +76,13 @@
 				{
 				"id":"dc",
 				"skillName":"Disc Compatibility",
-				"description":"Quick with Spherical AoE ATK and TRAP discs, but slow with Long-range ATK Discs"
+				"description":"Quick with ATK (Circumference) and TRAP Discs, but slow with ATK (Long Distance) Disc"
 				}
 			]
         },
 		{
 			"id":"anna",
-            "name":"Anna",
+            "name":"Anna Starling",
 			"skills":[
 				{
 				"id": "sk",
@@ -102,7 +102,7 @@
 				{
 				"id":"dc",
 				"skillName":"Disc Compatibility",
-				"description":"Quick with MOVE Discs, but slow with close range and charge ATK Discs"
+				"description":"Quick with MOVE Disc, but slow with ATK (Short Distance) and ATK (Rush) Discs"
 				}
 			]
         },
@@ -154,7 +154,7 @@
 				{
 				"id":"dc",
 				"skillName":"Disc Compatibility",
-				"description":"Quick with charge ATK and BUFF Discs, but slow with MOVE Discs"
+				"description":"Quick with ATK (Rush) and BUFF Discs, but slow with MOVE Disc"
 				}
 			]
         },			
@@ -180,7 +180,7 @@
 				{
 				"id":"dc",
 				"skillName":"Disc Compatibility",
-				"description":"Quick with BUFF Discs, but slow with spherical AoE and charge ATK Discs"
+				"description":"Quick with BUFF Disc, but slow with ATK (Circumference) and ATK (Rush) Discs"
 				}
 			]
         },
@@ -232,7 +232,7 @@
 				{
 				"id":"dc",
 				"skillName":"Disc Compatibility",
-				"description":"Quick with Spherical AoE ATK Discs, but slow with Charge ATK Discs"
+				"description":"Quick with ATK (Circumference) Disc, but slow with ATK (Rush) Disc"
 				}
 			]
         },
