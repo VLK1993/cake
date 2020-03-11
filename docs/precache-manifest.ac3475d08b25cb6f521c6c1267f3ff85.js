@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bf77066507dabf74e897",
-    "url": "/cake/css/app.e13b36b7.css"
+    "revision": "4d00832501f07c84b8ad",
+    "url": "/cake/css/app.e7e7729a.css"
   },
   {
     "revision": "f4a8696c4b4ee96e56834f881cda2837",
@@ -136,16 +136,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/list/mei_c2.png"
   },
   {
-    "revision": "0cc921c639813dafb10cddcc1d5bb2e8",
+    "revision": "c83bc9f8cc4b56f554776a4134bb94ff",
     "url": "/cake/index.html"
   },
   {
-    "revision": "bf77066507dabf74e897",
-    "url": "/cake/js/app.b7af33a4.js"
+    "revision": "4d00832501f07c84b8ad",
+    "url": "/cake/js/app.08dee096.js"
   },
   {
-    "revision": "7f279fd2bc5464afc71f",
-    "url": "/cake/js/chunk-vendors.b0d59017.js"
+    "revision": "ccc60150af22ff381066",
+    "url": "/cake/js/chunk-vendors.178b891e.js"
+  },
+  {
+    "revision": "33ad169dac5c6489e8027c839e344079",
+    "url": "/cake/json/discs.json"
   },
   {
     "revision": "43dd17ac065bd12715bea294c587da2a",

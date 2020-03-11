@@ -1,0 +1,752 @@
+{
+	"discs": 
+	[
+		{
+			"id":"flamizaurus",
+			"nameEN":"Flamizaurus",
+			"nameJP":"フレイムザウラー",
+			"descriptionEN":"Deals large frontal damage & knocks them away",
+			"descriptionJP":"前方範囲に大ダメージ攻撃 + ＋吹き飛ばし",
+			"type":"atk-l",
+			"rarity":"ur",
+			"element":"fire"
+		},
+		{
+		"id":"giamoth",
+		"nameEN":"Giamoth",
+		"nameJP":"",
+		"descriptionEN":"Deals medium frontal damage using a dash pierce attack & shield break",
+		"descriptionJP":"",
+		"type":"atk-r",
+		"rarity":"ur",
+		"element":"wind"
+		},
+		{
+		"id":"phoenora",		
+		"nameEN":"Phoenora",
+		"nameJP":"",
+		"descriptionEN":"heals HP by 50% for all teammates",
+		"descriptionJP":"",
+		"type":"heal",
+		"rarity":"ur",
+		"element":"wind"
+		},
+		{
+		"id":"nurseroid",	
+		"nameEN":"Nurseroid",
+		"nameJP":"",
+		"descriptionEN":"Regenerates own HP (max 100% in 20 seconds)",
+		"descriptionJP":"",
+		"type":"heal",
+		"rarity":"ur",
+		"element":"fire"
+		},
+		{
+		"id":"fierycoon",
+		"nameEN":"Fierycoon",
+		"nameJP":"",
+		"descriptionEN":"Medium increase of attack power for all teammates (15 seconds)",
+		"descriptionJP":"",
+		"type":"buff",
+		"rarity":"ur",
+		"element":"fire"
+		},
+		{
+		"id":"raging-kong",
+		"nameEN":"Raging Kong",
+		"nameJP":"",
+		"descriptionEN":"Deals massive damage to surrounding circular area",
+		"descriptionJP":"",
+		"type":"atk-c",
+		"rarity":"ur",
+		"element":"fire"
+		},
+		{
+		"id":"deviathan",
+		"nameEN":"Deviathan",
+		"nameJP":"",
+		"descriptionEN":"Deals medium damage to surrounding circular area & stuns them",
+		"descriptionJP":"",
+		"type":"atk-c",
+		"rarity":"ur",
+		"element":"water"
+		},
+		{
+		"id":"galaxy-shield",
+		"nameEN":"Galaxy Shield",
+		"nameJP":"",
+		"descriptionEN":"Reduce damage taken by 70% (10 seconds)",
+		"descriptionJP":"",
+		"type":"buff",
+		"rarity":"ur",
+		"element":"water"
+		},
+		{
+		"id":"gatling-ultra",
+		"nameEN":"Gatling Ultra",
+		"nameJP":"",
+		"descriptionEN":"Deals massive frontal damage using combo attack",
+		"descriptionJP":"",
+		"type":"atk-l",
+		"rarity":"",
+		"element":""
+		},
+		{
+		"id":"skybeast",
+		"nameEN":"Skybeast",
+		"nameJP":"",
+		"descriptionEN":"Large increase in boost energy recovery for all teammates (10 seconds)",
+		"descriptionJP":"",
+		"type":"buff",
+		"rarity":"ur",
+		"element":"wind"
+		},		
+		{
+		"id":"arcolphin",
+		"nameEN":"Arcolphin",
+		"nameJP":"",
+		"descriptionEN":"Warps to start point & heals HP by 100%",
+		"descriptionJP":"",
+		"type":"warp",
+		"rarity":"ur",
+		"element":"water"
+		},	
+		{
+		"id":"killer-billet",
+		"nameEN":"Killer Billet",
+		"nameJP":"",
+		"descriptionEN":"Sets turret that attacks opponents in range at ultra high speed (15 seconds)",
+		"descriptionJP":"",
+		"type":"trap",
+		"rarity":"ur",
+		"element":"wind"
+		},	
+		{
+		"id":"liberwolf",
+		"nameEN":"Liberwolf",
+		"nameJP":"",
+		"descriptionEN":"Creates an area that deals massive damage over 8 seconds",
+		"descriptionJP":"",
+		"type":"trap",
+		"rarity":"ur",
+		"element":"water"
+		},	
+		{
+		"id":"hyper-bomb",	
+		"nameEN":"Hyper Bomb",
+		"nameJP":"",
+		"descriptionEN":"Sets large damage bomb trap that knocks away opponents who approach it (20 seconds)",
+		"descriptionJP":"",
+		"type":"atk-c",
+		"rarity":"ur",
+		"element":"water"
+		},
+		{
+		"id":"boarush",	
+		"nameEN":"Boarush",
+		"nameJP":" ",
+		"descriptionEN":"Deals small frontal damage using a dash pursuit attack",
+		"descriptionJP":" ",
+		"type":"atk-r",
+		"rarity":"sr",
+		"element":"fire"
+		},
+		{
+		"id":"horwhale",	
+		"nameEN":"Horwhale",
+		"nameJP":" ",
+		"descriptionEN":"Deals medium frontal damage & knocks away target",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"sr",
+		"element":"water"
+		}, 
+		{
+		"id":"gigaphone",	
+		"nameEN":"Gigaphone",
+		"nameJP":" ",
+		"descriptionEN":"Large increase in attack power (15 seconds)",
+		"descriptionJP":" ",
+		"type":"buff",
+		"rarity":"sr",
+		"element":"fire"
+		}, 
+		{
+		"id":"peacocktail",	
+		"nameEN":"Peacocktail",
+		"nameJP":" ",
+		"descriptionEN":"Heals HP by 60%",
+		"descriptionJP":" ",
+		"type":"heal",
+		"rarity":"sr",
+		"element":"fire"
+		}, 
+		{
+		"id":"geckosaurus",	
+		"nameEN":"Geckosaurus",
+		"nameJP":" ",
+		"descriptionEN":"Deals medium damage to one enemy in front & movement speed down (5 seconds)",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"sr",
+		"element":"water"
+		}, 
+		{
+		"id":"mantallion",	
+		"nameEN":"Mantallion",
+		"nameJP":" ",
+		"descriptionEN":"Deals medium damage to one enemy in front & paralysis attack",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"sr",
+		"element":"wind"
+		}, 
+		{
+		"id":"jack-upper",	
+		"nameEN":"Jack Upper",
+		"nameJP":" ",
+		"descriptionEN":"Deals high damage to nearby opponents & knocks them upwards",
+		"descriptionJP":" ",
+		"type":"atk-s",
+		"rarity":"sr",
+		"element":"wind"
+		}, 
+		{
+		"id":"leeta",	
+		"nameEN":"Leeta",
+		"nameJP":" ",
+		"descriptionEN":"Increase speed and move forward automatically (5 seconds)",
+		"descriptionJP":" ",
+		"type":"move",
+		"rarity":"sr",
+		"element":"wind"
+		}, 
+		{
+		"id":"assassin-gate",	
+		"nameEN":"Assassin Gate",
+		"nameJP":" ",
+		"descriptionEN":"Warp behind locked on target or closet opponent",
+		"descriptionJP":" ",
+		"type":"warp",
+		"rarity":"sr",
+		"element":"fire"
+		}, 
+		{
+		"id":"septicopter",	
+		"nameEN":"Septicopter",
+		"nameJP":" ",
+		"descriptionEN":"Sets turret that attacks opponents in range at medium speed",
+		"descriptionJP":" ",
+		"type":"trap",
+		"rarity":"sr",
+		"element":"water"
+		}, 
+		{
+		"id":"fairy-frog",	
+		"nameEN":"Fairy Frog",
+		"nameJP":" ",
+		"descriptionEN":"Large boost energy recovery",
+		"descriptionJP":" ",
+		"type":"heal",
+		"rarity":"sr",
+		"element":"water"
+		}, 
+		{
+		"id":"pyronkey",	
+		"nameEN":"Pyronkey",
+		"nameJP":" ",
+		"descriptionEN":"Deals large rear continuos damage while dashing",
+		"descriptionJP":" ",
+		"type":"move",
+		"rarity":"sr",
+		"element":"fire"
+		}, 
+		{
+		"id":"rosmie",	
+		"nameEN":"Rosmie",
+		"nameJP":"Deal low AoE damage <br>Apply poison damage based on max HP last for 20 seconds (maximum up to 60% HP in total)",
+		"descriptionEN":" ",
+		"descriptionJP":" ",
+		"type":" ",
+		"rarity":" ",
+		"element":" "
+		}, 
+		{
+		"id":"neolumi",	
+		"nameEN":"Neolumi",
+		"nameJP":"",
+		"descriptionEN":"Warps to location of an ally with lowest HP & heals HP by 50%",
+		"descriptionJP":" ",
+		"type":"warp",
+		"rarity":"sr",
+		"element":"wind"
+		}, 
+		{
+		"id":"junk-bullet",	
+		"nameEN":"Junk Bullet",
+		"nameJP":" ",
+		"descriptionEN":"Deals medium continuos damage to one enemy in front & attack down (8 seconds)",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"sr",
+		"element":"wind"
+		}, 
+		{
+		"id":"cycrane",	
+		"nameEN":"Cycrane",
+		"nameJP":" ",
+		"descriptionEN":"While flipping in the air, deal small damage to enemies behind & ",
+		"descriptionJP":" ",
+		"type":"move",
+		"rarity":"sr",
+		"element":"wind"
+		}, 
+		{
+		"id":"bond-gate",	
+		"nameEN":"Bond Gate",
+		"nameJP":" ",
+		"descriptionEN":"Warps to nearby ally",
+		"descriptionJP":"heals HP by 50%",
+		"type":"warp",
+		"rarity":"sr",
+		"element":"water"
+		}, 
+		{
+		"id":"snazzy-snail",	
+		"nameEN":"Snazzy Snail",
+		"nameJP":" ",
+		"descriptionEN":"Creates an area that greatly slows enemies",
+		"descriptionJP":" ",
+		"type":"trap",
+		"rarity":"sr",
+		"element":"wind"
+		}, 
+		{
+		"id":"bombster",	
+		"nameEN":"Bombster",
+		"nameJP":" ",
+		"descriptionEN":"Deals medium damage to one enemy",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"r",
+		"element":"fire"
+		}, 
+		{
+		"id":"fairy-lizard",	
+		"nameEN":"Fairy Lizard",
+		"nameJP":" ",
+		"descriptionEN":"Deals small damage to surrounding circular area",
+		"descriptionJP":" ",
+		"type":"atk-r",
+		"rarity":"r",
+		"element":"wind"
+		}, 
+		{
+		"id":"uber-beaver",	
+		"nameEN":"Uber Beaver",
+		"nameJP":" ",
+		"descriptionEN":"Deals medium damage to surrounding circular area & knocks them upwards",
+		"descriptionJP":" ",
+		"type":"atk-c",
+		"rarity":"r",
+		"element":"water"
+		}, 
+		{
+		"id":"spewdor",	
+		"nameEN":"Spewdor",
+		"nameJP":" ",
+		"descriptionEN":"Small increase in movement speed (10 seconds)",
+		"descriptionJP":" ",
+		"type":"buff",
+		"rarity":"r",
+		"element":"fire"
+		}, 
+		{
+		"id":"cutiemander",	
+		"nameEN":"Cutiemander",
+		"nameJP":" ",
+		"descriptionEN":"Heals HP by 30% for all teammates",
+		"descriptionJP":" ",
+		"type":"heal",
+		"rarity":"r",
+		"element":"fire"
+		}, 
+		{
+		"id":"start-gate",	
+		"nameEN":"Start Gate",
+		"nameJP":" ",
+		"descriptionEN":"Warps to start point",
+		"descriptionJP":" ",
+		"type":"warp",
+		"rarity":"r",
+		"element":"water"
+		}, 
+		{
+		"id":"walrock",	
+		"nameEN":"Walrock",
+		"nameJP":" ",
+		"descriptionEN":"Deals small damage to nearby opponents & slam attack",
+		"descriptionJP":" ",
+		"type":"atk-s",
+		"rarity":"r",
+		"element":"water"
+		}, 
+		{
+		"id":"shockhog",	
+		"nameEN":"Shockhog",
+		"nameJP":" ",
+		"descriptionEN":"Deals small damage to surrounding circular area & stuns them",
+		"descriptionJP":" ",
+		"type":"atk-c",
+		"rarity":"r",
+		"element":"water"
+		}, 
+		{
+		"id":"tetra-shield",	
+		"nameEN":"Tetra Shield",
+		"nameJP":" ",
+		"descriptionEN":"Reduce damage taken by 30% for teammates (15 seconds)",
+		"descriptionJP":" ",
+		"type":"buff",
+		"rarity":"r",
+		"element":"wind"
+		}, 
+		{
+		"id":"jet-hammer",	
+		"nameEN":"Jet Hammer",
+		"nameJP":" ",
+		"descriptionEN":"Deals small damage to one enemy in front & stun attack",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"r",
+		"element":"fire"
+		}, 
+		{
+		"id":"booby-bomb",	
+		"nameEN":"Booby Bomb",
+		"nameJP":" ",
+		"descriptionEN":"Sets small damage bomb trap that knocks away opponents who approach it (20 seconds)",
+		"descriptionJP":" ",
+		"type":"trap",
+		"rarity":"r",
+		"element":"wind"
+		}, 
+		{
+		"id":"crabshiedion",	
+		"nameEN":"Crabshiedion",
+		"nameJP":" ",
+		"descriptionEN":"Reduce damage taken by 50% (15 seconds)",
+		"descriptionJP":" ",
+		"type":"trap",
+		"rarity":"r",
+		"element":"wind"
+		}, 
+		{
+		"id":"robo-turret",	
+		"nameEN":"Robo Turret",
+		"nameJP":" ",
+		"descriptionEN":"Sets turret that attacks opponents in range at medium speed (15 seconds)",
+		"descriptionJP":" ",
+		"type":"trap",
+		"rarity":"r",
+		"element":"water"
+		}, 
+		{
+		"id":"buffbox",	
+		"nameEN":"Buffbox",
+		"nameJP":" ",
+		"descriptionEN":"Small increase of attack power for all teammates (20 seconds)",
+		"descriptionJP":" ",
+		"type":"buff",
+		"rarity":"r",
+		"element":"fire"
+		}, 
+		{
+		"id":"octoverse",	
+		"nameEN":"Octoverse",
+		"nameJP":" ",
+		"descriptionEN":"Deals small frontal damage<br>Apply poison damage based on max HP last for 10 seconds (maximum up to 30% HP in total)",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"r",
+		"element":"fire"
+		}, 
+		{
+		"id":"spunkle",	
+		"nameEN":"Spunkle",
+		"nameJP":" ",
+		"descriptionEN":"Deals medium rear continuos damage while dashing",
+		"descriptionJP":" ",
+		"type":"move",
+		"rarity":"r",
+		"element":"wind"
+		}, 
+		{
+		"id":"ga-ga-gatling",	
+		"nameEN":"Ga-Ga-Gatling",
+		"nameJP":" ",
+		"descriptionEN":"Deals large frontal damage using combo attack",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"r",
+		"element":"fire"
+		}, 
+		{
+		"id":"aerojammer",	
+		"nameEN":"Aeronjammer",
+		"nameJP":" ",
+		"descriptionEN":"Sets small damage bomb rap that suppresses for ",
+		"descriptionJP":" ",
+		"type":" ",
+		"rarity":" ",
+		"element":" "
+		}, 
+		{
+		"id":"morbeel",	
+		"nameEN":"Morbeel",
+		"nameJP":" ",
+		"descriptionEN":"Deals small frontal damage & attack power down (8 seconds)",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"r",
+		"element":"water"
+		}, 
+		{
+		"id":"hedgefish",	
+		"nameEN":"Hedgefish",
+		"nameJP":" ",
+		"descriptionEN":"Sets a small damage bomb trap that paralyzes opponents who approach it (20 seconds)",
+		"descriptionJP":" ",
+		"type":"trap",
+		"rarity":"r",
+		"element":"wind"
+		}, 
+		{
+		"id":"red-blaster",	
+		"nameEN":"Red Blaster",
+		"nameJP":" ",
+		"descriptionEN":"Deals medium damage to one enemy in front",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"n",
+		"element":"fire"
+		},
+		{
+		"id":"air-blaster",	
+		"nameEN":"Air Blaster",
+		"nameJP":" ",
+		"descriptionEN":"Deals medium damage to one enemy in front",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"n",
+		"element":"wind"
+		},
+		{
+		"id":"blue-blaster",	
+		"nameEN":"Blue Blaster",
+		"nameJP":" ",
+		"descriptionEN":"Deals medium damage to one enemy in front",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"n",
+		"element":"water"
+		},
+		{
+		"id":"jet-shark",	
+		"nameEN":"Jet Shark",
+		"nameJP":" ",
+		"descriptionEN":"Deals small frontal damage using dash pierce attack & shield break",
+		"descriptionJP":" ",
+		"type":"atk-r",
+		"rarity":"n",
+		"element":"fire"
+		},
+		{
+		"id":"rush-blade",	
+		"nameEN":"Rush Blade",
+		"nameJP":" ",
+		"descriptionEN":"Deals small frontal damage using a dash pierce attack & shield break",
+		"descriptionJP":" ",
+		"type":"atk-r",
+		"rarity":"n",
+		"element":"water"
+		},
+		{
+		"id":"crocopeller",	
+		"nameEN":"Crocopeller",
+		"nameJP":" ",
+		"descriptionEN":"Deals small frontal damage using dash pursuit attack",
+		"descriptionJP":" ",
+		"type":"atk-r",
+		"rarity":"n",
+		"element":"wind"
+		},
+		{
+		"id":"volcortoise",	
+		"nameEN":"Volcortoise",
+		"nameJP":" ",
+		"descriptionEN":"Deals medium damage to surrounding circular area",
+		"descriptionJP":" ",
+		"type":"atk-c",
+		"rarity":"n",
+		"element":"fire"
+		},
+		{
+		"id":"wind-weasel",	
+		"nameEN":"Wind Weasel",
+		"nameJP":" ",
+		"descriptionEN":"Deals medium damage to surrounding circular area",
+		"descriptionJP":" ",
+		"type":"atk-c",
+		"rarity":"n",
+		"element":"wind"
+		},
+		{
+		"id":"snotty-puff",	
+		"nameEN":"Snotty Puff",
+		"nameJP":" ",
+		"descriptionEN":"Deals small damage to surrounding circular area",
+		"descriptionJP":" ",
+		"type":"atk-c",
+		"rarity":"n",
+		"element":"water"
+		},
+		{
+		"id":"rappit",	
+		"nameEN":"Rappit",
+		"nameJP":" ",
+		"descriptionEN":"Deals small frontal damage & knocks away target",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"n",
+		"element":"wind"
+		},
+		{
+		"id":"armorlocaris",	
+		"nameEN":"Armorlocaris",
+		"nameJP":" ",
+		"descriptionEN":"Deals small frontal damage & knocks away targets",
+		"descriptionJP":" ",
+		"type":"atk-l",
+		"rarity":"n",
+		"element":"water"
+		},
+		{
+		"id":"boxaroo",	
+		"nameEN":"Boxaroo",
+		"nameJP":" ",
+		"descriptionEN":"Small increase in attack power (30 seconds)",
+		"descriptionJP":" ",
+		"type":"buff",
+		"rarity":"n",
+		"element":"wind"
+		},
+		{
+		"id":"crabshelment",	
+		"nameEN":"Crabshelmet",
+		"nameJP":" ",
+		"descriptionEN":"Reduce damage taken by 30% (25 seconds)",
+		"descriptionJP":" ",
+		"type":"buff",
+		"rarity":"n",
+		"element":"water"
+		},
+		{
+		"id":"picoleaf",	
+		"nameEN":"Picoleaf",
+		"nameJP":" ",
+		"descriptionEN":"Heals HP by 30%",
+		"descriptionJP":" ",
+		"type":"heal",
+		"rarity":"n",
+		"element":"wind"
+		},
+		{
+		"id":"rhinot",	
+		"nameEN":"Rhinot",
+		"nameJP":" ",
+		"descriptionEN":"Deals medium damage to nearby opponents & knocks them up",
+		"descriptionJP":" ",
+		"type":"atk-s",
+		"rarity":"n",
+		"element":"fire"
+		},
+		{
+		"id":"vegedra",	
+		"nameEN":"Vegedra",
+		"nameJP":" ",
+		"descriptionEN":"Deals small damage to nearby opponents & knocks them up",
+		"descriptionJP":" ",
+		"type":"atk-s",
+		"rarity":"n",
+		"element":"wind"
+		},
+		{
+		"id":"bratty-otty",	
+		"nameEN":"Bratty Otty",
+		"nameJP":" ",
+		"descriptionEN":"Deals small damage to nearby opponents & slam attacks them",
+		"descriptionJP":" ",
+		"type":"atk-s",
+		"rarity":"n",
+		"element":"water"
+		},
+		{
+		"id":"medical-box",	
+		"nameEN":"Medical Box",
+		"nameJP":" ",
+		"descriptionEN":"Regenerates HP (max 50% in 10 seconds)",
+		"descriptionJP":" ",
+		"type":"heal",
+		"rarity":"n",
+		"element":"water"
+		},
+		{
+		"id":"red-mine",	
+		"nameEN":"Red Mine",
+		"nameJP":" ",
+		"descriptionEN":"Sets medium damage bomb trap that knocks away opponents who approach it (20 seconds)",
+		"descriptionJP":" ",
+		"type":"trap",
+		"rarity":"n",
+		"element":"fire"
+		},
+		{
+		"id":"green-mine",	
+		"nameEN":"Green Mine",
+		"nameJP":" ",
+		"descriptionEN":"Sets medium damage bomb trap that knocks away opponents who approach it (20 seconds)",
+		"descriptionJP":" ",
+		"type":"trap",
+		"rarity":"n",
+		"element":"wind"
+		},
+		{
+		"id":"blue-mine",	
+		"nameEN":"Blue Mine",
+		"nameJP":" ",
+		"descriptionEN":"Sets medium damage bomb trap that knocks away opponents who approach it (20 seconds)",
+		"descriptionJP":" ",
+		"type":"trap",
+		"rarity":"n",
+		"element":"water"
+		},
+		{
+		"id":"boost-bottle",	
+		"nameEN":"Boost Bottle",
+		"nameJP":" ",
+		"descriptionEN":"Medium boost energy recovery",
+		"descriptionJP":" ",
+		"type":"heal",
+		"rarity":"n",
+		"element":"wind"
+		}
+		
+		
+		
+		
+		
+		
+		
+	]
+}
