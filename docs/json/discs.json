@@ -264,12 +264,12 @@
 		{
 		"id":"rosmie",	
 		"nameEN":"Rosmie",
-		"nameJP":"Deal low AoE damage <br>Apply poison damage based on max HP last for 20 seconds (maximum up to 60% HP in total)",
-		"descriptionEN":" ",
+		"nameJP":"",
+		"descriptionEN":"Deal low AoE damage. Apply poison damage based on max HP last for 20 seconds (maximum up to 60% HP in total)",
 		"descriptionJP":" ",
-		"type":" ",
-		"rarity":" ",
-		"element":" "
+		"type":"atk-c",
+		"rarity":"sr",
+		"element":"water"
 		}, 
 		{
 		"id":"neolumi",	
@@ -642,7 +642,7 @@
 		"element":"wind"
 		},
 		{
-		"id":"crabshelment",	
+		"id":"crabshelmet",	
 		"nameEN":"Crabshelmet",
 		"nameJP":" ",
 		"descriptionEN":"Reduce damage taken by 30% (25 seconds)",

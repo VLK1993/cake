@@ -48,15 +48,23 @@
 
     <!-- DISC GRID -->
     </div>
-    <div class="discGrid">
-      
-        <div class="disc" v-for="disc in filterdisc" :key="disc.id" >
-          <div class="discName">{{disc.nameEN}}</div>
-          <div class="discSkill">{{disc.descriptionEN}}</div>
-          <div class="discRarity">{{disc.rarity}}</div>
-          
-          </div>
-      
+    <div class="discGridContainer">
+        <div class="discGrid">
+        
+            <div class="discWrapper" v-for="disc in filterdisc" :key="disc.id" >
+                <div class="discName">{{disc.nameEN}}</div>
+                <div class="discType"><span v-bind:class="'type-'+disc.type"></span></div>
+                <!-- 
+                <div class="discRarity">{{disc.rarity}}</div>
+                <div class="discElement">{{disc.element}}</div>
+                -->
+                <div class="discImage"><img v-bind:src="'img/disc/icon/'+disc.id+'.png'"></div>
+                <div class="discSkill">{{disc.descriptionEN}}</div>
+
+            
+            </div>
+        
+        </div>
     </div>
   
 </div>
@@ -68,6 +76,7 @@
  &-atk-r:before {content:'ATK (Rush)'}
  &-atk-c:before {content:'ATK (Circumference)'}
  &-warp:before {content:'WARP'}
+ &-buff:before {content:'BUFF'}
  &-move:before {content:'MOVE'}
  &-heal:before {content:'HEAL'}
  &-trap:before {content:'TRAP'}
@@ -79,9 +88,80 @@
     display:inline-block;
   }
 }
+.discGridContainer {
+    background-color:#f5f5f5;
+}
 .discGrid {
   display:grid;
   grid-template-columns: repeat(5, 1fr);
+  margin-top:10px;
+  padding:10px;
+  grid-gap:5px;
+}
+.discWrapper {
+    display:grid;
+    background-color:rgb(250,250,250);
+    .discName, .discType, .discElement, .discRarity, .discSkill {
+          padding-top:5px; padding-bottom:5px;
+    }
+    grid-template-rows:2em 2em 220px 1fr;
+    grid-template-areas: 
+    "discName discName" 
+    "discType discType" 
+    "discImage discImage" 
+    "discSkill discSkill";
+    .discName { grid-area:discName;
+        background-color:rgb(5,5,5);
+        color:rgb(245,245,245);
+        font-weight: bold;
+    }
+    .discType { grid-area:discType;
+    }
+    .discElement { 
+        grid-area:discElement;
+        text-transform:capitalize;}
+    .discRarity { 
+        grid-area:discRarity;
+        text-transform:uppercase;
+    }
+    .discImage { 
+        grid-area:discImage;
+        background-color:rgb(230,230,230);
+        height:220px;
+        padding-top:10px;
+        img {
+            height:200px;
+        }
+    }
+    .discSkill { grid-area:discSkill;
+        align-self: stretch;
+        background-color:rgb(245,245,245);
+        padding-left:5px;
+        padding-right:5px;
+    
+    }
+    
+
+}
+@media screen and (max-width:769px) {
+    .discGrid {
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (max-width:426px) {
+    .discGrid {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:321px) {
+    .discGrid {
+        display:grid;
+        grid-template-columns: repeat(1, 1fr);
+}
+
+
 }
 </style>
 <script>
