@@ -84,11 +84,14 @@
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: red;
-  color: white;
+  background-color: #ffdc00;
+  color: black;
+  text-transform:uppercase;
+  border:solid 1.5px rgb(5, 5, 5);
   cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 10px;
   :hover {
     background-color: #555;
   }
@@ -171,7 +174,7 @@
     text-transform: uppercase;
   }
 }
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 376px) {
   #discQueryHolder {
     .fieldType {
       grid-template-columns: 1fr;
@@ -240,20 +243,27 @@
 }
 @media screen and (max-width: 769px) {
   .discGrid {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media screen and (max-width: 426px) {
   .discGrid {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 426px) {
+  .discGrid {
+    .discWrapper .discImage img {
+      height:175px;
+    }
   }
 }
 @media screen and (max-width: 321px) {
   .discGrid {
-    display: grid;
     grid-template-columns: repeat(1, 1fr);
+    .discWrapper .discImage img { 
+      height:200px;
+    }
   }
 }
 </style>

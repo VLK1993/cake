@@ -25,12 +25,12 @@
     font-weight: bold;
     color: rgb(150,150,150);
     text-transform:uppercase;
-    padding-left:2vw;
-    padding-right:2vw;
+    padding-left:3vw;
+    padding-right:3vw;
     font-weight:bold;
     text-decoration: none;
     font-family:Verdana;
-    font-size: calc(20px + (25 - 20) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(18px + (25 - 18) * ((100vw - 300px) / (1600 - 300)));
     &.router-link-exact-active {
       color: rgb(250,250,250);
     }

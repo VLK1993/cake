@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "58bd9573967264e5b35b",
-    "url": "/cake/css/app.3906ec65.css"
+    "revision": "39a78611dc1fe9427050",
+    "url": "/cake/css/app.87fa996a.css"
   },
   {
     "revision": "f4a8696c4b4ee96e56834f881cda2837",
@@ -12,52 +12,100 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/character/kiana_pt.png"
   },
   {
-    "revision": "2096693c2d3d0637b373ac9d29265db1",
+    "revision": "fd7bc8c850fb68fd767ab29f1de18ac8",
     "url": "/cake/img/character/kickerList/anna.jpg"
   },
   {
-    "revision": "1a0bb6bd1208dab08396281ab7697f7e",
+    "revision": "ab457bb8e485f1198a762b67b8865c82",
     "url": "/cake/img/character/kickerList/buzzy.jpg"
   },
   {
-    "revision": "4cf8fa879d0031f38a4a7e966f6f2116",
+    "revision": "0069e3774c70838265647b3e53b48cf9",
     "url": "/cake/img/character/kickerList/coco.jpg"
   },
   {
-    "revision": "c2a215af3407f7d65d8844000c37310a",
+    "revision": "4149512118c900f2e41d14f14493636a",
     "url": "/cake/img/character/kickerList/diatrus.jpg"
   },
   {
-    "revision": "07d96c8da06ffb15c2131a4bcff88a73",
+    "revision": "e3a3c7e7fee44875f7e587978992d0d6",
     "url": "/cake/img/character/kickerList/grenhawk.jpg"
   },
   {
-    "revision": "707d73a95dd7e30e310926b339c92093",
+    "revision": "5fc18271c10f4d9f921a31c06df42e8c",
     "url": "/cake/img/character/kickerList/jay.jpg"
   },
   {
-    "revision": "e54e354c91982f1189c02ffbab68307c",
+    "revision": "a7d9dbe9421333213ad434e51b9bfce9",
     "url": "/cake/img/character/kickerList/kite.jpg"
   },
   {
-    "revision": "d903358d42a32b489532cbd501c7a3ac",
+    "revision": "85398a20612b7f3cc5b01d1f19213ec0",
     "url": "/cake/img/character/kickerList/owlbert.jpg"
   },
   {
-    "revision": "80b337db0f56e041538c87df075c7da6",
+    "revision": "5957afe108f618f8b09fadb2e9a9b791",
     "url": "/cake/img/character/kickerList/pitophy.jpg"
   },
   {
-    "revision": "7cfdd5015b3018efaae6e97586f90fd6",
+    "revision": "0ea99fd3ea0fb00d5ed01a9a16d5bb28",
     "url": "/cake/img/character/kickerList/ruriha.jpg"
   },
   {
-    "revision": "85a20a83458cf9723c9900362194b78b",
+    "revision": "aefe9137b5b15a24b7f9a36f34b2217e",
     "url": "/cake/img/character/kickerList/tsubame.jpg"
   },
   {
-    "revision": "b1555e3286c9cbde11e7dff30f493cb6",
+    "revision": "7ad92b3cbce447a0546e7666df9db1e3",
     "url": "/cake/img/character/kickerList/yuyan.jpg"
+  },
+  {
+    "revision": "2096693c2d3d0637b373ac9d29265db1",
+    "url": "/cake/img/character/kickerListSmall/anna.jpg"
+  },
+  {
+    "revision": "1a0bb6bd1208dab08396281ab7697f7e",
+    "url": "/cake/img/character/kickerListSmall/buzzy.jpg"
+  },
+  {
+    "revision": "4cf8fa879d0031f38a4a7e966f6f2116",
+    "url": "/cake/img/character/kickerListSmall/coco.jpg"
+  },
+  {
+    "revision": "c2a215af3407f7d65d8844000c37310a",
+    "url": "/cake/img/character/kickerListSmall/diatrus.jpg"
+  },
+  {
+    "revision": "07d96c8da06ffb15c2131a4bcff88a73",
+    "url": "/cake/img/character/kickerListSmall/grenhawk.jpg"
+  },
+  {
+    "revision": "707d73a95dd7e30e310926b339c92093",
+    "url": "/cake/img/character/kickerListSmall/jay.jpg"
+  },
+  {
+    "revision": "e54e354c91982f1189c02ffbab68307c",
+    "url": "/cake/img/character/kickerListSmall/kite.jpg"
+  },
+  {
+    "revision": "d903358d42a32b489532cbd501c7a3ac",
+    "url": "/cake/img/character/kickerListSmall/owlbert.jpg"
+  },
+  {
+    "revision": "80b337db0f56e041538c87df075c7da6",
+    "url": "/cake/img/character/kickerListSmall/pitophy.jpg"
+  },
+  {
+    "revision": "7cfdd5015b3018efaae6e97586f90fd6",
+    "url": "/cake/img/character/kickerListSmall/ruriha.jpg"
+  },
+  {
+    "revision": "85a20a83458cf9723c9900362194b78b",
+    "url": "/cake/img/character/kickerListSmall/tsubame.jpg"
+  },
+  {
+    "revision": "b1555e3286c9cbde11e7dff30f493cb6",
+    "url": "/cake/img/character/kickerListSmall/yuyan.jpg"
   },
   {
     "revision": "cd69143ee9ec4220159307a03fd6dcee",
@@ -740,12 +788,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/list/valkyrja/mei_c2.png"
   },
   {
-    "revision": "9db26314283591faf98fcb21b78fdf96",
+    "revision": "9cdd937a2933a29c707eb2eaf0aaa825",
     "url": "/cake/index.html"
   },
   {
-    "revision": "58bd9573967264e5b35b",
-    "url": "/cake/js/app.e855cfd5.js"
+    "revision": "39a78611dc1fe9427050",
+    "url": "/cake/js/app.3d46e6af.js"
   },
   {
     "revision": "ccc60150af22ff381066",

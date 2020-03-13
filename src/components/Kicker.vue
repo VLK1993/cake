@@ -9,9 +9,12 @@
             v-bind:data-kicker="kicker.id"
             v-on:click.capture="selectKicker($event)"
           >
-            <div class="kickerName">{{ kicker.name }}</div>
-            <img
+            <div class="kickerName">{{ kicker.id }}</div>
+            <img class="showOnPC"
               v-bind:src="'img/character/kickerList/' + kicker.id + '.jpg'"
+            />
+            <img class="showOnPhone"
+              v-bind:src="'img/character/kickerListSmall/' + kicker.id + '.jpg'"
             />
             <div class="kickerBG"></div>
           </div>
@@ -97,7 +100,7 @@ li {
   &.active {
     display: block;
     position: absolute;
-    top: 75px;
+    top: 85px;
     left: 5%;
     z-index: 2;
     border: 2px solid black;
@@ -180,7 +183,6 @@ li {
   #kickerContainer {
     max-width: 1366px;
     margin: auto;
-    background-color: #f5f5f5;
   }
 }
 
@@ -189,20 +191,39 @@ li {
 }
 .kickerGrid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap:7px;
   .kickerWrapper {
-    position: relative;
+position: relative;
     z-index: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .showOnPhone {display:none;}
+    .showOnPC {
+      filter:grayscale(100%);
+      transition: filter 0.05s ease-in;
+    }
+    &:hover {
+      .showOnPC {filter:grayscale(0%);}
+    }
     img {
-      position: relative;
-      z-index: 2;
+position: relative;
+    z-index: 2;
+    width: 100%;
     }
     .kickerName {
-      position: relative;
-      padding-top: 10px;
-      padding-bottom: 5px;
-      z-index: 2;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 2;
+    background-color: rgb(50,50,50);
+    font-family: Verdana;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+    width: 100%;
     }
     .kickerBG {
       position: absolute;
@@ -211,22 +232,21 @@ li {
       width: 100%;
       height: 100%;
       z-index: 1;
-    }
-    &:hover .kickerName {
-      color: white;
-      background-color: black;
-      font-weight: bold;
-    }
-    &:hover .kickerBG {
-      background-color: rgb(235, 235, 235);
+      background-color: #ffdc00;
     }
   }
 }
 
 /* MEDIA */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .kickerGrid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    .kickerWrapper {
+      .showOnPC {
+        filter: grayscale(0%);
+
+      }
+    }
   }
 
   .kickerInfoHolder .kickerInfo {
@@ -243,10 +263,11 @@ li {
 @media screen and (max-width: 426px) {
   .kickerGrid {
     grid-template-columns: repeat(3, 1fr);
-    .kickerWrapper img {
-      width: 30vw;
+    .kickerWrapper {
+    .showOnPhone {display:block;}
+    .showOnPC {display:none;}
+      }
     }
-  }
 }
 </style>
 
