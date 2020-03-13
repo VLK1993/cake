@@ -800,7 +800,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/js/chunk-vendors.178b891e.js"
   },
   {
-    "revision": "3151c0a5101dac083e0296c586cb94c6",
+    "revision": "334bb81bf2a894c349bf77f767d12cd1",
     "url": "/cake/json/discs.json"
   },
   {
