@@ -1,5 +1,5 @@
 module.exports = {
   runtimeCompiler: true,
-  outputDir: 'docs',
-  publicPath: '/cake/'
-}
+  outputDir: "docs",
+  publicPath: "/cake/"
+};

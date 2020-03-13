@@ -25,7 +25,7 @@
 		"id":"phoenora",		
 		"nameEN":"Phoenora",
 		"nameJP":"",
-		"descriptionEN":"heals HP by 50% for all teammates",
+		"descriptionEN":"Heals HP by 50% for all teammates",
 		"descriptionJP":"",
 		"type":"heal",
 		"rarity":"ur",
@@ -306,7 +306,7 @@
 		"nameEN":"Bond Gate",
 		"nameJP":" ",
 		"descriptionEN":"Warps to nearby ally",
-		"descriptionJP":"heals HP by 50%",
+		"descriptionJP":"Heals HP by 50%",
 		"type":"warp",
 		"rarity":"sr",
 		"element":"water"
@@ -437,7 +437,7 @@
 		"nameJP":" ",
 		"descriptionEN":"Reduce damage taken by 50% (15 seconds)",
 		"descriptionJP":" ",
-		"type":"trap",
+		"type":"buff",
 		"rarity":"r",
 		"element":"wind"
 		}, 

@@ -5,7 +5,6 @@ import Kicker from "../components/Kicker.vue";
 import Disc from "../components/Disc.vue";
 import axios_test from "../tempt/axios_test.vue";
 
-
 Vue.use(VueRouter);
 
 const routes = [
@@ -25,8 +24,8 @@ const routes = [
     component: Disc
   },
   {
-    path:"/axios_test",
-    name:"axios_test",
+    path: "/axios_test",
+    name: "axios_test",
     component: axios_test
   }
 ];
