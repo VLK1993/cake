@@ -126,6 +126,8 @@
     content: "TRAP";
   }
 }
+
+
 #discQueryHolder {
   flex-wrap: wrap;
   display: flex;
@@ -174,17 +176,7 @@
     text-transform: uppercase;
   }
 }
-@media screen and (max-width: 376px) {
-  #discQueryHolder {
-    .fieldType {
-      grid-template-columns: 1fr;
-      .buttonAll {
-        grid-column: 1 / span 1;
-      }
-      width: 100%;
-    }
-  }
-}
+
 .discGridContainer {
   background-color: #f5f5f5;
 }
@@ -258,6 +250,32 @@
     }
   }
 }
+@media screen and (max-width:376px) {
+  .type {
+    &-atk-l:before {
+      content: "ATK (Long)";
+    }
+    &-atk-s:before {
+      content: "ATK (Short)";
+    }
+    &-atk-c:before {
+      content: "ATK (Circle)";
+    }
+  }
+}
+@media screen and (max-width: 376px) {
+  #discQueryHolder {
+    .field {
+      display:flex;
+      flex-direction:column;
+      .fieldLabel {
+      left:0;
+    }
+    }
+    
+    .fieldRarity, .fieldElement {min-width:initial;}
+  }
+}
 @media screen and (max-width: 321px) {
   .discGrid {
     grid-template-columns: repeat(1, 1fr);
@@ -281,6 +299,7 @@ export default {
         "warp",
         "move",
         "trap",
+        "buff",
         "heal"
       ],
       elementLists: ["fire", "water", "wind"],
