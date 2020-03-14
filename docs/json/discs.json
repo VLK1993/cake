@@ -224,9 +224,9 @@
 		{
 		"id":"assassin-gate",	
 		"nameEN":"Assassin Gate",
-		"nameJP":" ",
-		"descriptionEN":"Warp behind locked on target or closet opponent",
-		"descriptionJP":" ",
+		"nameJP":"アサシンゲート",
+		"descriptionEN":"Warps behind locked on target or the closet enemy",
+		"descriptionJP":"ロックオン相手、または最も近い相手の背後へ瞬間移動",
 		"type":"warp",
 		"rarity":"sr",
 		"element":"fire"
@@ -234,9 +234,9 @@
 		{
 		"id":"septicopter",	
 		"nameEN":"Septicopter",
-		"nameJP":" ",
+		"nameJP":"セプタコプター",
 		"descriptionEN":"Sets a turret that attacks an enemy within its range (Attack Speed = Slow, Active Time = 15 seconds)",
-		"descriptionJP":" ",
+		"descriptionJP":"範囲内の相手を中速で攻撃するタレットを15秒間設置",
 		"type":"trap",
 		"rarity":"sr",
 		"element":"water"
@@ -294,9 +294,9 @@
 		{
 		"id":"cycrane",	
 		"nameEN":"Cycrane",
-		"nameJP":" ",
-		"descriptionEN":"While flipping in the air, deal small damage to enemies behind & ",
-		"descriptionJP":" ",
+		"nameJP":"クックロン",
+		"descriptionEN":"Does a somersault to attack an enemy from its back, deals damage (Low) + paralyzes it",
+		"descriptionJP":"宙返りしながら、自身後方に小ダメージ攻撃 ＋シビレ",
 		"type":"move",
 		"rarity":"sr",
 		"element":"wind"
@@ -504,9 +504,9 @@
 		{
 		"id":"morbeel",	
 		"nameEN":"Morbeel",
-		"nameJP":" ",
-		"descriptionEN":"Deals small frontal damage & attack power down (8 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"ヌタウツボン",
+		"descriptionEN":"Deals a projectile damage (Low) & decreases enemy ATK that got hit (Debuff Effect = Medium, Debuff Time = 8 seconds)",
+		"descriptionJP":"前方範囲に小ダメージ攻撃 ＋8秒間攻撃力中ダウン",
 		"type":"atk-l",
 		"rarity":"r",
 		"element":"water"
