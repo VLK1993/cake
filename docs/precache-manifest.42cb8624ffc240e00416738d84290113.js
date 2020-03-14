@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b3a41b004a9eb2b8e951",
-    "url": "/cake/css/app.f6b26583.css"
+    "revision": "ef6620650ea6a39ac7e4",
+    "url": "/cake/css/app.f23e1539.css"
   },
   {
     "revision": "f4a8696c4b4ee96e56834f881cda2837",
@@ -160,31 +160,31 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/character/mei_c2.png"
   },
   {
-    "revision": "3834d8d4f8c0f2a522ec8f440d5f8eed",
+    "revision": "2d8dc8959a238989a10cdcd4bf7d9882",
     "url": "/cake/img/disc/icon/aerojammer.png"
   },
   {
-    "revision": "b647793fb54235c82f19e9b4e80df81f",
+    "revision": "08cd54bf54b7728a8611dc2f525f2817",
     "url": "/cake/img/disc/icon/air-blaster.png"
   },
   {
-    "revision": "1edd1d69bc62d0f3a44c3ce0b88e24dc",
+    "revision": "f2e0945d072c42293087c295399c16f1",
     "url": "/cake/img/disc/icon/arcolphin.png"
   },
   {
-    "revision": "aa37fb730e6c981c2efde33c4fa9504e",
+    "revision": "228e03005c8378dc86ae0d91d179db83",
     "url": "/cake/img/disc/icon/armorlocaris.png"
   },
   {
-    "revision": "07fd15c8fda0bede105424df2cabe0e1",
+    "revision": "b083a33758d500e770f594317cde39e5",
     "url": "/cake/img/disc/icon/assassin-gate.png"
   },
   {
-    "revision": "05de6467c19ea037d38bdd2fd24c7f79",
+    "revision": "09f16769862d698bf54cf7c804b1660a",
     "url": "/cake/img/disc/icon/blue-blaster.png"
   },
   {
-    "revision": "be002fd5eaa540fb35aa505c1d8ad649",
+    "revision": "ba25c64f2d4af1519c61fc4266535351",
     "url": "/cake/img/disc/icon/blue-mine.png"
   },
   {
@@ -192,51 +192,51 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/disc/icon/boarush.png"
   },
   {
-    "revision": "efa294bb47b66723fab8e1d90438ac2d",
+    "revision": "023edc52923c1e8b0fa2a23c4d1faa7c",
     "url": "/cake/img/disc/icon/bombster.png"
   },
   {
-    "revision": "85ffde8c7730784fd86429d659a52f4f",
+    "revision": "7ee251dfea21892db29ee03e68ee9adc",
     "url": "/cake/img/disc/icon/bond-gate.png"
   },
   {
-    "revision": "b3f8d94be4eee481dd211dac00784156",
+    "revision": "1f1ad801abefe4b42a14023b571bea67",
     "url": "/cake/img/disc/icon/booby-bomb.png"
   },
   {
-    "revision": "899f5fb221a2a859f52871b3f62d467c",
+    "revision": "66b654bff2cc8347ab7d723eaa4f70b7",
     "url": "/cake/img/disc/icon/boost-bottle.png"
   },
   {
-    "revision": "679f95a29d3621524e0ca74029986aca",
+    "revision": "5f42da28409388614b30203a62e9ebad",
     "url": "/cake/img/disc/icon/boxaroo.png"
   },
   {
-    "revision": "0d0a61490aebb84fe3908bcac68d5661",
+    "revision": "d561818fda7db716f55f1ae3e34952f5",
     "url": "/cake/img/disc/icon/bratty-otty.png"
   },
   {
-    "revision": "57af148b58f62466bcb77240a168470a",
+    "revision": "f9a9674f241b898595661463d19575ca",
     "url": "/cake/img/disc/icon/buffbox.png"
   },
   {
-    "revision": "b25575f5214778421127932c078a16c8",
+    "revision": "0e8d7e07ad939ce24668f746779b84ed",
     "url": "/cake/img/disc/icon/crabshelmet.png"
   },
   {
-    "revision": "6631edc68fc82fb27f5a4adb31ab7e19",
+    "revision": "ddf07a1fbed926099110084dd2508939",
     "url": "/cake/img/disc/icon/crabshiedion.png"
   },
   {
-    "revision": "6add6579da449211a0e879acf46cd7d8",
+    "revision": "c17ceea217fb17202c8f385f661764fd",
     "url": "/cake/img/disc/icon/crocopeller.png"
   },
   {
-    "revision": "08cc0a973be6b3291a5e611bebb0fb80",
+    "revision": "d4db584a0cd241651641f1f9a2fb7fd2",
     "url": "/cake/img/disc/icon/cutiemander.png"
   },
   {
-    "revision": "bf5139f6b96bcc21b0128d7073986613",
+    "revision": "e0afdc13b76a64ea160c7fb641fb512a",
     "url": "/cake/img/disc/icon/cycrane.png"
   },
   {
@@ -244,23 +244,23 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/disc/icon/deviathan.png"
   },
   {
-    "revision": "5765eb3a8afba4f6eedc3c8ad3d89982",
+    "revision": "b24ae806182fbe79f6712de84b72ef45",
     "url": "/cake/img/disc/icon/fairy-frog.png"
   },
   {
-    "revision": "2b175e7fd392096ad28700b703287734",
+    "revision": "a5cb93055c90613859349653d2fa5f1f",
     "url": "/cake/img/disc/icon/fairy-lizard.png"
   },
   {
-    "revision": "3855262024cb45e2ebd8c558e474a30b",
+    "revision": "39ec31b6963f9539083da29263a9374f",
     "url": "/cake/img/disc/icon/fierycoon.png"
   },
   {
-    "revision": "563d3f1b8fd4b13703590f8aee852742",
+    "revision": "c37537265b3ca36b5645141a277b2551",
     "url": "/cake/img/disc/icon/flamizaurus.png"
   },
   {
-    "revision": "0e6d845fb255ce26ee2d314d5ab9a12b",
+    "revision": "0f867522b893ba5878adce27c8d40612",
     "url": "/cake/img/disc/icon/ga-ga-gatling.png"
   },
   {
@@ -272,27 +272,27 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/disc/icon/gatling-ultra.png"
   },
   {
-    "revision": "69c7dec851b10740a1edc3001a91687d",
+    "revision": "4a7407d3574ef7a65e3f76ba1bf4507b",
     "url": "/cake/img/disc/icon/geckosaurus.png"
   },
   {
-    "revision": "028f6352d62354095fa9bdde5b802a41",
+    "revision": "b22982dce15c3fd4029cbbd8daaaf0be",
     "url": "/cake/img/disc/icon/giamoth.png"
   },
   {
-    "revision": "be55d0eb8fc6d2b8ba3279705eb2a735",
+    "revision": "d7627c7194925c6c5ea31a3aa8a575a9",
     "url": "/cake/img/disc/icon/gigaphone.png"
   },
   {
-    "revision": "caea38e3a4138855c6c76d70564e3aec",
+    "revision": "5e119dc36d4970443a4f1917326fe9bb",
     "url": "/cake/img/disc/icon/green-mine.png"
   },
   {
-    "revision": "4cf6fe05615c1a98827ee4a8cd2abdb5",
+    "revision": "15e01526cdbad2e455a54a019dc99403",
     "url": "/cake/img/disc/icon/hedgefish.png"
   },
   {
-    "revision": "10cdf6316dbb694d8d95e448f314b7ee",
+    "revision": "5b02ece58f12fe1c3a5c86d518022892",
     "url": "/cake/img/disc/icon/horwhale.png"
   },
   {
@@ -304,43 +304,43 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/disc/icon/jack-upper.png"
   },
   {
-    "revision": "931e8432cd72c228a1365ac2dba70cb6",
+    "revision": "e79c94d5f0b2aa636fd1f9bc637083c0",
     "url": "/cake/img/disc/icon/jet-hammer.png"
   },
   {
-    "revision": "d57ea4666aa8854935665cf2d95213f2",
+    "revision": "9bb3558a033b92af0647db5293ab6064",
     "url": "/cake/img/disc/icon/jet-shark.png"
   },
   {
-    "revision": "dcdb780574b35c0485491f5ed8d4874f",
+    "revision": "e548857b00170de7d376a736654b069c",
     "url": "/cake/img/disc/icon/junk-bullet.png"
   },
   {
-    "revision": "05c199193b9cc4a100f4a120b73dba3b",
+    "revision": "5b717bb346bd46d321501c1ed2898556",
     "url": "/cake/img/disc/icon/killer-billet.png"
   },
   {
-    "revision": "367309166c135d29dcd4eaf7aad98c3c",
+    "revision": "296aba8b3ae105774c5712fe74813cae",
     "url": "/cake/img/disc/icon/leeta.png"
   },
   {
-    "revision": "c9e3af395090fd3ee8d403c8fc36b316",
+    "revision": "015598983a3dc028a094f44dad28960b",
     "url": "/cake/img/disc/icon/liberwolf.png"
   },
   {
-    "revision": "2c2058ca11687afc0d0dbbf769ae20df",
+    "revision": "c0ed37e1085834fd06a1e6f7b1c5e8b4",
     "url": "/cake/img/disc/icon/mantallion.png"
   },
   {
-    "revision": "dffa9772e50ca1c95a6a1fabd596619a",
+    "revision": "76f2365d47995a0c5b0189ecb1595e87",
     "url": "/cake/img/disc/icon/medical-box.png"
   },
   {
-    "revision": "c601f68b582d642cff3362555e3284b1",
+    "revision": "b60f02b72ea864c9257f2891014cb8f8",
     "url": "/cake/img/disc/icon/morbeel.png"
   },
   {
-    "revision": "1ccb8f44110af08fb9456b7431f8257d",
+    "revision": "768896fef16fdbda0aae8ed4dc505cc2",
     "url": "/cake/img/disc/icon/neolumi.png"
   },
   {
@@ -348,31 +348,31 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/disc/icon/nursedroid.png"
   },
   {
-    "revision": "dde4e2be5ffff28d4685120a3f3002bb",
+    "revision": "74e445af0ebe282ff66abe1a243af6f4",
     "url": "/cake/img/disc/icon/nurseroid.png"
   },
   {
-    "revision": "fc8ca86abf31d21546622128ea5264b8",
+    "revision": "7a3754f8ac0ab6d988785df23affe519",
     "url": "/cake/img/disc/icon/octoverse.png"
   },
   {
-    "revision": "fd98fdef492e0022a241522fc26abf44",
+    "revision": "554543d5d61e86569b6c3db15e927a6d",
     "url": "/cake/img/disc/icon/peacocktail.png"
   },
   {
-    "revision": "a5da7a2997b7d61234bc7819aa0e5bf4",
+    "revision": "bfc0460c0958d4b24a79eabcfe646c1b",
     "url": "/cake/img/disc/icon/phoenora.png"
   },
   {
-    "revision": "72564fe5bc15fa941e39c184d2e090f3",
+    "revision": "da5c1572efcd4bc88a30f1a80e672035",
     "url": "/cake/img/disc/icon/picoleaf.png"
   },
   {
-    "revision": "4e1a4955f6f9188cd216bc7f336e34d1",
+    "revision": "0706d661302a2e30c46aa69094c6f70e",
     "url": "/cake/img/disc/icon/pyronkey.png"
   },
   {
-    "revision": "afc13c9ce9c91f16258663f000ab1a76",
+    "revision": "604bf5be367095b55fb4cac3ab6a9e57",
     "url": "/cake/img/disc/icon/raging-bulldog.png"
   },
   {
@@ -380,39 +380,39 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/disc/icon/raging-kong.png"
   },
   {
-    "revision": "6f664aadad0dcdd4716ce4aed38f42ec",
+    "revision": "597673e518b1228604c3639bec6aa1e4",
     "url": "/cake/img/disc/icon/rappit.png"
   },
   {
-    "revision": "b54a00bb713998b8b83cb233764e5a6a",
+    "revision": "d3ca31b25ebd626227c86160a685de95",
     "url": "/cake/img/disc/icon/red-blaster.png"
   },
   {
-    "revision": "d3e9790cbe53ec680083ac7543b3a316",
+    "revision": "87c5bcbdd0c563b043eed5d3b0d62c03",
     "url": "/cake/img/disc/icon/red-mine.png"
   },
   {
-    "revision": "24792dcada1757a1f8c36b3af25a54d0",
+    "revision": "a984fa75cd76e1ef8376704df5775190",
     "url": "/cake/img/disc/icon/rhinot.png"
   },
   {
-    "revision": "2f57b2b7431d8794d0573bad4491edc7",
+    "revision": "84a1117eaf54b0847347485f2a057a6e",
     "url": "/cake/img/disc/icon/robo-turret.png"
   },
   {
-    "revision": "5ce0b5d2940911f329afe4b7047537b2",
+    "revision": "bfb6a9f5c01d1ddcff4288a0ac48c897",
     "url": "/cake/img/disc/icon/rosmie.png"
   },
   {
-    "revision": "ccfc83031cf031f506c638f5b16ebb1e",
+    "revision": "b98b52bdcc2c87e7e10f0205c5a1bf08",
     "url": "/cake/img/disc/icon/rush-blade.png"
   },
   {
-    "revision": "8a67ca0bce0550ccd418a354090fadfb",
+    "revision": "5304a5ad13faf3caa98a673970c6a873",
     "url": "/cake/img/disc/icon/septicopter.png"
   },
   {
-    "revision": "ddc837ea149256e3f4a4448efec5a7f1",
+    "revision": "0c809d330f85b7a64831a993b6776273",
     "url": "/cake/img/disc/icon/shockhog.png"
   },
   {
@@ -424,43 +424,43 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/disc/icon/snazzy-snail.png"
   },
   {
-    "revision": "b6a8fdabafd25e97f8d3c2773055ee9c",
+    "revision": "8e9c22c0803233e59e1b142f903e3879",
     "url": "/cake/img/disc/icon/snotty-puff.png"
   },
   {
-    "revision": "5a56a5387d48db4c8ac670fe1b3921cc",
+    "revision": "5b7aa29ba18e78c1830aee7045c77168",
     "url": "/cake/img/disc/icon/spewdor.png"
   },
   {
-    "revision": "db4556db794c498daa1e39a47ea33a76",
+    "revision": "3c1c30426818d7535c1eef8944a89346",
     "url": "/cake/img/disc/icon/spunkle.png"
   },
   {
-    "revision": "041275012c0d294a2fd9069acdd408be",
+    "revision": "2bb7fc77c268ec8864b8cb8c918c0956",
     "url": "/cake/img/disc/icon/start-gate.png"
   },
   {
-    "revision": "89a2db87184af476983b4d68a095c9ea",
+    "revision": "b6657dd8754649b5e5d16740119b9c8b",
     "url": "/cake/img/disc/icon/tetra-shield.png"
   },
   {
-    "revision": "96994dee60c1485f0754421f83d5df7a",
+    "revision": "55f6d3a9e92a609ffbb8000cee49d250",
     "url": "/cake/img/disc/icon/uber-beaver.png"
   },
   {
-    "revision": "2ec3ef62aa4e1ed47c95070c69d7465d",
+    "revision": "6981e999c1f8db096900f9f0e93f9e15",
     "url": "/cake/img/disc/icon/vegedra.png"
   },
   {
-    "revision": "e7628c7b7c212b38ae1f9140ac0eedad",
+    "revision": "45ba4de269c1fec99ea61ef8333fd456",
     "url": "/cake/img/disc/icon/volcortoise.png"
   },
   {
-    "revision": "3c2bf2ca818fcd2117516e37bb597da5",
+    "revision": "b2d3318d34462f1a42840e7b76eaf750",
     "url": "/cake/img/disc/icon/walrock.png"
   },
   {
-    "revision": "1c161e83b607bb8f56b724040230107d",
+    "revision": "fbc3bf609f2a13430cdf7aab5563e3c6",
     "url": "/cake/img/disc/icon/wind-weasel.png"
   },
   {
@@ -788,19 +788,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/list/valkyrja/mei_c2.png"
   },
   {
-    "revision": "a0fabe21e94b43fb61005823c9412107",
+    "revision": "c5bbd43938a2a1bd78126f7cffc8c48c",
     "url": "/cake/index.html"
   },
   {
-    "revision": "b3a41b004a9eb2b8e951",
-    "url": "/cake/js/app.bc39c53e.js"
+    "revision": "ef6620650ea6a39ac7e4",
+    "url": "/cake/js/app.0849db45.js"
   },
   {
     "revision": "ccc60150af22ff381066",
     "url": "/cake/js/chunk-vendors.178b891e.js"
   },
   {
-    "revision": "aada79fe5bd2d28998df5769b2ec745e",
+    "revision": "ca3ce0472fae86d893aab4034bcbf200",
     "url": "/cake/json/discs.json"
   },
   {
