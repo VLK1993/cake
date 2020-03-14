@@ -6,17 +6,18 @@
         <p>1) This <b>is not</b> an official website.</p>
         <p>2) Description regarding to Kickers & Discs written on this website <b>can be different</b> with in-game.</p>
         <p>3) Discord invitation posted here leads to a private server, associated with this website. In other words, it <b>is not</b> official server.</p>
-        
-         <div class="discordLink">
-           
+    
+    </div>
+           <div class="discordLink">
+           <img src="img/icons/server.png" />
+           <div class="discordLinkText">
            <p>Q: What is inside the Discord server?</p>
            <p>• A players community<br>• English translated news which is made, based on Japanese in-game announcements</p>
            <p>※It is recommended one should play Kick-Flight with Japanese language, because the game <b>doesn't provide</b> news in other languages</p>
+           </div>
          </div>
-
-    </div>
- 
     </div>  
+   
 </template>
 <style lang="scss" scoped>
   .pageContainerHome {
@@ -25,6 +26,14 @@
     width:100%;
     padding-top:20px;
     
+  }
+  .discordLink {
+    background-color:rgb(250,250,250);
+    border:solid 2px rgb(50,50,50);
+    width:75vw;
+    margin:5vw auto;
+    display: flex;
+    flex-direction: row;
   }
   .precaution {
     background-color:rgb(250,250,250);
@@ -52,7 +61,6 @@
       color:#C00000;
     }
   }
-  
 </style>
 <script>
 export default {};
