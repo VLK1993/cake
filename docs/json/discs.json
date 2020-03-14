@@ -475,7 +475,7 @@
 		"id":"spunkle",	
 		"nameEN":"Spunkle",
 		"nameJP":"スカパンクル",
-		"descriptionEN":"Continuously rushs forwards, while fires multiple wind balls backwards (Total Damage = Medium, direction is unchangeable, but not stops when knock into an object) when knock into an object)",
+		"descriptionEN":"Continuously rushs forwards, while fires multiple wind balls backwards (Total Damage = Medium, direction is unchangeable, but not stops when knock into an object)",
 		"descriptionJP":"ダッシュしながら、自身後方に連続攻撃(合計中ダメージ)",
 		"type":"move",
 		"rarity":"r",
