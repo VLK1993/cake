@@ -134,9 +134,9 @@
 		{
 		"id":"hyper-bomb",	
 		"nameEN":"Hyper Bomb",
-		"nameJP":"",
+		"nameJP":"ハイパーボム",
 		"descriptionEN":"Sets a bomb that deals damage (High) + knocks up when an enemy approach it (Active time = 20 seconds)",
-		"descriptionJP":"",
+		"descriptionJP":"大ダメージ＋吹き飛ばす爆弾を20秒間設置",
 		"type":"trap",
 		"rarity":"ur",
 		"element":"water"
@@ -144,9 +144,9 @@
 		{
 		"id":"boarush",	
 		"nameEN":"Boarush",
-		"nameJP":" ",
+		"nameJP":"イノッシン",
 		"descriptionEN":"Pushes an enemy along with user + deals damage (Low)",
-		"descriptionJP":" ",
+		"descriptionJP":"前方に小ダメージの追撃突進攻撃",
 		"type":"atk-r",
 		"rarity":"sr",
 		"element":"fire"
@@ -154,8 +154,8 @@
 		{
 		"id":"horwhale",	
 		"nameEN":"Horwhale",
-		"nameJP":" ",
-		"descriptionEN":"Deals a projectile damage (Medium) + knock back",
+		"nameJP":"ホエーリア",
+		"descriptionEN":"Deals a projectile damage (Medium) + knocks back",
 		"descriptionJP":"前方範囲に中ダメージ攻撃 + ＋吹き飛ばし",
 		"type":"atk-l",
 		"rarity":"sr",
@@ -164,9 +164,9 @@
 		{
 		"id":"gigaphone",	
 		"nameEN":"Gigaphone",
-		"nameJP":" ",
+		"nameJP":"チアラウダー",
 		"descriptionEN":"Increases user ATK (High) over 15 seconds",
-		"descriptionJP":" ",
+		"descriptionJP":"自身の攻撃力を15秒間大アップ",
 		"type":"buff",
 		"rarity":"sr",
 		"element":"fire"
@@ -174,9 +174,9 @@
 		{
 		"id":"peacocktail",	
 		"nameEN":"Peacocktail",
-		"nameJP":" ",
-		"descriptionEN":"Heals user HP by 50%",
-		"descriptionJP":" ",
+		"nameJP":"キュジャック",
+		"descriptionEN":"Heals user HP by 60%",
+		"descriptionJP":"自身のHPを60％回復",
 		"type":"heal",
 		"rarity":"sr",
 		"element":"fire"
@@ -184,9 +184,9 @@
 		{
 		"id":"geckosaurus",	
 		"nameEN":"Geckosaurus",
-		"nameJP":" ",
-		"descriptionEN":"Deals medium damage to one enemy in front & movement speed down (5 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"ゲコダルマ",
+		"descriptionEN":"Deals damage (Medium) to the first enemy got hit + slows that enemy movement speed over 5 seconds",
+		"descriptionJP":"前方1体に中ダメージ攻撃 + ＋5秒間移動速度中ダウン",
 		"type":"atk-l",
 		"rarity":"sr",
 		"element":"water"
@@ -194,9 +194,9 @@
 		{
 		"id":"mantallion",	
 		"nameEN":"Mantallion",
-		"nameJP":" ",
-		"descriptionEN":"Deals medium damage to one enemy in front & paralysis attack",
-		"descriptionJP":" ",
+		"nameJP":"マンタリオン",
+		"descriptionEN":"Deals damage (Medium) to the first enemy got hit + paralyzes that enemy",
+		"descriptionJP":"前方1体に中ダメージ攻撃 ＋シビレ",
 		"type":"atk-l",
 		"rarity":"sr",
 		"element":"wind"
@@ -204,9 +204,9 @@
 		{
 		"id":"jack-upper",	
 		"nameEN":"Jack Upper",
-		"nameJP":" ",
-		"descriptionEN":"Deals high damage to nearby opponents & knocks them upwards",
-		"descriptionJP":" ",
+		"nameJP":"ジャックアッパー",
+		"descriptionEN":"Deals damage (High) to enemies standing in front of user within the range + knocks them up",
+		"descriptionJP":"近くの相手に大ダメージ攻撃 ＋上吹き飛ばし",
 		"type":"atk-s",
 		"rarity":"sr",
 		"element":"wind"
@@ -214,9 +214,9 @@
 		{
 		"id":"leeta",	
 		"nameEN":"Leeta",
-		"nameJP":" ",
-		"descriptionEN":"Increase speed and move forward automatically (5 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"レイター",
+		"descriptionEN":"Continuously rushs forwards with high speed over 5 seconds (direction is changeable, but stop when knock into an object)",
+		"descriptionJP":"自動的に5秒間高速前進する",
 		"type":"move",
 		"rarity":"sr",
 		"element":"wind"
@@ -244,9 +244,9 @@
 		{
 		"id":"fairy-frog",	
 		"nameEN":"Fairy Frog",
-		"nameJP":" ",
-		"descriptionEN":"Large boost energy recovery",
-		"descriptionJP":" ",
+		"nameJP":"エネガエル",
+		"descriptionEN":"Recovers energy (High)",
+		"descriptionJP":"自身のブーストエネルギーを大回復",
 		"type":"heal",
 		"rarity":"sr",
 		"element":"water"
@@ -254,9 +254,9 @@
 		{
 		"id":"pyronkey",	
 		"nameEN":"Pyronkey",
-		"nameJP":" ",
-		"descriptionEN":"Deals large rear continuos damage while dashing",
-		"descriptionJP":" ",
+		"nameJP":"ホノウッキー",
+		"descriptionEN":"Continuously rushs forwards, while fires  multiple fire balls backwards (Total Damage = High, direction is unchangeable & stops when knock into an object)",
+		"descriptionJP":"ダッシュしながら、自身後方に連続攻撃(合計大ダメージ)",
 		"type":"move",
 		"rarity":"sr",
 		"element":"fire"
@@ -265,7 +265,7 @@
 		"id":"rosmie",	
 		"nameEN":"Rosmie",
 		"nameJP":"",
-		"descriptionEN":"Deal low AoE damage. Apply poison damage based on max HP last for 20 seconds (maximum up to 60% HP in total)",
+		"descriptionEN":"Deal an AoE damage (Low) + deals poison damage equal to 60% enemy max HP over 20 seconds",
 		"descriptionJP":" ",
 		"type":"atk-c",
 		"rarity":"sr",
@@ -274,9 +274,9 @@
 		{
 		"id":"neolumi",	
 		"nameEN":"Neolumi",
-		"nameJP":"",
-		"descriptionEN":"Warps to location of an ally with lowest HP & heals HP by 50%",
-		"descriptionJP":" ",
+		"nameJP":"ネオイルミー",
+		"descriptionEN":"Warps to location of an ally with lowest HP + heals that ally HP by 50%",
+		"descriptionJP":"HPが最も低い味方付近へ瞬間移動し、味方のHPを50％回復",
 		"type":"warp",
 		"rarity":"sr",
 		"element":"wind"
@@ -284,9 +284,9 @@
 		{
 		"id":"junk-bullet",	
 		"nameEN":"Junk Bullet",
-		"nameJP":" ",
-		"descriptionEN":"Deals medium continuos damage to one enemy in front & attack down (8 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"ジャンクバレット",
+		"descriptionEN":"Fires multiple projectiles forwards + decreases enemy ATK that got hit (Total Damage = Medium, Debuff Effect = Medium, Debuff Time = 8 seconds)",
+		"descriptionJP":"前方1体に連続攻撃(合計中ダメージ) ＋8秒間攻撃力中ダウン",
 		"type":"atk-l",
 		"rarity":"sr",
 		"element":"wind"
@@ -304,9 +304,9 @@
 		{
 		"id":"bond-gate",	
 		"nameEN":"Bond Gate",
-		"nameJP":" ",
-		"descriptionEN":"Warps to nearby ally",
-		"descriptionJP":"Heals HP by 50%",
+		"nameJP":"キズナゲート",
+		"descriptionEN":"Warps to the nearest ally + heals user HP by 50%",
+		"descriptionJP":"近くの味方がいる場所へ瞬間移動し、HPを50％回復",
 		"type":"warp",
 		"rarity":"sr",
 		"element":"water"
@@ -314,9 +314,9 @@
 		{
 		"id":"snazzy-snail",	
 		"nameEN":"Snazzy Snail",
-		"nameJP":" ",
-		"descriptionEN":"Creates an area that greatly slows enemies",
-		"descriptionJP":" ",
+		"nameJP":"ノロマイマイ",
+		"descriptionEN":"Creates an AoE field that slows movement speed (Debuff Effect = Extremely High, Field Active Time = 10 Seconds)",
+		"descriptionJP":"相手の移動速度を極大ダウンする空間を10秒間生成",
 		"type":"trap",
 		"rarity":"sr",
 		"element":"wind"
@@ -324,9 +324,9 @@
 		{
 		"id":"bombster",	
 		"nameEN":"Bombster",
-		"nameJP":" ",
-		"descriptionEN":"Deals medium damage to one enemy",
-		"descriptionJP":" ",
+		"nameJP":"ボムスター",
+		"descriptionEN":"Deals damage (Medium) to the first enemy got hit",
+		"descriptionJP":"前方1体に中ダメージ攻撃",
 		"type":"atk-l",
 		"rarity":"r",
 		"element":"fire"
@@ -334,9 +334,9 @@
 		{
 		"id":"fairy-lizard",	
 		"nameEN":"Fairy Lizard",
-		"nameJP":" ",
-		"descriptionEN":"Deals an AoE damage (Small) + knocks up",
-		"descriptionJP":" ",
+		"nameJP":"フェアリザード",
+		"descriptionEN":"Deals an AoE damage (Low) + knocks up",
+		"descriptionJP":"周囲球状に小ダメージ攻撃 ＋上吹き飛ばし",
 		"type":"atk-r",
 		"rarity":"r",
 		"element":"wind"
@@ -344,9 +344,9 @@
 		{
 		"id":"uber-beaver",	
 		"nameEN":"Uber Beaver",
-		"nameJP":" ",
+		"nameJP":"ウーバービーバー",
 		"descriptionEN":"Deals an AoE damage (Medium) + knocks up",
-		"descriptionJP":" ",
+		"descriptionJP":"周囲球状に中ダメージ攻撃 + ＋上吹き飛ばし",
 		"type":"atk-c",
 		"rarity":"r",
 		"element":"water"
@@ -354,9 +354,9 @@
 		{
 		"id":"spewdor",	
 		"nameEN":"Spewdor",
-		"nameJP":" ",
-		"descriptionEN":"Small increase in movement speed (10 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"スピュードル",
+		"descriptionEN":"Increases user movement speed (Low) over 10 seconds",
+		"descriptionJP":"自身の移動速度を10秒間小アップ",
 		"type":"buff",
 		"rarity":"r",
 		"element":"fire"
@@ -364,9 +364,9 @@
 		{
 		"id":"cutiemander",	
 		"nameEN":"Cutiemander",
-		"nameJP":" ",
+		"nameJP":"キュパルーパー",
 		"descriptionEN":"Heals HP by 30% for all teammates",
-		"descriptionJP":" ",
+		"descriptionJP":"味方全員のHPを30％回復",
 		"type":"heal",
 		"rarity":"r",
 		"element":"fire"
@@ -374,9 +374,9 @@
 		{
 		"id":"start-gate",	
 		"nameEN":"Start Gate",
-		"nameJP":" ",
+		"nameJP":"スタートゲート",
 		"descriptionEN":"Warps to start point",
-		"descriptionJP":" ",
+		"descriptionJP":"スタート地点に瞬間移動",
 		"type":"warp",
 		"rarity":"r",
 		"element":"water"
@@ -384,9 +384,9 @@
 		{
 		"id":"walrock",	
 		"nameEN":"Walrock",
-		"nameJP":" ",
-		"descriptionEN":"Deals small damage to nearby opponents & slam attack",
-		"descriptionJP":" ",
+		"nameJP":"トドロック",
+		"descriptionEN":"Deals damage (Low) to enemies standing in front of user within the range + knocks them down",
+		"descriptionJP":"近くの相手に小ダメージ攻撃 + ＋叩きつけ",
 		"type":"atk-s",
 		"rarity":"r",
 		"element":"water"
@@ -394,9 +394,9 @@
 		{
 		"id":"shockhog",	
 		"nameEN":"Shockhog",
-		"nameJP":" ",
-		"descriptionEN":"Deals an AoE damage (Small) + paralyzes",
-		"descriptionJP":" ",
+		"nameJP":"ビリリット",
+		"descriptionEN":"Deals an AoE damage (Low) + paralyzes",
+		"descriptionJP":"周囲球状に小ダメージ攻撃 + ＋シビレ",
 		"type":"atk-c",
 		"rarity":"r",
 		"element":"water"
@@ -404,9 +404,9 @@
 		{
 		"id":"tetra-shield",	
 		"nameEN":"Tetra Shield",
-		"nameJP":" ",
+		"nameJP":"テトラシールド",
 		"descriptionEN":"Deploys a shield for all teammate that cuts off 30% incoming damage",
-		"descriptionJP":" ",
+		"descriptionJP":"味方全員の被ダメージを15秒間30％カット",
 		"type":"buff",
 		"rarity":"r",
 		"element":"wind"
@@ -414,9 +414,9 @@
 		{
 		"id":"jet-hammer",	
 		"nameEN":"Jet Hammer",
-		"nameJP":" ",
-		"descriptionEN":"Deals small damage to one enemy in front & stun attack",
-		"descriptionJP":" ",
+		"nameJP":"ジェットハンマー",
+		"descriptionEN":"Deals damage (Low) to the first enemy got hit + stuns that enemy",
+		"descriptionJP":"前方1体に小ダメージ攻撃 ＋スタン",
 		"type":"atk-l",
 		"rarity":"r",
 		"element":"fire"
@@ -424,9 +424,9 @@
 		{
 		"id":"booby-bomb",	
 		"nameEN":"Booby Bomb",
-		"nameJP":" ",
-		"descriptionEN":"Sets small damage bomb trap that knocks away opponents who approach it (20 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"ブービーボンバー",
+		"descriptionEN":"Sets a bomb that deals damage (Low) + knocks up when an enemy approach it (Active time = 20 seconds)",
+		"descriptionJP":"小ダメージ＋吹き飛ばす爆弾を20秒間設置",
 		"type":"trap",
 		"rarity":"r",
 		"element":"wind"
@@ -434,9 +434,9 @@
 		{
 		"id":"crabshiedion",	
 		"nameEN":"Crabshiedion",
-		"nameJP":" ",
-		"descriptionEN":"Reduce damage taken by 50% (15 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"マモリガニ",
+		"descriptionEN":"Deploys a shield that cuts off 50% incoming damage (Active Time: 15 Seconds)",
+		"descriptionJP":"自身の被ダメージを15秒間50％カット",
 		"type":"buff",
 		"rarity":"r",
 		"element":"wind"
@@ -444,9 +444,9 @@
 		{
 		"id":"robo-turret",	
 		"nameEN":"Robo Turret",
-		"nameJP":" ",
-		"descriptionEN":"Sets turret that attacks opponents in range at medium speed (15 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"アクトタレット",
+		"descriptionEN":"Sets a turret that attacks an enemy within its range (Attack Speed = Slow, Active Time = 15 seconds)",
+		"descriptionJP":"範囲内の相手を中速で攻撃するタレットを15秒間設置",
 		"type":"trap",
 		"rarity":"r",
 		"element":"water"
@@ -454,9 +454,9 @@
 		{
 		"id":"buffbox",	
 		"nameEN":"Buffbox",
-		"nameJP":" ",
-		"descriptionEN":"Increases ATK (Small) over 20 seconds for all teammates",
-		"descriptionJP":" ",
+		"nameJP":"エンカレッジオ",
+		"descriptionEN":"Increases ATK (Low) over 20 seconds for all teammates",
+		"descriptionJP":"味方全員の攻撃力を20秒間小アップ",
 		"type":"buff",
 		"rarity":"r",
 		"element":"fire"
@@ -464,9 +464,9 @@
 		{
 		"id":"octoverse",	
 		"nameEN":"Octoverse",
-		"nameJP":" ",
-		"descriptionEN":"Deals small frontal damage<br>Apply poison damage based on max HP last for 10 seconds (maximum up to 30% HP in total)",
-		"descriptionJP":" ",
+		"nameJP":"オクトヴァース",
+		"descriptionEN":"Deals a projectile damage (Low) + deals poison damage equal to 30% enemy max HP over 10 seconds",
+		"descriptionJP":"前方範囲に小ダメージ攻撃 ＋10秒間毒(最大HP30％)",
 		"type":"atk-l",
 		"rarity":"r",
 		"element":"fire"
@@ -474,9 +474,9 @@
 		{
 		"id":"spunkle",	
 		"nameEN":"Spunkle",
-		"nameJP":" ",
-		"descriptionEN":"Deals medium rear continuos damage while dashing",
-		"descriptionJP":" ",
+		"nameJP":"スカパンクル",
+		"descriptionEN":"Continuously rushs forwards, while fires multiple wind balls backwards (Total Damage = Medium, direction is unchangeable & stops when knock into an object)",
+		"descriptionJP":"ダッシュしながら、自身後方に連続攻撃(合計中ダメージ)",
 		"type":"move",
 		"rarity":"r",
 		"element":"wind"
@@ -494,12 +494,12 @@
 		{
 		"id":"aerojammer",	
 		"nameEN":"Aeronjammer",
-		"nameJP":" ",
-		"descriptionEN":"Sets small damage bomb rap that suppresses for ",
-		"descriptionJP":" ",
-		"type":" ",
-		"rarity":" ",
-		"element":" "
+		"nameJP":"エアロジャマー",
+		"descriptionEN":"Sets a trap that is triggered when an enemy approaches it, deals damage (Low) to enemies standing within the range + seals all of their skills (Active Time: 20 Seconds, Sealing Time: 8 Seconds)",
+		"descriptionJP":"小ダメージ＋8秒間スキルを封じる爆弾を20秒間設置",
+		"type":"trap",
+		"rarity":"r",
+		"element":"water"
 		}, 
 		{
 		"id":"morbeel",	
@@ -514,9 +514,9 @@
 		{
 		"id":"hedgefish",	
 		"nameEN":"Hedgefish",
-		"nameJP":" ",
-		"descriptionEN":"Sets a small damage bomb trap that paralyzes opponents who approach it (20 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"ハリマンボー",
+		"descriptionEN":"Sets a bomb that is triggered when an enemy approaches it, deals damage (Low) to enemies standing within the range + paralyzes them (Active Time = 20 Seconds)",
+		"descriptionJP":"小ダメージ＋シビレさせる爆弾を20秒間設置",
 		"type":"trap",
 		"rarity":"r",
 		"element":"wind"
@@ -524,9 +524,9 @@
 		{
 		"id":"red-blaster",	
 		"nameEN":"Red Blaster",
-		"nameJP":" ",
-		"descriptionEN":"Deals medium damage to one enemy in front",
-		"descriptionJP":" ",
+		"nameJP":"レッドブラスター",
+		"descriptionEN":"Deals damage (Medium) to the first enemy got hit",
+		"descriptionJP":"前方1体に中ダメージ攻撃",
 		"type":"atk-l",
 		"rarity":"n",
 		"element":"fire"
@@ -534,9 +534,9 @@
 		{
 		"id":"air-blaster",	
 		"nameEN":"Air Blaster",
-		"nameJP":" ",
-		"descriptionEN":"Deals medium damage to one enemy in front",
-		"descriptionJP":" ",
+		"nameJP":"エアブラスター",
+		"descriptionEN":"Deals damage (Medium) to the first enemy got hit",
+		"descriptionJP":"前方1体に中ダメージ攻撃",
 		"type":"atk-l",
 		"rarity":"n",
 		"element":"wind"
@@ -544,9 +544,9 @@
 		{
 		"id":"blue-blaster",	
 		"nameEN":"Blue Blaster",
-		"nameJP":" ",
-		"descriptionEN":"Deals medium damage to one enemy in front",
-		"descriptionJP":" ",
+		"nameJP":"ブルーブラスター",
+		"descriptionEN":"Deals damage (Medium) to the first enemy got hit",
+		"descriptionJP":"前方1体に中ダメージ攻撃",
 		"type":"atk-l",
 		"rarity":"n",
 		"element":"water"
@@ -554,9 +554,9 @@
 		{
 		"id":"jet-shark",	
 		"nameEN":"Jet Shark",
-		"nameJP":" ",
-		"descriptionEN":"Deals small frontal damage using dash pierce attack & shield break",
-		"descriptionJP":" ",
+		"nameJP":"ジェットシャーク",
+		"descriptionEN":"Deals a piercing damage (Low) + shield-break",
+		"descriptionJP":"前方に小ダメージの貫通突進攻撃 ＋シールドブレイク",
 		"type":"atk-r",
 		"rarity":"n",
 		"element":"fire"
@@ -564,9 +564,9 @@
 		{
 		"id":"rush-blade",	
 		"nameEN":"Rush Blade",
-		"nameJP":" ",
-		"descriptionEN":"Deals small frontal damage using a dash pierce attack & shield break",
-		"descriptionJP":" ",
+		"nameJP":"ラッシュブレイド",
+		"descriptionEN":"Deals a piercing damage (Low) + shield-break",
+		"descriptionJP":"前方に小ダメージの貫通突進攻撃 ＋シールドブレイク",
 		"type":"atk-r",
 		"rarity":"n",
 		"element":"water"
@@ -574,9 +574,9 @@
 		{
 		"id":"crocopeller",	
 		"nameEN":"Crocopeller",
-		"nameJP":" ",
-		"descriptionEN":"Deals small frontal damage using dash pursuit attack",
-		"descriptionJP":" ",
+		"nameJP":"プロペダイル",
+		"descriptionEN":"Pushes an enemy along with user + deals damage (Low)",
+		"descriptionJP":"前方に小ダメージの追撃突進攻撃",
 		"type":"atk-r",
 		"rarity":"n",
 		"element":"wind"
@@ -584,9 +584,9 @@
 		{
 		"id":"volcortoise",	
 		"nameEN":"Volcortoise",
-		"nameJP":" ",
+		"nameJP":"ボルケータス",
 		"descriptionEN":"Deals an AoE damage (Medium)",
-		"descriptionJP":" ",
+		"descriptionJP":"周囲球状に中ダメージ攻撃",
 		"type":"atk-c",
 		"rarity":"n",
 		"element":"fire"
@@ -594,9 +594,9 @@
 		{
 		"id":"wind-weasel",	
 		"nameEN":"Wind Weasel",
-		"nameJP":" ",
+		"nameJP":"カゼタチヌ",
 		"descriptionEN":"Deals an AoE damage (Medium)",
-		"descriptionJP":" ",
+		"descriptionJP":"周囲球状に中ダメージ攻撃",
 		"type":"atk-c",
 		"rarity":"n",
 		"element":"wind"
@@ -604,9 +604,9 @@
 		{
 		"id":"snotty-puff",	
 		"nameEN":"Snotty Puff",
-		"nameJP":" ",
-		"descriptionEN":"Deals an AoE damage (Small)",
-		"descriptionJP":" ",
+		"nameJP":"ハナプーゴン",
+		"descriptionEN":"Deals an AoE damage (Low)",
+		"descriptionJP":"周囲球状に小ダメージ攻撃",
 		"type":"atk-c",
 		"rarity":"n",
 		"element":"water"
@@ -614,9 +614,9 @@
 		{
 		"id":"rappit",	
 		"nameEN":"Rappit",
-		"nameJP":" ",
-		"descriptionEN":"Deals small frontal damage & knocks away target",
-		"descriptionJP":" ",
+		"nameJP":"ラピビット",
+		"descriptionEN":"Deals a projectile damage (Low) + knocks back",
+		"descriptionJP":"前方範囲に小ダメージ攻撃 ＋吹き飛ばし",
 		"type":"atk-l",
 		"rarity":"n",
 		"element":"wind"
@@ -624,9 +624,9 @@
 		{
 		"id":"armorlocaris",	
 		"nameEN":"Armorlocaris",
-		"nameJP":" ",
+		"nameJP":"アームドカリス",
 		"descriptionEN":"Deals small frontal damage & knocks away targets",
-		"descriptionJP":" ",
+		"descriptionJP":"前方範囲に小ダメージ攻撃 ＋吹き飛ばし",
 		"type":"atk-l",
 		"rarity":"n",
 		"element":"water"
@@ -634,9 +634,9 @@
 		{
 		"id":"boxaroo",	
 		"nameEN":"Boxaroo",
-		"nameJP":" ",
-		"descriptionEN":"Small increase in attack power (30 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"ファイタガルー",
+		"descriptionEN":"Increases user ATK (Low)",
+		"descriptionJP":"自身の攻撃力を30秒間小アップ",
 		"type":"buff",
 		"rarity":"n",
 		"element":"wind"
@@ -644,9 +644,9 @@
 		{
 		"id":"crabshelmet",	
 		"nameEN":"Crabshelmet",
-		"nameJP":" ",
-		"descriptionEN":"Reduce damage taken by 30% (25 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"シェルカブト",
+		"descriptionEN":"Deploys a shield that cuts off 30% incoming damage (Active Time: 25 Seconds)",
+		"descriptionJP":"自身の被ダメージを25秒間30％カット",
 		"type":"buff",
 		"rarity":"n",
 		"element":"water"
@@ -654,9 +654,9 @@
 		{
 		"id":"picoleaf",	
 		"nameEN":"Picoleaf",
-		"nameJP":" ",
-		"descriptionEN":"Heals HP by 30%",
-		"descriptionJP":" ",
+		"nameJP":"ピコリーフ",
+		"descriptionEN":"Heals user HP by 30%",
+		"descriptionJP":"自身のHPを30％回復",
 		"type":"heal",
 		"rarity":"n",
 		"element":"wind"
@@ -664,9 +664,9 @@
 		{
 		"id":"rhinot",	
 		"nameEN":"Rhinot",
-		"nameJP":" ",
-		"descriptionEN":"Deals medium damage to nearby opponents & knocks them up",
-		"descriptionJP":" ",
+		"nameJP":"ライノット",
+		"descriptionEN":"Deals damage (Medium) to enemies standing in front of user within the range + knocks them up",
+		"descriptionJP":"近くの相手に中ダメージ攻撃 ＋上吹き飛ばし",
 		"type":"atk-s",
 		"rarity":"n",
 		"element":"fire"
@@ -674,9 +674,9 @@
 		{
 		"id":"vegedra",	
 		"nameEN":"Vegedra",
-		"nameJP":" ",
-		"descriptionEN":"Deals small damage to nearby opponents & knocks them up",
-		"descriptionJP":" ",
+		"nameJP":"ハタキドラ",
+		"descriptionEN":"Deals damage (Low) to enemies standing in front of user within the range + knocks them up",
+		"descriptionJP":"近くの相手に小ダメージ攻撃 ＋上吹き飛ばし",
 		"type":"atk-s",
 		"rarity":"n",
 		"element":"wind"
@@ -684,9 +684,9 @@
 		{
 		"id":"bratty-otty",	
 		"nameEN":"Bratty Otty",
-		"nameJP":" ",
-		"descriptionEN":"Deals small damage to nearby opponents & slam attacks them",
-		"descriptionJP":" ",
+		"nameJP":"ヤンチャラ",
+		"descriptionEN":"Deals damage (Low) to enemies standing in front of user within the range + knocks them back",
+		"descriptionJP":"近くの相手に小ダメージ攻撃 ＋叩きつけ",
 		"type":"atk-s",
 		"rarity":"n",
 		"element":"water"
@@ -704,9 +704,9 @@
 		{
 		"id":"red-mine",	
 		"nameEN":"Red Mine",
-		"nameJP":" ",
-		"descriptionEN":"Sets medium damage bomb trap that knocks away opponents who approach it (20 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"レッドマイン",
+		"descriptionEN":"Sets a bomb that is triggered when an enemy approaches it, deals damage (Medium) to enemies standing within the range + knocks them up (Active Time = 20 Seconds)",
+		"descriptionJP":"中ダメージ＋吹き飛ばす爆弾を20秒間設置",
 		"type":"trap",
 		"rarity":"n",
 		"element":"fire"
@@ -714,9 +714,9 @@
 		{
 		"id":"green-mine",	
 		"nameEN":"Green Mine",
-		"nameJP":" ",
-		"descriptionEN":"Sets medium damage bomb trap that knocks away opponents who approach it (20 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"グリーンマイン",
+		"descriptionEN":"Sets a bomb that is triggered when an enemy approaches it, deals damage (Medium) to enemies standing within the range + knocks them up (Active Time = 20 Seconds)",
+		"descriptionJP":"中ダメージ＋吹き飛ばす爆弾を20秒間設置",
 		"type":"trap",
 		"rarity":"n",
 		"element":"wind"
@@ -724,9 +724,9 @@
 		{
 		"id":"blue-mine",	
 		"nameEN":"Blue Mine",
-		"nameJP":" ",
-		"descriptionEN":"Sets medium damage bomb trap that knocks away opponents who approach it (20 seconds)",
-		"descriptionJP":" ",
+		"nameJP":"ブルーマイン",
+		"descriptionEN":"Sets a bomb that is triggered when an enemy approaches it, deals damage (Medium) to enemies standing within the range + knocks them up (Active Time = 20 Seconds)",
+		"descriptionJP":"中ダメージ＋吹き飛ばす爆弾を20秒間設置",
 		"type":"trap",
 		"rarity":"n",
 		"element":"water"
@@ -734,9 +734,9 @@
 		{
 		"id":"boost-bottle",	
 		"nameEN":"Boost Bottle",
-		"nameJP":" ",
-		"descriptionEN":"Medium boost energy recovery",
-		"descriptionJP":" ",
+		"nameJP":"ブーストボトル",
+		"descriptionEN":"Recovers energy (Medium)",
+		"descriptionJP":"自身のブーストエネルギーを中回復",
 		"type":"heal",
 		"rarity":"n",
 		"element":"wind"
