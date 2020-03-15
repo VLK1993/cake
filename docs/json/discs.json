@@ -29,7 +29,8 @@
 		"descriptionJP":"味方全員のHPを50％回復",
 		"type":"heal",
 		"rarity":"ur",
-		"element":"wind"
+		"element":"wind",
+		"alts":["cutiemander"]
 		},
 		{
 		"id":"nurseroid",	

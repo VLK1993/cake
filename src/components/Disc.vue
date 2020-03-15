@@ -71,6 +71,7 @@
           <div class="discSkill">{{ disc.descriptionEN }}</div>
         </div>
       </div>
+      
     </div>
   </div>
 </template>

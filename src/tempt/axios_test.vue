@@ -69,12 +69,15 @@
             <img v-bind:src="'img/disc/icon/' + disc.id + '.png'" />
           </div>
           <div class="discSkill">{{ disc.descriptionEN }}</div>
+          <!-- CHECK FOR ALTERNATIVE-->
+          
         </div>
       </div>
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
+
 #buttonGoTop {
   display: none;
   position: fixed;
@@ -188,6 +191,7 @@
   grid-gap: 5px;
 }
 .discWrapper {
+  position:relative;
   display: grid;
   background-color: rgb(250, 250, 250);
   grid-template-rows: 2em 2em 220px 1fr;
