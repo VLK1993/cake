@@ -9,8 +9,8 @@
     <div class="discordQA">
            <div class="question">Q1: What is inside the Discord server?</div>
            <div class="answer">• A players community<br>• Non-official English news which is made, based on Japanese in-game announcements</div>
-           <div class="question">Q2: Why it is a non-official English news?</div>
-           <div class="answer">• The game may not update non-Japanese news in real time (late an hour, a day or even a month)</div>
+           <div class="question">Q2: Why does it have non-official English news?</div>
+           <div class="answer">• The game <b>may not</b> update non-Japanese news in real time (late an hour, a day or even a month)</div>
            <div class="question">Q3: What is the difference between official & non-official English news?</div>
            <div class="answer">• Adding untranslated information. For example: Kicker Balance (version 1.2.0)</div>
           

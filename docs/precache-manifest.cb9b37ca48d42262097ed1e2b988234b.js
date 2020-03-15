@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7664356d9bd6a235bc89",
-    "url": "/cake/css/app.64f62f01.css"
+    "revision": "00c6a1b9a961693803e2",
+    "url": "/cake/css/app.34cc5d53.css"
   },
   {
     "revision": "52d298c49a3b61ded159ba704bf9e159",
@@ -792,12 +792,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/list/valkyrja/mei_c2.png"
   },
   {
-    "revision": "c256602f727618f517b6bb98e9dcdc07",
+    "revision": "9a475741853c43fc6bfcee62df709c5a",
     "url": "/cake/index.html"
   },
   {
-    "revision": "7664356d9bd6a235bc89",
-    "url": "/cake/js/app.08a6a3d7.js"
+    "revision": "00c6a1b9a961693803e2",
+    "url": "/cake/js/app.bd87178e.js"
   },
   {
     "revision": "ccc60150af22ff381066",
@@ -808,7 +808,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/json/discs.json"
   },
   {
-    "revision": "43dd17ac065bd12715bea294c587da2a",
+    "revision": "036e9e14c0bbd2d1d42e468d42953a20",
     "url": "/cake/json/kickers.json"
   },
   {
