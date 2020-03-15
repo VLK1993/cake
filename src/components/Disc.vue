@@ -231,6 +231,7 @@
     align-self: stretch;
     background-color: rgb(245, 245, 245);
     padding: 5px;
+    font-size:calc(13px + (15 - 13) * ((100vw - 300px)/(1600 - 300)));;
   }
 }
 @media screen and (max-width: 769px) {
@@ -242,12 +243,16 @@
   .discGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+ 
 }
 @media screen and (max-width: 426px) {
   .discGrid {
     .discWrapper .discImage img {
       height:175px;
     }
+  }
+  .discSkill {
+    text-align:left;
   }
 }
 @media screen and (max-width:376px) {
