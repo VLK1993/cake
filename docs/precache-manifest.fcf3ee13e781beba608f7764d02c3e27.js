@@ -1,7 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "63218c80c9e2a0f0afc7",
-    "url": "/cake/css/app.1baf2621.css"
+    "revision": "262b7ffb544c31e79adb",
+    "url": "/cake/css/app.aa4e566f.css"
+  },
+  {
+    "revision": "52d298c49a3b61ded159ba704bf9e159",
+    "url": "/cake/google4b6511df010d35d2.html"
   },
   {
     "revision": "f4a8696c4b4ee96e56834f881cda2837",
@@ -788,12 +792,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/list/valkyrja/mei_c2.png"
   },
   {
-    "revision": "251649900fa501d970a6609c8f18cd88",
+    "revision": "98c81b28cb367e8522da28eab5592378",
     "url": "/cake/index.html"
   },
   {
-    "revision": "63218c80c9e2a0f0afc7",
-    "url": "/cake/js/app.2f4a56ca.js"
+    "revision": "262b7ffb544c31e79adb",
+    "url": "/cake/js/app.370b2aff.js"
   },
   {
     "revision": "ccc60150af22ff381066",
