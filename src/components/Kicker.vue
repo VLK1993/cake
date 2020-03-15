@@ -180,6 +180,7 @@ li {
 .pageContainer {
   width: 100%;
   padding-top:20px;
+  padding-bottom:20px;
   #kickerContainer {
     max-width: 1366px;
     margin: auto;
@@ -207,6 +208,7 @@ position: relative;
     }
     &:hover {
       .showOnPC {filter:grayscale(0%);}
+      cursor: pointer;
     }
     img {
 position: relative;

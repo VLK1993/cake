@@ -8,12 +8,13 @@
         <p>3) Discord invitation posted here leads to a private server, associated with this website. In other words, it <b>is not</b> official server.</p>
     
     </div>
-           <div class="discordLink">
-           <img src="img/icons/server.png" />
+    <div class="discordLink">
+          <h2 class="discordLabel">Discord Server</h2>
+           <div class="discordIcon"><a href="https://discord.gg/HXHQE5K"  target="_blank"><img src="img/icons/server.png" /></a></div>
            <div class="discordLinkText">
            <p>Q: What is inside the Discord server?</p>
            <p>• A players community<br>• English translated news which is made, based on Japanese in-game announcements</p>
-           <p>※It is recommended one should play Kick-Flight with Japanese language, because the game <b>doesn't provide</b> news in other languages</p>
+           <p>※It is recommended one should play Kick-Flight with Japanese language, because the game <b>doesn't provide enough</b> news in other languages</p>
            </div>
          </div>
     </div>  
@@ -25,15 +26,50 @@
     min-height:1000px;
     width:100%;
     padding-top:20px;
-    
+    padding-bottom:20px;
+      b {
+      color:#C00000;
+    }
   }
   .discordLink {
     background-color:rgb(250,250,250);
     border:solid 2px rgb(50,50,50);
     width:75vw;
-    margin:5vw auto;
-    display: flex;
-    flex-direction: row;
+    padding:20px;
+    margin:calc(1vw + 2vh) auto;
+    display:grid;
+    grid-gap:10px;
+    grid-template-areas:
+    "discordIcon discordLabel"
+    "discordIcon discordLinkText"
+    ;
+  }
+  .discordLabel {
+    grid-area:discordLabel;
+    margin-bottom:10px;
+    margin-top:0;
+  }
+  .discordIcon {
+    grid-area:discordIcon;
+    align-self: center;
+    img {
+      border-radius:5px;
+      filter:drop-shadow(10px 10px 0 #4444dd);
+      transition:filter 0.075s ease-in-out;
+      border:solid rgb(50,50,50) 1.5px;
+    }
+    &:hover {
+      img {
+        filter:drop-shadow(10px 10px 0 #dd4444);
+      }
+    }
+  }
+  .discordLinkText {
+    text-align:left;
+    padding:0 calc(10px + (20 - 10) * ((100vw - 300px)/(1600 - 300)));
+    grid-area:discordLinkText;
+    font-size:calc(16px + (18 - 16) * ((100vw - 300px)/(1600 - 300)));
+    line-height:1.75em;
   }
   .precaution {
     background-color:rgb(250,250,250);
@@ -42,7 +78,7 @@
     margin:0 auto;
     text-align:left;
     padding:20px;
-    font-size:18px;
+    font-size:calc(16px + (18 - 16) * ((100vw - 300px)/(1600 - 300)));;
     line-height:1.75em;
     h1 {
       text-align:center;
@@ -57,10 +93,19 @@
         margin-right:0.4em;
       }
     }
-    b {
-      color:#C00000;
-    }
+  
   }
+@media screen and (max-width:426px) {
+  .discordLink {
+    grid-template-areas:
+    "discordLabel"
+    "discordIcon"
+    "discordLinkText"
+    ;
+  }
+
+
+}
 </style>
 <script>
 export default {};
