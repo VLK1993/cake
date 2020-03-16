@@ -338,7 +338,7 @@
 		"nameJP":"フェアリザード",
 		"descriptionEN":"Deals an AoE damage (Low) + knocks up",
 		"descriptionJP":"周囲球状に小ダメージ攻撃 ＋上吹き飛ばし",
-		"type":"atk-r",
+		"type":"atk-c",
 		"rarity":"r",
 		"element":"wind"
 		}, 
