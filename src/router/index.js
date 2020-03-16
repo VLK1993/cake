@@ -11,17 +11,41 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
+    metaInfo: {
+      title: "Kick-Flight Wiki",
+      meta: [
+        { name: "description", content: "Fan-made Kick-Flight Wiki" },
+        { name: "keywords", content: "mobile-game,kick-Flight" }
+        //you can also add open graph tags here
+      ]
+    },
   },
   {
     path: "/kicker",
     name: "Kicker",
-    component: Kicker
+    component: Kicker,
+    metaInfo: {
+      title: "Kickers | Kick-Flight Wiki",
+      meta: [
+        { name: "description", content: "Contains Kickers information including Kicker Skill, Special Skill, Disc Compability" },
+        { name: "keywords", content: "Kick-Flight, kicker, kicker skill, special skill, disc compability" }
+        //you can also add open graph tags here
+      ]
+    },
   },
   {
     path: "/disc",
     name: "Disc",
-    component: Disc
+    component: Disc,
+    metaInfo: {
+      title: "Disc | Kick-Flight Wiki",
+      meta: [
+        { name: "description", content: "Contains Discs information, with filter through type, rarity and elements" },
+        { name: "keywords", content: "Kick-Flight, disc, ATK, BUFF, HEAL, WARP, TRAP, MOVE" }
+        //you can also add open graph tags here
+      ]
+    }
   },
   {
     path: "/axios_test",

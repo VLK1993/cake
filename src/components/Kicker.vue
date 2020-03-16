@@ -277,6 +277,14 @@ position: relative;
 import axios from "axios";
 export default {
   name: "kickerGrid",
+  metaInfo: {
+    title: "Kicker | Kick-Flight Wiki",
+    meta: [
+      { name: "description", content: "Fan-made Kick-Flight Wiki" },
+      { name: "keywords", content: "mobile-game,kick-Flight" }
+      //you can also add open graph tags here
+    ]
+  },
   data() {
     return {
       kickers: []

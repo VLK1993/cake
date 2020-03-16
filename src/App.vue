@@ -37,3 +37,15 @@
   }
 }
 </style>
+<script>
+export default {
+  metaInfo: {
+    title: "Kick-Flight Wiki",
+    meta: [
+      { name: "description", content: "Fan-made Kick-Flight Wiki" },
+      { name: "keywords", content: "mobile-game,kick-Flight" }
+      //you can also add open graph tags here
+    ]
+  }
+}
+</script>
