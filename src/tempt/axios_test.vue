@@ -70,7 +70,7 @@
           </div>
           <div class="discSkill">{{ disc.descriptionEN }}</div>
           <!-- CHECK FOR ALTERNATIVE-->
-          
+          <div v-if="disc.atkType != 'none'" class="alt">{{disc.atkType}}</div>
         </div>
       </div>
     </div>
@@ -191,6 +191,12 @@
   grid-gap: 5px;
 }
 .discWrapper {
+  .alt {
+    position:absolute;
+    top:0;
+    left:0;
+    color:red;
+  }
   position:relative;
   display: grid;
   background-color: rgb(250, 250, 250);

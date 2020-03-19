@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a7879ee6bd3e29e7e847",
-    "url": "/cake/css/app.2dee958f.css"
+    "revision": "b88851dd5fe938a9de4d",
+    "url": "/cake/css/app.126bd397.css"
   },
   {
     "revision": "52d298c49a3b61ded159ba704bf9e159",
@@ -184,6 +184,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/disc/icon/assassin-gate.png"
   },
   {
+    "revision": "bd48d1ccde95bd55e3ff6e2374b0dff1",
+    "url": "/cake/img/disc/icon/assault-lance.png"
+  },
+  {
     "revision": "09f16769862d698bf54cf7c804b1660a",
     "url": "/cake/img/disc/icon/blue-blaster.png"
   },
@@ -288,12 +292,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/disc/icon/gigaphone.png"
   },
   {
+    "revision": "2e1e2a30ad1d7fe1041a397bc76792d3",
+    "url": "/cake/img/disc/icon/great-glidears.png"
+  },
+  {
     "revision": "5e119dc36d4970443a4f1917326fe9bb",
     "url": "/cake/img/disc/icon/green-mine.png"
   },
   {
     "revision": "15e01526cdbad2e455a54a019dc99403",
     "url": "/cake/img/disc/icon/hedgefish.png"
+  },
+  {
+    "revision": "70c6694b06c9da308c03651fb30c9c89",
+    "url": "/cake/img/disc/icon/hippograndus.png"
   },
   {
     "revision": "5b02ece58f12fe1c3a5c86d518022892",
@@ -412,6 +424,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/disc/icon/rush-blade.png"
   },
   {
+    "revision": "5f4fe3b2bb49c8130ab6f26f229dd6b8",
+    "url": "/cake/img/disc/icon/sea-slugster.png"
+  },
+  {
     "revision": "5304a5ad13faf3caa98a673970c6a873",
     "url": "/cake/img/disc/icon/septicopter.png"
   },
@@ -422,6 +438,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0ca732ef922b67418099d61a8f953f4d",
     "url": "/cake/img/disc/icon/skybeast.png"
+  },
+  {
+    "revision": "a115ed9a7f4866ff7e62fad14ef66b3d",
+    "url": "/cake/img/disc/icon/slingshooter.png"
   },
   {
     "revision": "9217f25d1698d72d3bdc35537c9f87a3",
@@ -792,19 +812,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/list/valkyrja/mei_c2.png"
   },
   {
-    "revision": "263a82c7527fb3c0ad184bb8d0068c54",
+    "revision": "cd0756a656c9d83a7b8e5e412e179d0b",
     "url": "/cake/index.html"
   },
   {
-    "revision": "a7879ee6bd3e29e7e847",
-    "url": "/cake/js/app.cca968cc.js"
+    "revision": "b88851dd5fe938a9de4d",
+    "url": "/cake/js/app.03818269.js"
   },
   {
     "revision": "d5d3324aa46d2261de36",
     "url": "/cake/js/chunk-vendors.6bc2e894.js"
   },
   {
-    "revision": "1dc63e10821087a2f96c5c9b951f6c4c",
+    "revision": "ae36ad6c66962d8a15b06b16ff21b5a0",
     "url": "/cake/json/discs.json"
   },
   {
