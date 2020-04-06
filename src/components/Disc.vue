@@ -382,11 +382,12 @@ export default {
         return vm.discs;
       } else {
         return _.filter(vm.discs, function(query) {
-          let result = true;
           for (let i = 0; i < totalComparision; i++) {
-            result &= comparisions[i].call(query);
+            if (!comparisions[i].call(query)) {
+              return false;
+            }
           }
-          return result;
+          return true;
         });
       }
     }
