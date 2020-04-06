@@ -7,47 +7,57 @@
       <div class="field fieldType">
         <div class="fieldLabel">Type</div>
         <div class="buttonAll">
-          <input type="radio" id="all" value="" v-model="type" />
-          <label for="all">ALL</label>
+          <input type="radio" id="filter_type_all" value v-model="type" />
+          <label for="filter_type_all">ALL</label>
         </div>
         <div v-for="typeList in typeLists" :key="typeList">
-          <input type="radio" v-bind:value="typeList" v-model="type" />
-          <label
-            v-bind:for="typeList"
-            v-bind:class="'type-' + typeList"
-          ></label>
+          <input
+            type="radio"
+            v-bind:id="'filter_type_' + typeList"
+            v-bind:value="typeList"
+            v-model="type"
+          />
+          <label v-bind:for="'filter_type_' + typeList" v-bind:class="'type-' + typeList"></label>
         </div>
       </div>
       <!-- ELEMENT SELECTOR -->
       <div class="field fieldElement">
         <div class="fieldLabel">Element</div>
         <div>
-          <input type="radio" id="all" value="" v-model="element" />
-          <label for="all">All</label>
+          <input type="radio" id="filter_element_all" value v-model="element" />
+          <label for="filter_element_all">All</label>
         </div>
         <div v-for="elementList in elementLists" :key="elementList">
-          <label v-bind:for="elementList"
-            ><input
+          <label v-bind:for="'filter_element_' + elementList">
+            <input
               type="radio"
+              v-bind:id="'filter_element_' + elementList"
               v-bind:value="elementList"
               v-model="element"
-            />{{ elementList }}</label
-          >
+            />
+            {{ elementList }}
+          </label>
         </div>
       </div>
       <!-- RARITY SELECTOR -->
       <div class="field fieldRarity">
         <div class="fieldLabel">Rarity</div>
         <div>
-          <input type="radio" id="all" value="" v-model="rarity" />
-          <label for="all">All</label>
+          <input type="radio" id="filter_rarity_all" value v-model="rarity" />
+          <label for="filter_rarity_all">All</label>
         </div>
         <div v-for="rarityList in rarityLists" :key="rarityList">
-          <label v-bind:for="rarityList"
-            ><input type="radio" v-bind:value="rarityList" v-model="rarity" />{{
-              rarityList
-            }}</label
-          >
+          <label v-bind:for="'filter_rarity_' + rarityList">
+            <input
+              type="radio"
+              v-bind:id="'filter_rarity_' + rarityList"
+              v-bind:value="rarityList"
+              v-model="rarity"
+            />
+            {{
+            rarityList
+            }}
+          </label>
         </div>
       </div>
       <!-- SPECIAL TAG SELECTOR -->
@@ -64,14 +74,13 @@
           <!-- 
                 <div class="discRarity">{{disc.rarity}}</div>
                 <div class="discElement">{{disc.element}}</div>
-                -->
+          -->
           <div class="discImage">
             <img v-bind:src="'img/disc/icon/' + disc.id + '.png'" />
           </div>
           <div class="discSkill">{{ disc.descriptionEN }}</div>
         </div>
       </div>
-      
     </div>
   </div>
 </template>
@@ -87,8 +96,8 @@
   outline: none;
   background-color: #ffdc00;
   color: black;
-  text-transform:uppercase;
-  border:solid 1.5px rgb(5, 5, 5);
+  text-transform: uppercase;
+  border: solid 1.5px rgb(5, 5, 5);
   cursor: pointer;
   padding: 10px;
   font-weight: bold;
@@ -127,7 +136,6 @@
     content: "TRAP";
   }
 }
-
 
 #discQueryHolder {
   flex-wrap: wrap;
@@ -232,7 +240,7 @@
     align-self: stretch;
     background-color: rgb(245, 245, 245);
     padding: 5px;
-    font-size:calc(13px + (15 - 13) * ((100vw - 300px)/(1600 - 300)));;
+    font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1600 - 300)));
   }
 }
 @media screen and (max-width: 769px) {
@@ -244,19 +252,18 @@
   .discGrid {
     grid-template-columns: repeat(2, 1fr);
   }
- 
 }
 @media screen and (max-width: 426px) {
   .discGrid {
     .discWrapper .discImage img {
-      height:175px;
+      height: 175px;
     }
   }
   .discSkill {
-    text-align:left;
+    text-align: left;
   }
 }
-@media screen and (max-width:376px) {
+@media screen and (max-width: 376px) {
   .type {
     &-atk-l:before {
       content: "ATK (Long)";
@@ -272,21 +279,24 @@
 @media screen and (max-width: 376px) {
   #discQueryHolder {
     .field {
-      display:flex;
-      flex-direction:column;
+      display: flex;
+      flex-direction: column;
       .fieldLabel {
-      left:0;
+        left: 0;
+      }
     }
+
+    .fieldRarity,
+    .fieldElement {
+      min-width: initial;
     }
-    
-    .fieldRarity, .fieldElement {min-width:initial;}
   }
 }
 @media screen and (max-width: 321px) {
   .discGrid {
     grid-template-columns: repeat(1, 1fr);
-    .discWrapper .discImage img { 
-      height:200px;
+    .discWrapper .discImage img {
+      height: 200px;
     }
   }
 }
@@ -297,19 +307,9 @@ import _ from "lodash";
 export default {
   data() {
     return {
-      typeLists: [
-        "atk-r",
-        "atk-l",
-        "atk-s",
-        "atk-c",
-        "warp",
-        "move",
-        "trap",
-        "buff",
-        "heal"
-      ],
-      elementLists: ["fire", "water", "wind"],
-      rarityLists: ["ur", "sr", "r", "n"],
+      typeLists: [],
+      elementLists: [],
+      rarityLists: [],
       rarity: "",
       type: "",
       element: "",
@@ -319,7 +319,32 @@ export default {
   async created() {
     try {
       const res = await axios.get("json/discs.json");
-      this.discs = res.data.discs;
+
+      // cook the list of elements on the fly
+      const disc = res.data.discs,
+        elementLists = this.elementLists,
+        rarityLists = this.rarityLists,
+        typeLists = this.typeLists;
+
+      const function_dataCooker = function(discData, propertyName) {
+        if (discData.hasOwnProperty(propertyName)) {
+          const data = discData[propertyName];
+          if (!this.includes(data)) {
+            this.push(data);
+          }
+        }
+      };
+
+      for (const discData of disc) {
+        function_dataCooker.call(elementLists, discData, "element");
+        function_dataCooker.call(rarityLists, discData, "rarity");
+        function_dataCooker.call(typeLists, discData, "type");
+      }
+      // Finished cooking.
+      // This is to ensure that all the elements, rarities and types that fetched from the JSON data. Will be listed in the variables.
+      // In the future, in case you add more elements or rarities or types, it will just appear in the variable without code changes.
+
+      this.discs = disc;
       console.log(res.data);
     } catch (e) {
       console.error(e);
@@ -327,15 +352,43 @@ export default {
   },
   computed: {
     filterdisc() {
-      var vm = this,
-        discs = vm.discs;
-      return _.filter(discs, function(query) {
-        var rarity = vm.rarity ? query.rarity == vm.rarity : true,
-          type = vm.type ? query.type == vm.type : true,
-          element = vm.element ? query.element == vm.element : true;
+      let vm = this;
 
-        return type && element && rarity;
-      });
+      // Let's use an array of comparer. Why?
+      // - This will make it that we only "check for the current filter's param is null or not" once, then add the comparer to the list.
+      // Then the we will invoke all the comparers in the list in the filter function. With this, we eliminated the null-check per-filter's query.
+
+      const comparisions = [];
+      if (this.rarity) {
+        comparisions.push(function() {
+          // "this" here is the item that is being tested to the filter.
+          return this.rarity === vm.rarity;
+        });
+      }
+      if (this.type) {
+        comparisions.push(function() {
+          // "this" here is the item that is being tested to the filter.
+          return this.type === vm.type;
+        });
+      }
+      if (this.element) {
+        comparisions.push(function() {
+          // "this" here is the item that is being tested to the filter.
+          return this.element === vm.element;
+        });
+      }
+      const totalComparision = comparisions.length;
+      if (totalComparision === 0) {
+        return vm.discs;
+      } else {
+        return _.filter(vm.discs, function(query) {
+          let result = true;
+          for (let i = 0; i < totalComparision; i++) {
+            result &= comparisions[i].call(query);
+          }
+          return result;
+        });
+      }
     }
   },
   methods: {
