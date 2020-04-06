@@ -202,7 +202,7 @@ export default {
       
 
       
-      var indexAtkTypeDiscs = Object.values(groupDiscs);
+      //var indexAtkTypeDiscs = Object.values(groupDiscs);
 
     } catch (e) {
       console.error(e);

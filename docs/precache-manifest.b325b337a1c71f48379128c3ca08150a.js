@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a0f4fbeb432a2e009a88",
-    "url": "/cake/css/app.c1513fb0.css"
+    "revision": "deef1d2650a5da0909d4",
+    "url": "/cake/css/app.c36be5a8.css"
   },
   {
     "revision": "52d298c49a3b61ded159ba704bf9e159",
@@ -812,16 +812,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/list/valkyrja/mei_c2.png"
   },
   {
-    "revision": "bf288c53b6b5247c20032e2b0ed90af5",
+    "revision": "361e8716003ec497c74c6d4f4b876bce",
     "url": "/cake/index.html"
   },
   {
-    "revision": "a0f4fbeb432a2e009a88",
-    "url": "/cake/js/app.3a7e72b8.js"
+    "revision": "deef1d2650a5da0909d4",
+    "url": "/cake/js/app.7d626208.js"
   },
   {
-    "revision": "4224b93a5d4ad41f796f",
-    "url": "/cake/js/chunk-vendors.a15fa4a9.js"
+    "revision": "c151b86749846dbb88f6",
+    "url": "/cake/js/chunk-vendors.30179a3d.js"
   },
   {
     "revision": "f23207e1bffeefa07b9eb3fa952e2ce6",
@@ -844,7 +844,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/json/todos2.json"
   },
   {
-    "revision": "c28869e59ff89ff447e0292df1d742c0",
+    "revision": "42452745ee5de45d467d6c5f20327fa1",
     "url": "/cake/manifest.json"
   },
   {
