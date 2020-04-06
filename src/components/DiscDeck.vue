@@ -56,7 +56,7 @@
     </div>
     <div class="discGridContainer">
       <div class="discGrid">
-        <div class="discWrapper" v-for="disc in filterdisc" :key="disc.id">
+        <div class="discWrapper" v-for="disc in filterdisc" :key="disc.id" v-bind:data-numberid="disc.numberID" v-on:click.capture="getDisc($event)">
           <div class="discName">{{ disc.nameEN }}</div>
           <div class="discType">
             <span v-bind:class="'type-' + disc.type"></span>
@@ -69,19 +69,51 @@
             <img v-bind:src="'img/disc/icon/' + disc.id + '.png'" />
           </div>
           <div class="discSkill">{{ disc.descriptionEN }}</div>
-          <!-- CHECK FOR ALTERNATIVE-->
-          <div v-if="disc.atkType != 'none'" class="alt">{{disc.atkType}}</div>
         </div>
       </div>
+      
+    </div>
+    <div class="deckBuilder">
+        <div class="discSlot"></div>
+        <div class="discSlot"></div>
+        <div class="discSlot"></div>
+        <div class="discSlot"></div>
+
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
+.active {
+    .discImage{
+    background-color:yellow !important;
+    }
+
+}
+.deckBuilder {
+    position:fixed;
+    left:2.5%;
+    bottom:10px;
+    z-index: 2;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width:95%;
+    grid-gap:10px;
+    .discSlot {
+        background-color:rgb(150, 150, 150);
+        height:100px;
+    }
+}
+.pageContainer {
+    position:relative;
+
+}
+
+
 
 #buttonGoTop {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 120px;
   right: 30px;
   z-index: 99;
   font-size: 18px;
@@ -191,13 +223,6 @@
   grid-gap: 5px;
 }
 .discWrapper {
-  .alt {
-    position:absolute;
-    top:0;
-    left:0;
-    color:red;
-  }
-  position:relative;
   display: grid;
   background-color: rgb(250, 250, 250);
   grid-template-rows: 2em 2em 220px 1fr;
@@ -303,6 +328,7 @@
 <script>
 import axios from "axios";
 import _ from "lodash";
+import $ from "jquery";
 export default {
   data() {
     return {
@@ -322,14 +348,16 @@ export default {
       rarity: "",
       type: "",
       element: "",
-      discs: []
+      discs: [],
+      activeDiscIndex: 0,
+      discDeck:[],
+      discDeckLength: 4,
     };
   },
   async created() {
     try {
       const res = await axios.get("json/discs.json");
       this.discs = res.data.discs;
-      console.log(res.data);
     } catch (e) {
       console.error(e);
     }
@@ -351,7 +379,26 @@ export default {
     goTop() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
-    }
+    },
+    //REFER TO KICKER.VUE WHEN FORGET HOW TO CODE
+    getDisc: function(event) {
+            var activeDisc = event.target.closest(".discWrapper");
+            var activeDiscID = activeDisc.dataset.numberid;
+
+            var activeDisc2 = $(event.target).parents(".discWrapper");
+
+            if(activeDisc.classList.contains("active")){
+                //IF CLICK ON ACTIVE DISC
+                $(activeDisc2).removeClass("active");
+                
+            }
+            else {
+                //IF CLICK ON NON ACTIVE DISC
+                activeDisc.classList.add("active");
+            }
+            console.log(activeDiscID);
+            
+        }
   },
   mounted() {
     //Go TOP BUTTON
@@ -359,7 +406,6 @@ export default {
     window.onscroll = function() {
       scrollFunction();
     };
-
     function scrollFunction() {
       if (
         document.body.scrollTop > 20 ||
@@ -369,7 +415,12 @@ export default {
       } else {
         buttonGoTop.style.display = "none";
       }
-    }
+    };
+    //$(".pageContainer").click(function(){
+    //    var clicked = $(this);
+    //    console.log(clicked);
+    //})
+    
   }
 };
 </script>

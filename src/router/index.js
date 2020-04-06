@@ -3,7 +3,10 @@ import VueRouter from "vue-router";
 import Home from "../components/Home.vue";
 import Kicker from "../components/Kicker.vue";
 import Disc from "../components/Disc.vue";
-import axios_test from "../tempt/axios_test.vue";
+import showDiscTag from "../tempt/showDiscTag.vue";
+import sortDiscTag from "../tempt/sortDiscTag.vue";
+import DiscDeck from "../components/DiscDeck.vue";
+
 
 Vue.use(VueRouter);
 
@@ -48,9 +51,19 @@ const routes = [
     }
   },
   {
-    path: "/axios_test",
-    name: "axios_test",
-    component: axios_test
+    path: "/showDiscTag",
+    name: "showDiscTag",
+    component: showDiscTag
+  },
+  {
+    path: "/sortDiscTag",
+    name: "sortDiscTag",
+    component: sortDiscTag
+  },
+  {
+    path: "/discDeck",
+    name: "DiscDeck",
+    component: DiscDeck
   }
 ];
 

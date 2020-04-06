@@ -166,7 +166,7 @@
 			"rarity": "ur",
 			"element": "water",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "knock back"
 		},
 		{
 			"id": "boarush",
@@ -190,7 +190,7 @@
 			"rarity": "sr",
 			"element": "water",
 			"atkMod": "2.7",
-			"atkType": "knocks back"
+			"atkType": "knock back"
 		},
 		{
 			"id": "gigaphone",
@@ -226,7 +226,7 @@
 			"rarity": "sr",
 			"element": "water",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "slow"
 		},
 		{
 			"id": "mantallion",
@@ -238,7 +238,7 @@
 			"rarity": "sr",
 			"element": "wind",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "paralyze"
 		},
 		{
 			"id": "jack-upper",
@@ -250,7 +250,7 @@
 			"rarity": "sr",
 			"element": "wind",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "knock up"
 		},
 		{
 			"id": "leeta",
@@ -322,7 +322,7 @@
 			"rarity": "sr",
 			"element": "water",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "poison"
 		},
 		{
 			"id": "neolumi",
@@ -358,7 +358,7 @@
 			"rarity": "sr",
 			"element": "wind",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "paralyze"
 		},
 		{
 			"id": "bond-gate",
@@ -393,7 +393,7 @@
 			"type": "atk-l",
 			"rarity": "r",
 			"element": "fire",
-			"atkMod": "0",
+			"atkMod": "3.4",
 			"atkType": "none"
 		},
 		{
@@ -405,8 +405,8 @@
 			"type": "atk-c",
 			"rarity": "r",
 			"element": "wind",
-			"atkMod": "0",
-			"atkType": "none"
+			"atkMod": "1.9",
+			"atkType": "knock up"
 		},
 		{
 			"id": "uber-beaver",
@@ -417,8 +417,8 @@
 			"type": "atk-c",
 			"rarity": "r",
 			"element": "water",
-			"atkMod": "0",
-			"atkType": "none"
+			"atkMod": "3.1",
+			"atkType": "knock up"
 		},
 		{
 			"id": "spewdor",
@@ -466,7 +466,7 @@
 			"rarity": "r",
 			"element": "water",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "knock down"
 		},
 		{
 			"id": "shockhog",
@@ -478,7 +478,7 @@
 			"rarity": "r",
 			"element": "water",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "paralyze"
 		},
 		{
 			"id": "tetra-shield",
@@ -502,7 +502,7 @@
 			"rarity": "r",
 			"element": "fire",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "stun"
 		},
 		{
 			"id": "booby-bomb",
@@ -562,7 +562,7 @@
 			"rarity": "r",
 			"element": "fire",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "poison"
 		},
 		{
 			"id": "spunkle",
@@ -598,7 +598,7 @@
 			"rarity": "r",
 			"element": "water",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "sealing skill"
 		},
 		{
 			"id": "morbeel",
@@ -633,7 +633,7 @@
 			"type": "atk-l",
 			"rarity": "n",
 			"element": "fire",
-			"atkMod": "0",
+			"atkMod": "3.2",
 			"atkType": "none"
 		},
 		{
@@ -645,7 +645,7 @@
 			"type": "atk-l",
 			"rarity": "n",
 			"element": "wind",
-			"atkMod": "0",
+			"atkMod": "3.2",
 			"atkType": "none"
 		},
 		{
@@ -657,7 +657,7 @@
 			"type": "atk-l",
 			"rarity": "n",
 			"element": "water",
-			"atkMod": "0",
+			"atkMod": "3.2",
 			"atkType": "none"
 		},
 		{
@@ -669,7 +669,7 @@
 			"type": "atk-r",
 			"rarity": "n",
 			"element": "fire",
-			"atkMod": "0",
+			"atkMod": "0.8",
 			"atkType": "none"
 		},
 		{
@@ -681,7 +681,7 @@
 			"type": "atk-r",
 			"rarity": "n",
 			"element": "water",
-			"atkMod": "0",
+			"atkMod": "1.7",
 			"atkType": "none"
 		},
 		{
@@ -693,7 +693,7 @@
 			"type": "atk-r",
 			"rarity": "n",
 			"element": "wind",
-			"atkMod": "0",
+			"atkMod": "1.2",
 			"atkType": "none"
 		},
 		{
@@ -705,7 +705,7 @@
 			"type": "atk-c",
 			"rarity": "n",
 			"element": "fire",
-			"atkMod": "0",
+			"atkMod": "3.8",
 			"atkType": "none"
 		},
 		{
@@ -717,7 +717,7 @@
 			"type": "atk-c",
 			"rarity": "n",
 			"element": "wind",
-			"atkMod": "0",
+			"atkMod": "3.8",
 			"atkType": "none"
 		},
 		{
@@ -729,7 +729,7 @@
 			"type": "atk-c",
 			"rarity": "n",
 			"element": "water",
-			"atkMod": "0",
+			"atkMod": "2.1",
 			"atkType": "none"
 		},
 		{
@@ -741,8 +741,8 @@
 			"type": "atk-l",
 			"rarity": "n",
 			"element": "wind",
-			"atkMod": "0",
-			"atkType": "none"
+			"atkMod": "1.1",
+			"atkType": "knock back"
 		},
 		{
 			"id": "armorlocaris",
@@ -753,8 +753,8 @@
 			"type": "atk-l",
 			"rarity": "n",
 			"element": "water",
-			"atkMod": "0",
-			"atkType": "none"
+			"atkMod": "2.3",
+			"atkType": "knock back"
 		},
 		{
 			"id": "boxaroo",
@@ -802,7 +802,7 @@
 			"rarity": "n",
 			"element": "fire",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "knock up"
 		},
 		{
 			"id": "vegedra",
@@ -814,7 +814,7 @@
 			"rarity": "n",
 			"element": "wind",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "knock up"
 		},
 		{
 			"id": "bratty-otty",
@@ -826,7 +826,7 @@
 			"rarity": "n",
 			"element": "water",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "knock down"
 		},
 		{
 			"id": "medical-box",
@@ -850,19 +850,19 @@
 			"rarity": "n",
 			"element": "fire",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "knock back"
 		},
 		{
 			"id": "green-mine",
 			"nameEN": "Green Mine",
 			"nameJP": "グリーンマイン",
-			"descriptionEN": "Sets a bomb that is triggered when an enemy approaches it, deals damage (Medium) to enemies standing within the range + knocks them whale (Active Time = 20 Seconds)",
+			"descriptionEN": "Sets a bomb that is triggered when an enemy approaches it, deals damage (Medium) to enemies standing within the range + knocks them back (Active Time = 20 Seconds)",
 			"descriptionJP": "中ダメージ＋吹き飛ばす爆弾を20秒間設置",
 			"type": "trap",
 			"rarity": "n",
 			"element": "wind",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "knock back"
 		},
 		{
 			"id": "blue-mine",
@@ -874,7 +874,7 @@
 			"rarity": "n",
 			"element": "water",
 			"atkMod": "0",
-			"atkType": "none"
+			"atkType": "knock back"
 		},
 		{
 			"id": "boost-bottle",
