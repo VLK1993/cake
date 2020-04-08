@@ -7,47 +7,55 @@
       <div class="field fieldType">
         <div class="fieldLabel">Type</div>
         <div class="buttonAll">
-          <input type="radio" id="all" value="" v-model="type" />
-          <label for="all">ALL</label>
+          <input type="radio" id="filter_type_all" value v-model="type" />
+          <label for="filter_type_all">ALL</label>
         </div>
         <div v-for="typeList in typeLists" :key="typeList">
-          <input type="radio" v-bind:value="typeList" v-model="type" />
-          <label
-            v-bind:for="typeList"
-            v-bind:class="'type-' + typeList"
-          ></label>
+          <input
+            type="radio"
+            v-bind:id="'filter_type_' + typeList"
+            v-bind:value="typeList"
+            v-model="type"
+          />
+          <label v-bind:for="'filter_type_' + typeList" v-bind:class="'type-' + typeList"></label>
         </div>
       </div>
       <!-- ELEMENT SELECTOR -->
       <div class="field fieldElement">
         <div class="fieldLabel">Element</div>
         <div>
-          <input type="radio" id="all" value="" v-model="element" />
-          <label for="all">All</label>
+          <input type="radio" id="filter_element_all" value v-model="element" />
+          <label for="filter_element_all">All</label>
         </div>
         <div v-for="elementList in elementLists" :key="elementList">
-          <label v-bind:for="elementList"
-            ><input
+          <label v-bind:for="'filter_element_' + elementList">
+            <input
               type="radio"
+              v-bind:id="'filter_element_' + elementList"
               v-bind:value="elementList"
               v-model="element"
-            />{{ elementList }}</label
-          >
+            />
+            {{ elementList }}
+          </label>
         </div>
       </div>
       <!-- RARITY SELECTOR -->
       <div class="field fieldRarity">
         <div class="fieldLabel">Rarity</div>
         <div>
-          <input type="radio" id="all" value="" v-model="rarity" />
-          <label for="all">All</label>
+          <input type="radio" id="filter_rarity_all" value v-model="rarity" />
+          <label for="filter_rarity_all">All</label>
         </div>
         <div v-for="rarityList in rarityLists" :key="rarityList">
-          <label v-bind:for="rarityList"
-            ><input type="radio" v-bind:value="rarityList" v-model="rarity" />{{
-              rarityList
-            }}</label
-          >
+          <label v-bind:for="'filter_rarity_' + rarityList">
+            <input
+              type="radio"
+              v-bind:id="'filter_rarity_' + rarityList"
+              v-bind:value="rarityList"
+              v-model="rarity"
+            />
+            {{ rarityList }}
+          </label>
         </div>
       </div>
       <!-- SPECIAL TAG SELECTOR -->
@@ -56,7 +64,7 @@
     </div>
     <div class="discGridContainer">
       <div class="discGrid">
-        <div class="discWrapper" v-for="disc in filterdisc" :key="disc.id" v-bind:data-numberid="disc.numberID" v-on:click.capture="getDisc($event)">
+        <div class="discWrapper" v-for="disc in filterdisc" :key="disc.id" v-bind:data-nameid="disc.id" v-bind:data-numberid="disc.numberID" v-on:click.capture="getDisc($event)">
           <div class="discName">{{ disc.nameEN }}</div>
           <div class="discType">
             <span v-bind:class="'type-' + disc.type"></span>
@@ -64,52 +72,61 @@
           <!-- 
                 <div class="discRarity">{{disc.rarity}}</div>
                 <div class="discElement">{{disc.element}}</div>
-                -->
+          -->
           <div class="discImage">
             <img v-bind:src="'img/disc/icon/' + disc.id + '.png'" />
           </div>
           <div class="discSkill">{{ disc.descriptionEN }}</div>
         </div>
       </div>
-      
     </div>
-    <div class="deckBuilder">
-        <div class="discSlot"></div>
-        <div class="discSlot"></div>
-        <div class="discSlot"></div>
-        <div class="discSlot"></div>
+    <div class="deckBuilderContainer">
+        <button v-clipboard:copy="deckURL">Spawn URL</button>
+        <button v-on:click="clearDeck($event)" >Clear All deck</button>
+        <div class="deckBuilder">
+            <div class="discSlot" data-position="p1" v-on:click.capture="assignDisc($event)"></div>
+            <div class="discSlot" data-position="p2" v-on:click.capture="assignDisc($event)"></div>
+            <div class="discSlot" data-position="p3" v-on:click.capture="assignDisc($event)"></div>
+            <div class="discSlot" data-position="p4" v-on:click.capture="assignDisc($event)"></div>
 
+        </div>
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
-.active {
-    .discImage{
-    background-color:yellow !important;
-    }
 
+.deckBuilderContainer {
+    position:fixed;
+    right:0;
+    left:0;
+    bottom:0;
+    z-index: 2;
 }
 .deckBuilder {
-    position:fixed;
-    left:2.5%;
-    bottom:10px;
-    z-index: 2;
+    width:95%;
+    margin:0 auto;
+    
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width:95%;
     grid-gap:10px;
+    background-color:rgba(50,50,50,0.85);
     .discSlot {
         background-color:rgb(150, 150, 150);
-        height:100px;
+        height:120px;
+        min-width:0;
+        min-height:0;
+        ::v-deep img {
+            width:100%;
+        }
     }
-}
+} 
+
+
+
 .pageContainer {
     position:relative;
 
 }
-
-
-
 #buttonGoTop {
   display: none;
   position: fixed;
@@ -224,6 +241,7 @@
 }
 .discWrapper {
   display: grid;
+  position:relative;
   background-color: rgb(250, 250, 250);
   grid-template-rows: 2em 2em 220px 1fr;
   grid-template-areas:
@@ -268,7 +286,35 @@
     padding: 5px;
     font-size:calc(13px + (15 - 13) * ((100vw - 300px)/(1600 - 300)));;
   }
+  &.active {
+    .discImage{
+    background-color:yellow !important;
+    }
+  }
+  &::before {
+    position:absolute;
+    left:0; right:0; top:0; bottom:0;
+    background-color:rgba(50,50,50,0.5);
+    content:"";
+    display:none;
+  }
+  &::after {
+    content:"Already In Deck";
+    color:red;
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    display:none;
+  }
+  &.inDeck::before {
+    display:block;
+  }
+  &.inDeck::after {
+    display:block;
+  }
 }
+
+
 @media screen and (max-width: 769px) {
   .discGrid {
     grid-template-columns: repeat(4, 1fr);
@@ -332,47 +378,148 @@ import $ from "jquery";
 export default {
   data() {
     return {
-      typeLists: [
-        "atk-r",
-        "atk-l",
-        "atk-s",
-        "atk-c",
-        "warp",
-        "move",
-        "trap",
-        "buff",
-        "heal"
-      ],
-      elementLists: ["fire", "water", "wind"],
-      rarityLists: ["ur", "sr", "r", "n"],
+      typeLists: [],
+      elementLists: [],
+      rarityLists: [],
       rarity: "",
       type: "",
       element: "",
       discs: [],
-      activeDiscIndex: 0,
-      discDeck:[],
-      discDeckLength: 4,
+      activeDiscValue:{},
+      deck:{},
+      chooseDisc:true,
+      deckURL:""
     };
   },
   async created() {
+       /*
+       *A. GET JSON FILE and form filter around it
+       */
     try {
       const res = await axios.get("json/discs.json");
-      this.discs = res.data.discs;
+
+      // cook the list of elements on the fly
+      const disc = res.data.discs,
+        elementLists = this.elementLists,
+        rarityLists = this.rarityLists,
+        typeLists = this.typeLists;
+
+      const function_dataCooker = function(discData, propertyName) {
+        if (discData.hasOwnProperty(propertyName)) {
+          const data = discData[propertyName];
+          if (!this.includes(data)) {
+            this.push(data);
+          }
+        }
+      };
+
+      for (const discData of disc) {
+        function_dataCooker.call(elementLists, discData, "element");
+        function_dataCooker.call(rarityLists, discData, "rarity");
+        function_dataCooker.call(typeLists, discData, "type");
+      }
+      // Finished cooking.
+      // This is to ensure that all the elements, rarities and types that fetched from the JSON data. Will be listed in the variables.
+      // In the future, in case you add more elements or rarities or types, it will just appear in the variable without code changes.
+
+      this.discs = disc;
+      console.log(res.data);
     } catch (e) {
       console.error(e);
-    }
+    };
+       /*
+        * B. FETCH URL, get Position and Value then put it back to Deck Slot
+        * Update into DECK{}
+        */
+        var deckURLString = new URL(window.location.href).toString();
+        deckURLString = deckURLString.replace("#/","");
+        /*
+         * Find "?" in URL to check if shared disc link or not
+         */
+        var checkURL = deckURLString.search("\\?"); //I dont know why ? is \\?
+        if( checkURL != -1){
+          var deckURL = new URL(deckURLString); 
+          //Convert URL Param into OBJ
+          var deckParams = new URLSearchParams(deckURL.search.slice(1));
+
+          var deckInfo = {}; //Deck Information including Value and Position -> returns Object
+          for(let pair of deckParams.entries()) {
+              deckInfo[pair[0]] = pair[1]    //push keys/values to object
+          }
+          
+          var deckInfoValue = Object.values(deckInfo); //Deck Info Value = numberID - use to look up Disc from disc -> returns Array
+          var deckInfoPos = Object.keys(deckInfo); //Deck Info Position - use to bind with disc info later -> returns Array
+
+
+          var discs = this.discs;
+          var filtered = discs.filter(function(item) {
+              return deckInfoValue.indexOf(item.numberID) !== -1 ;
+          });
+
+          var deckIndex = 0;
+          for (deckIndex; deckIndex < deckInfoPos.length; deckIndex++) {
+            var value = deckInfoValue[deckIndex];
+            var nameID = filtered[deckIndex].id;
+            var position = deckInfoPos[deckIndex];
+
+            //WHY WONT YOU WORK
+            $(`.discWrapper[data-numberid="${value}"]`).addClass("inDeck");
+            console.log(`.discWrapper[data-numberid="${value}"]`);
+
+
+            $(".deckBuilder").find(`[data-position='${position}']`).html(`
+              <img src="img/disc/icon/${nameID}.png" />
+            `);
+
+            
+
+          };
+        }
+
+        
+       
+    
   },
   computed: {
     filterdisc() {
-      var vm = this,
-        discs = vm.discs;
-      return _.filter(discs, function(query) {
-        var rarity = vm.rarity ? query.rarity == vm.rarity : true,
-          type = vm.type ? query.type == vm.type : true,
-          element = vm.element ? query.element == vm.element : true;
+      let vm = this;
 
-        return type && element && rarity;
-      });
+      // Let's use an array of comparer. Why?
+      // - This will make it that we only "check for the current filter's param is null or not" once, then add the comparer to the list.
+      // Then the we will invoke all the comparers in the list in the filter function. With this, we eliminated the null-check per-filter's query.
+
+      const comparisions = [];
+      if (this.rarity) {
+        comparisions.push(function() {
+          // "this" here is the item that is being tested to the filter.
+          return this.rarity === vm.rarity;
+        });
+      }
+      if (this.type) {
+        comparisions.push(function() {
+          // "this" here is the item that is being tested to the filter.
+          return this.type === vm.type;
+        });
+      }
+      if (this.element) {
+        comparisions.push(function() {
+          // "this" here is the item that is being tested to the filter.
+          return this.element === vm.element;
+        });
+      }
+      const totalComparision = comparisions.length;
+      if (totalComparision === 0) {
+        return vm.discs;
+      } else {
+        return _.filter(vm.discs, function(query) {
+          for (let i = 0; i < totalComparision; i++) {
+            if (!comparisions[i].call(query)) {
+              return false;
+            }
+          }
+          return true;
+        });
+      }
     }
   },
   methods: {
@@ -380,25 +527,82 @@ export default {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     },
-    //REFER TO KICKER.VUE WHEN FORGET HOW TO CODE
+    /*
+     * Function making Discs go YELLOW on CLICK 
+     */
     getDisc: function(event) {
-            var activeDisc = event.target.closest(".discWrapper");
-            var activeDiscID = activeDisc.dataset.numberid;
-
-            var activeDisc2 = $(event.target).parents(".discWrapper");
-
-            if(activeDisc.classList.contains("active")){
-                //IF CLICK ON ACTIVE DISC
-                $(activeDisc2).removeClass("active");
-                
-            }
-            else {
-                //IF CLICK ON NON ACTIVE DISC
-                activeDisc.classList.add("active");
-            }
-            console.log(activeDiscID);
             
+            var activeDisc = $(event.target).parents(".discWrapper");
+            $(activeDisc).parent().children(".discWrapper").removeClass("active");
+            $(activeDisc).addClass("active");
+
+            
+            var activeDiscNumberID = $(activeDisc).data("numberid");
+            var activeDiscNameID = $(activeDisc).data("nameid");
+            var chooseDisc = this.chooseDisc = false;
+            var activeDiscValue = this.activeDiscValue = {
+                activeDiscNameID: activeDiscNameID,
+                activeDiscNumberID: activeDiscNumberID
+            };
+            
+            
+            return activeDiscValue && chooseDisc;
+    },
+    /*
+     * 1. RECORD ACTIVE DISC TO DECK
+     * 2. UPDATE DECK {}
+     * 3. SPAWN URL BASED ON DECK {}
+     */
+    assignDisc:function(event) {
+        var activeDiscValue = this.activeDiscValue;
+        var chooseDisc = this.chooseDisc;
+
+       
+        /*
+         * chooseDisc = fault -> after clicking on Disc Area
+         * chooseDisc = true  -> after clicking on Deck Area 
+         */
+        if(chooseDisc == false ) {
+            var deckSlot = event.target;
+            var deckSlotPosition = deckSlot.dataset.position;
+
+            $(".discWrapper.active").addClass("inDeck");
+            $(".discWrapper.active").removeClass("active");
+
+            deckSlot.innerHTML = `
+            <img src="img/disc/icon/${activeDiscValue.activeDiscNameID}.png" />
+            `;
+            var deck = this.deck; //get current deck object from data
+            var updateDeck = {
+                [deckSlotPosition]:activeDiscValue.activeDiscNumberID
+            }; //get current position and disc
+            deck = this.deck = Object.assign(deck, updateDeck); //merge dem 
+            chooseDisc = this.chooseDisc = true;
+
+            var deckURL = window.location.href.split('?')[0] + "?" + $.param(deck); // MAKE DECK URL BASED ON DECK
+            this.deckURL = deckURL;
+            
+            console.log(deck);
+            console.log(deckURL);
+            return deck & chooseDisc & deckURL;
         }
+       
+    },
+    clearDeck:function(){
+      $(".discSlot").empty();
+      var deck = this.deck = {};
+      var deckURL = this.deckURL = "";
+      $(".discWrapper.active").removeClass("active");
+      $(".discWrapper.inDeck").removeClass("inDeck");
+      var chooseDisc = this.chooseDisc = true;
+
+
+      console.log("deck URL Removed");
+      return deck & deckURL & chooseDisc;
+
+
+    }
+
   },
   mounted() {
     //Go TOP BUTTON
@@ -416,10 +620,9 @@ export default {
         buttonGoTop.style.display = "none";
       }
     };
-    //$(".pageContainer").click(function(){
-    //    var clicked = $(this);
-    //    console.log(clicked);
-    //})
+
+    
+    
     
   }
 };
