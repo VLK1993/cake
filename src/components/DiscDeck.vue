@@ -7,7 +7,12 @@
       <div class="field fieldType">
         <div class="fieldLabel">Type</div>
         <div class="buttonAll">
-          <input type="radio" id="filter_type_all" value v-model="filterting_type" />
+          <input
+            type="radio"
+            id="filter_type_all"
+            value
+            v-model="filterting_type"
+          />
           <label for="filter_type_all">ALL</label>
         </div>
         <div v-for="typeList in typeLists" :key="typeList">
@@ -17,14 +22,22 @@
             v-bind:value="typeList"
             v-model="filterting_type"
           />
-          <label v-bind:for="'filter_type_' + typeList" v-bind:class="'type-' + typeList"></label>
+          <label
+            v-bind:for="'filter_type_' + typeList"
+            v-bind:class="'type-' + typeList"
+          ></label>
         </div>
       </div>
       <!-- ELEMENT SELECTOR -->
       <div class="field fieldElement">
         <div class="fieldLabel">Element</div>
         <div>
-          <input type="radio" id="filter_element_all" value v-model="filterting_element" />
+          <input
+            type="radio"
+            id="filter_element_all"
+            value
+            v-model="filterting_element"
+          />
           <label for="filter_element_all">All</label>
         </div>
         <div v-for="elementList in elementLists" :key="elementList">
@@ -43,7 +56,12 @@
       <div class="field fieldRarity">
         <div class="fieldLabel">Rarity</div>
         <div>
-          <input type="radio" id="filter_rarity_all" value v-model="filterting_rarity" />
+          <input
+            type="radio"
+            id="filter_rarity_all"
+            value
+            v-model="filterting_rarity"
+          />
           <label for="filter_rarity_all">All</label>
         </div>
         <div v-for="rarityList in rarityLists" :key="rarityList">
@@ -66,24 +84,24 @@
       <div class="discGrid">
         <div
           class="discWrapper"
-          v-for="disc in filterdisc"
-          :key="disc.id"
-          v-bind:data-nameid="disc.id"
-          v-bind:data-numberid="disc.numberID"
+          v-for="discData in discs"
+          :key="discData.id"
+          v-bind:data-nameid="discData.id"
+          v-bind:data-numberid="discData.numberID"
           v-on:click.capture="getDisc($event)"
         >
-          <div class="discName">{{ disc.nameEN }}</div>
+          <div class="discName">{{ discData.nameEN }}</div>
           <div class="discType">
-            <span v-bind:class="'type-' + disc.type"></span>
+            <span v-bind:class="'type-' + discData.type"></span>
           </div>
           <!-- 
-                <div class="discRarity">{{disc.rarity}}</div>
-                <div class="discElement">{{disc.element}}</div>
+                <div class="discRarity">{{discData.rarity}}</div>
+                <div class="discElement">{{discData.element}}</div>
           -->
           <div class="discImage">
-            <img v-bind:src="'img/disc/icon/' + disc.id + '.png'" />
+            <img v-bind:src="'img/disc/icon/' + discData.id + '.png'" />
           </div>
-          <div class="discSkill">{{ disc.descriptionEN }}</div>
+          <div class="discSkill">{{ discData.descriptionEN }}</div>
         </div>
       </div>
     </div>
@@ -91,294 +109,34 @@
       <button v-clipboard:copy="deckURL">Spawn URL</button>
       <button v-on:click="clearDeck($event)">Clear All deck</button>
       <div class="deckBuilder">
-        <div class="discSlot" data-position="p1" v-on:click.capture="assignDisc($event)"></div>
-        <div class="discSlot" data-position="p2" v-on:click.capture="assignDisc($event)"></div>
-        <div class="discSlot" data-position="p3" v-on:click.capture="assignDisc($event)"></div>
-        <div class="discSlot" data-position="p4" v-on:click.capture="assignDisc($event)"></div>
+        <div
+          class="discSlot"
+          data-position="p1"
+          v-on:click.capture="assignDisc($event)"
+        ></div>
+        <div
+          class="discSlot"
+          data-position="p2"
+          v-on:click.capture="assignDisc($event)"
+        ></div>
+        <div
+          class="discSlot"
+          data-position="p3"
+          v-on:click.capture="assignDisc($event)"
+        ></div>
+        <div
+          class="discSlot"
+          data-position="p4"
+          v-on:click.capture="assignDisc($event)"
+        ></div>
       </div>
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
-.deckBuilderContainer {
-  position: fixed;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-}
-.deckBuilder {
-  width: 95%;
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
-  background-color: rgba(50, 50, 50, 0.85);
-  .discSlot {
-    background-color: rgb(150, 150, 150);
-    height: 120px;
-    min-width: 0;
-    min-height: 0;
-    ::v-deep img {
-      width: 100%;
-    }
-  }
-}
-
-.pageContainer {
-  position: relative;
-}
-#buttonGoTop {
-  display: none;
-  position: fixed;
-  bottom: 120px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #ffdc00;
-  color: black;
-  text-transform: uppercase;
-  border: solid 1.5px rgb(5, 5, 5);
-  cursor: pointer;
-  padding: 10px;
-  font-weight: bold;
-  border-radius: 10px;
-  :hover {
-    background-color: #555;
-  }
-}
-
-.type {
-  &-atk-l:before {
-    content: "ATK (Long Distance)";
-  }
-  &-atk-s:before {
-    content: "ATK (Short Distance)";
-  }
-  &-atk-r:before {
-    content: "ATK (Rush)";
-  }
-  &-atk-c:before {
-    content: "ATK (Circumference)";
-  }
-  &-warp:before {
-    content: "WARP";
-  }
-  &-buff:before {
-    content: "BUFF";
-  }
-  &-move:before {
-    content: "MOVE";
-  }
-  &-heal:before {
-    content: "HEAL";
-  }
-  &-trap:before {
-    content: "TRAP";
-  }
-}
-
-#discQueryHolder {
-  flex-wrap: wrap;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  .field {
-    display: grid;
-    position: relative;
-    padding: 20px 10px 10px 5px;
-    text-align: start;
-    border: solid 1.5px rgb(5, 5, 5);
-    background-color: rgb(245, 245, 245);
-    border-radius: 2px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 15px;
-    margin-top: 5px;
-    input {
-      margin: 0.4em;
-    }
-    .fieldLabel {
-      background-color: rgb(5, 5, 5);
-      color: rgb(250, 250, 250);
-      padding: 3px 6px;
-      position: absolute;
-      top: -10px;
-      left: 10px;
-    }
-  }
-  .fieldType {
-    grid-template-columns: 1fr 1fr;
-    .buttonAll {
-      grid-column: 1 / span 2;
-    }
-  }
-  .fieldElement {
-    min-width: 100px;
-  }
-  .fieldRarity {
-    min-width: 100px;
-  }
-  .fieldElement label {
-    text-transform: capitalize;
-  }
-  .fieldRarity label {
-    text-transform: uppercase;
-  }
-}
-
-.discGridContainer {
-  background-color: #f5f5f5;
-}
-.discGrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin-top: 10px;
-  padding: 10px;
-  grid-gap: 5px;
-}
-.discWrapper {
-  display: grid;
-  position: relative;
-  background-color: rgb(250, 250, 250);
-  grid-template-rows: 2em 2em 220px 1fr;
-  grid-template-areas:
-    "discName discName"
-    "discType discType"
-    "discImage discImage"
-    "discSkill discSkill";
-  .discName {
-    grid-area: discName;
-    background-color: rgb(5, 5, 5);
-    color: rgb(245, 245, 245);
-    font-weight: bold;
-    line-height: 32px;
-  }
-  .discType {
-    grid-area: discType;
-    background-color: rgb(100, 100, 100);
-    color: rgb(250, 250, 250);
-    line-height: 32px;
-  }
-  .discElement {
-    grid-area: discElement;
-    text-transform: capitalize;
-  }
-  .discRarity {
-    grid-area: discRarity;
-    text-transform: uppercase;
-  }
-  .discImage {
-    grid-area: discImage;
-    background-color: rgb(230, 230, 230);
-    height: 220px;
-    padding-top: 10px;
-    img {
-      height: 200px;
-    }
-  }
-  .discSkill {
-    grid-area: discSkill;
-    align-self: stretch;
-    background-color: rgb(245, 245, 245);
-    padding: 5px;
-    font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1600 - 300)));
-  }
-  &.active {
-    .discImage {
-      background-color: yellow !important;
-    }
-  }
-  &::before {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(50, 50, 50, 0.5);
-    content: "";
-    display: none;
-  }
-  &::after {
-    content: "Already In Deck";
-    color: red;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-  }
-  &.inDeck::before {
-    display: block;
-  }
-  &.inDeck::after {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  .discGrid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media screen and (max-width: 426px) {
-  .discGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 426px) {
-  .discGrid {
-    .discWrapper .discImage img {
-      height: 175px;
-    }
-  }
-  .discSkill {
-    text-align: left;
-  }
-}
-@media screen and (max-width: 376px) {
-  .type {
-    &-atk-l:before {
-      content: "ATK (Long)";
-    }
-    &-atk-s:before {
-      content: "ATK (Short)";
-    }
-    &-atk-c:before {
-      content: "ATK (Circle)";
-    }
-  }
-}
-@media screen and (max-width: 376px) {
-  #discQueryHolder {
-    .field {
-      display: flex;
-      flex-direction: column;
-      .fieldLabel {
-        left: 0;
-      }
-    }
-
-    .fieldRarity,
-    .fieldElement {
-      min-width: initial;
-    }
-  }
-}
-@media screen and (max-width: 321px) {
-  .discGrid {
-    grid-template-columns: repeat(1, 1fr);
-    .discWrapper .discImage img {
-      height: 200px;
-    }
-  }
-}
+@import "./DiscDeck.scss";
 </style>
 <script>
 import DiscDeckCode from "./DiscDeck.js";
-
 export default DiscDeckCode;
 </script>

@@ -9,18 +9,13 @@ module.exports = {
   extends: ["plugin:vue/essential", "@vue/prettier"],
 
   rules: {
-    'no-console': 'off',
-    'no-debugger': 'off',
-    'vue/no-unused-components': 'warning',
-    'vue/no-unused-vars': 'warning'
+    "no-console": "off",
+    "no-debugger": "off",
+    "vue/no-unused-components": "warn",
+    "vue/no-unused-vars": "warn"
   },
 
   parserOptions: {
-    parser: 'babel-eslint'
-  },
-
-  'extends': [
-    'plugin:vue/essential',
-    '@vue/prettier'
-  ]
+    parser: "babel-eslint"
+  }
 };

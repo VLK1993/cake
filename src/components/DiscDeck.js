@@ -1,11 +1,9 @@
-import Vue from "Vue";
+import Vue from "vue";
 import axios from "axios";
-import _ from "lodash";
 import $ from "jquery";
-// We don't really need FilterItemChangedEvent
-import { ItemFilter } from "@/classes/ItemFilter.js";
+import { FilterItemChangedEvent, ItemFilter } from "@/classes/ItemFilter.js";
 
-const filterTextAll = "ALL";
+const filterTextAll = "";
 
 let func_filter_rarity, func_filter_element, func_filter_type;
 
@@ -29,7 +27,7 @@ export default Vue.extend({
             deck: {},
             chooseDisc: true,
             deckURL: "",
-            filterEngine = new ItemFilter()
+            filterEngine: {}
         };
     },
     async created() {
@@ -65,9 +63,16 @@ export default Vue.extend({
 
             this.discs = disc;
 
+            this.filterEngine = new ItemFilter();
+            // We register the event before anything.
+            this.filterEngine.addEventListener(
+                FilterItemChangedEvent.EventName,
+                this.onFilterUpdated
+            );
+
             // Begin to observe data for filtering
-            filterEngine.observe(disc);
-            console.log(res.data);
+            this.filterEngine.observe(disc);
+            // console.log(res.data);
         } catch (e) {
             console.error(e);
         }
@@ -75,20 +80,32 @@ export default Vue.extend({
          * B. FETCH URL, get Position and Value then put it back to Deck Slot
          * Update into DECK{}
          */
-        var deckURLString = new URL(window.location.href).toString();
-        deckURLString = deckURLString.replace("#/", "");
-        /*
-         * Find "?" in URL to check if shared disc link or not
-         */
-        var checkURL = deckURLString.search("\\?"); //I dont know why ? is \\?
-        if (checkURL != -1) {
-            var deckURL = new URL(deckURLString);
-            //Convert URL Param into OBJ
-            var deckParams = new URLSearchParams(deckURL.search.slice(1));
+        // Using "window.location.href" is not prefered. We're having Vue on top.
+        // So use router's instead.
+        console.log(this.$route); // For you to see what's in the current object.
+
+        // this.$route.path: get the current path of from the router's URL.
+        // this.$route.query: get all the current queries data of from the router's URL.
+        // There's more but you should read the Vue document.
+        // Also, remind you of URL format: https://developer.mozilla.org/en-US/docs/Web/API/Location
+
+        var queryData = this.$route.query; // It's "data". Hence, you will get an dictionary object from this.
+        // Check if it's not null and it's not empty.
+        if (queryData) {
+
+            // Let's use the dictionary object.
+            // The dictionary has "propertyName" as the "key"
+            // and "propertyValue" as "value"
+            /* Example: If your query string is "?key=value&key2=value2". The dictionary will be:
+            {
+                "key": "value",
+                "key2": "value2"
+            }
+            */
 
             var deckInfo = {}; //Deck Information including Value and Position -> returns Object
-            for (let pair of deckParams.entries()) {
-                deckInfo[pair[0]] = pair[1]; //push keys/values to object
+            for (const key in queryData) {
+                deckInfo[key] = queryData[key];
             }
 
             var deckInfoValue = Object.values(deckInfo); //Deck Info Value = numberID - use to look up Disc from disc -> returns Array
@@ -134,21 +151,31 @@ export default Vue.extend({
                 if (this.type !== value) {
                     this.type = value;
 
-                    // We only add new filter it's not equal to "All", 
-                    if (value.toUpperCase() !== filterTextAll.toUpperCase()) {
+                    // We only add new filter it's not equal to "All",
+                    if (value.toUpperCase() === filterTextAll) {
                         // Only remove the filter if the filter function is defined
                         if (func_filter_rarity) {
-                            this.filterEngine.removeFilter(func_filter_rarity);
+                            this.filterEngine.removeFilter(func_filter_type);
                         }
                     } else {
+                        // Create a new filter
+                        const filter_func = function (itemToBeChecked) {
+                            return itemToBeChecked.type == value;
+                        };
                         // First we try to replace the filter.
-                        if (this.filterEngine.replaceFilter()) {
+                        // "replaceFilter" will immediately return false in case the given param is null or empty or undefined
+                        if (
+                            this.filterEngine.replaceFilter(func_filter_type, filter_func)
+                        ) {
                             // This means the old filter has been found and replaced successfully.
                             // We do not need to do anything further.
+                            // Except remember the new defined filter.
+                            func_filter_type = filter_func;
                         } else {
                             // This means the old filter could not be found.
-                            // Here, we need to add a new filter instead.
-                            this.filterEngine.addFilter();
+                            // Here, we need to add a the filter instead.
+                            func_filter_type = filter_func;
+                            this.filterEngine.addFilter(filter_func);
                         }
                     }
                 }
@@ -164,9 +191,33 @@ export default Vue.extend({
                 // We only need to make changes on new value.
                 if (this.element !== value) {
                     this.element = value;
-                    // In case it equal to "All", we remove the filter instead.
-                    if (value.toUpperCase() === filterTextAll.toUpperCase()) {
-                        this.filterEngine.addFilter();
+
+                    // We only add new filter it's not equal to "All",
+                    if (value.toUpperCase() === filterTextAll) {
+                        // Only remove the filter if the filter function is defined
+                        if (func_filter_element) {
+                            this.filterEngine.removeFilter(func_filter_element);
+                        }
+                    } else {
+                        // Create a new filter
+                        const filter_func = function (itemToBeChecked) {
+                            return itemToBeChecked.element == value;
+                        };
+                        // First we try to replace the filter.
+                        // "replaceFilter" will immediately return false in case the given param is null or empty or undefined
+                        if (
+                            this.filterEngine.replaceFilter(func_filter_element, filter_func)
+                        ) {
+                            // This means the old filter has been found and replaced successfully.
+                            // We do not need to do anything further.
+                            // Except remember the new defined filter.
+                            func_filter_element = filter_func;
+                        } else {
+                            // This means the old filter could not be found.
+                            // Here, we need to add a the filter instead.
+                            func_filter_element = filter_func;
+                            this.filterEngine.addFilter(filter_func);
+                        }
                     }
                 }
             }
@@ -181,53 +232,35 @@ export default Vue.extend({
                 // We only need to make changes on new value.
                 if (this.rarity !== value) {
                     this.rarity = value;
-                    // In case it equal to "All", we remove the filter instead.
-                    if (value.toUpperCase() === filterTextAll.toUpperCase()) {
-                        this.filterEngine.addFilter();
-                    }
-                }
-            }
-        },
-        filterdisc() {
-            let vm = this;
 
-            // Let's use an array of comparer. Why?
-            // - This will make it that we only "check for the current filter's param is null or not" once, then add the comparer to the list.
-            // Then the we will invoke all the comparers in the list in the filter function. With this, we eliminated the null-check per-filter's query.
-
-
-
-            const comparisions = [];
-            if (this.rarity) {
-                comparisions.push(function () {
-                    // "this" here is the item that is being tested to the filter.
-                    return this.rarity === vm.rarity;
-                });
-            }
-            if (this.type) {
-                comparisions.push(function () {
-                    // "this" here is the item that is being tested to the filter.
-                    return this.type === vm.type;
-                });
-            }
-            if (this.element) {
-                comparisions.push(function () {
-                    // "this" here is the item that is being tested to the filter.
-                    return this.element === vm.element;
-                });
-            }
-            const totalComparision = comparisions.length;
-            if (totalComparision === 0) {
-                return vm.discs;
-            } else {
-                return _.filter(vm.discs, function (query) {
-                    for (let i = 0; i < totalComparision; i++) {
-                        if (!comparisions[i].call(query)) {
-                            return false;
+                    // We only add new filter it's not equal to "All",
+                    if (value.toUpperCase() === filterTextAll) {
+                        // Only remove the filter if the filter function is defined
+                        if (func_filter_rarity) {
+                            this.filterEngine.removeFilter(func_filter_rarity);
+                        }
+                    } else {
+                        // Create a new filter
+                        const filter_func = function (itemToBeChecked) {
+                            return itemToBeChecked.rarity == value;
+                        };
+                        // First we try to replace the filter.
+                        // "replaceFilter" will immediately return false in case the given param is null or empty or undefined
+                        if (
+                            this.filterEngine.replaceFilter(func_filter_rarity, filter_func)
+                        ) {
+                            // This means the old filter has been found and replaced successfully.
+                            // We do not need to do anything further.
+                            // Except remember the new defined filter.
+                            func_filter_rarity = filter_func;
+                        } else {
+                            // This means the old filter could not be found.
+                            // Here, we need to add a the filter instead.
+                            func_filter_rarity = filter_func;
+                            this.filterEngine.addFilter(filter_func);
                         }
                     }
-                    return true;
-                });
+                }
             }
         }
     },
@@ -305,6 +338,43 @@ export default Vue.extend({
 
             console.log("deck URL Removed");
             return deck & deckURL & chooseDisc;
+        },
+        onFilterUpdated(event) {
+            const detailObj = event.detail;
+            if (Object.prototype.hasOwnProperty.call(detailObj, "addedItems") &&
+                Object.prototype.hasOwnProperty.call(detailObj, "removedItems")) {
+                const theDiv = document.querySelector(".discGridContainer .discGrid");
+                if (theDiv) {
+                    const theItemBecomeVisibleFromInvisible = detailObj.addedItems;
+                    let loopTotal = theItemBecomeVisibleFromInvisible.length;
+
+                    if (loopTotal !== 0) {
+                        for (let i = 0; i < loopTotal; i++) {
+                            const element = theDiv.querySelector(
+                                '.discWrapper[data-nameid="' +
+                                theItemBecomeVisibleFromInvisible[i].id +
+                                '"]'
+                            );
+                            if (element) {
+                                element.classList.remove("filterHidden");
+                            }
+                        }
+                    }
+
+                    const theOtherwise = detailObj.removedItems;
+                    loopTotal = theOtherwise.length;
+                    if (loopTotal !== 0) {
+                        for (let i = 0; i < loopTotal; i++) {
+                            const element = theDiv.querySelector(
+                                '.discWrapper[data-nameid="' + theOtherwise[i].id + '"]'
+                            );
+                            if (element) {
+                                element.classList.add("filterHidden");
+                            }
+                        }
+                    }
+                }
+            }
         }
     },
     mounted() {
