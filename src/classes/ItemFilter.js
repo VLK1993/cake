@@ -314,8 +314,8 @@ class ItemFilter extends EventTarget {
         }
         // We will begin to cook the list of addedItems and removedItems by ourselves here.
         const { addedItems, removedItems } = filterTheObserved.call(this, this.#filterCallbacks, this.#observingItems, this.#currentfilterType, this.#previousFilterResult_matched);
-        console.log(addedItems);
-        console.log(removedItems);
+
+        // Raise the event.
         this.dispatchEvent(new FilterItemChangedEvent(addedItems, removedItems));
     }
     //#endregion

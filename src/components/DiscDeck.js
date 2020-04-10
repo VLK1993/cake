@@ -81,7 +81,7 @@ export default Vue.extend({
          * Update into DECK{}
          */
         // Using "window.location.href" is not prefered. We're having Vue on top.
-        // So use router's instead.
+        // So use VueRouter's instead.
         console.log(this.$route); // For you to see what's in the current object.
 
         // this.$route.path: get the current path of from the router's URL.
@@ -89,7 +89,8 @@ export default Vue.extend({
         // There's more but you should read the Vue document.
         // Also, remind you of URL format: https://developer.mozilla.org/en-US/docs/Web/API/Location
 
-        var queryData = this.$route.query; // It's "data". Hence, you will get an dictionary object from this.
+        // It's "data". Hence, you will get an dictionary object from "this.$route.query".
+        var queryData = Object.assign({}, this.$route.query); // We create another new object {} and copy all the things from "this.$route.query".
         // Check if it's not null and it's not empty.
         if (queryData) {
 
@@ -124,7 +125,7 @@ export default Vue.extend({
 
                 //WHY WONT YOU WORK
                 $(`.discWrapper[data-numberid="${value}"]`).addClass("inDeck");
-                console.log(`.discWrapper[data-numberid="${value}"]`);
+                // console.log(`.discWrapper[data-numberid="${value}"]`);
 
                 $(".deckBuilder").find(`[data-position='${position}']`).html(`
               <img src="img/disc/icon/${nameID}.png" />
@@ -272,7 +273,7 @@ export default Vue.extend({
         /*
          * Function making Discs go YELLOW on CLICK
          */
-        getDisc: function (event) {
+        getDisc(event) {
             var activeDisc = $(event.target).parents(".discWrapper");
             $(activeDisc)
                 .parent()
@@ -295,7 +296,7 @@ export default Vue.extend({
          * 2. UPDATE DECK {}
          * 3. SPAWN URL BASED ON DECK {}
          */
-        assignDisc: function (event) {
+        assignDisc(event) {
             var activeDiscValue = this.activeDiscValue;
             var chooseDisc = this.chooseDisc;
 
@@ -328,7 +329,7 @@ export default Vue.extend({
                 return deck & chooseDisc & deckURL;
             }
         },
-        clearDeck: function () {
+        clearDeck() {
             $(".discSlot").empty();
             var deck = (this.deck = {});
             var deckURL = (this.deckURL = "");
