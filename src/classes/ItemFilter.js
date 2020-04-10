@@ -3,9 +3,11 @@ const _emptyArray = Object.freeze([]);
 
 class FilterItemChangedEvent extends CustomEvent {
     // Public static fields
+    // Publicly accessible through this class.
     static EventName = "filterItemChanged";
 
     // Private fields
+    // Use "#" to declare a private field, as documented here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields#Private_fields
     #_addedItems = [];
     #_removedItems = [];
 
@@ -15,6 +17,8 @@ class FilterItemChangedEvent extends CustomEvent {
      * @param {Array} removedItems An array of items that becomes unmatched to the current filter.
      */
     constructor(addedItems, removedItems) {
+        // Access the static field "FilterItemChangedEvent.EventName".
+        // We call "super()" function in order to call the parent's constructor (aka "Base class's constructor". "Base class" means the original class that this class inherited from.)
         super(FilterItemChangedEvent.EventName, {
             bubbles: false,
             composed: false,
@@ -70,7 +74,6 @@ class ItemFilter extends EventTarget {
     });
 
     // Private fields. This means the field can only be access within this class.
-    // Use "#" to declare a private field, as documented here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields#Private_fields
     #filterCallbacks = [];
     #observingItems;
     #currentfilterType = ItemFilter.FilterType.AND;
