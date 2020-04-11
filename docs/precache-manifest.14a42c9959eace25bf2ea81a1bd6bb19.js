@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "74ecd4d29abc1e8c8201",
+    "revision": "3ca4505c3288f58354b2",
     "url": "/cake/css/app.dca8e13a.css"
   },
   {
@@ -812,12 +812,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/list/valkyrja/mei_c2.png"
   },
   {
-    "revision": "3782b1a9f1cf14b0592ba165bc722384",
+    "revision": "b6628a80f5b092e6eaeca6b094ee772d",
     "url": "/cake/index.html"
   },
   {
-    "revision": "74ecd4d29abc1e8c8201",
-    "url": "/cake/js/app.342135f2.js"
+    "revision": "3ca4505c3288f58354b2",
+    "url": "/cake/js/app.e0a28ad3.js"
   },
   {
     "revision": "c4db2f94ed97b6733409",
