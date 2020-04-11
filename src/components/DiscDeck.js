@@ -3,9 +3,10 @@ import axios from "axios";
 import $ from "jquery";
 import { FilterItemChangedEvent, ItemFilter } from "@/classes/ItemFilter.js";
 
-const filterTextAll = "";
-
-let func_filter_rarity, func_filter_element, func_filter_type;
+// toUpperCase() of "" (empty string) does actually nothing.
+// This is actually to tell you that in case if it's not empty
+// It should be all upper case or the filterText might not match.
+const filterTextAll = "".toUpperCase();
 
 // Export an object out.
 // With this, the syntax "import <VariableName> from './path/to/this/js-file.js'" will make the "<VariableName>" got the exported object here.
@@ -27,7 +28,10 @@ export default Vue.extend({
             deck: {},
             chooseDisc: true,
             deckURL: "",
-            filterEngine: {}
+            filterEngine: {},
+            func_filter_rarity: Function,
+            func_filter_element: Function,
+            func_filter_type: Function
         };
     },
     async created() {
@@ -63,6 +67,7 @@ export default Vue.extend({
 
             this.discs = disc;
 
+            // We workaround the [Observer] object problem by setting the object instance directly here.
             this.filterEngine = new ItemFilter();
             // We register the event before anything.
             this.filterEngine.addEventListener(
@@ -109,7 +114,8 @@ export default Vue.extend({
                 deck[key] = queryData[key];
             }
 
-            
+
+
             var deckValue = Object.values(deck); //Deck Info Value = numberID - use to look up Disc from disc -> returns Array
             var deckPos = Object.keys(deck); //Deck Info Position - use to bind with disc info later -> returns Array
 
@@ -117,21 +123,14 @@ export default Vue.extend({
             var filtered = discs.filter(function (item) {
                 return deckValue.indexOf(item.numberID) !== -1;
             });
-            
-            
-            var deckIndex = 0;
-            
+
             for (deckIndex; deckIndex < deckPos.length; deckIndex++) {
                 var value = deckValue[deckIndex];
-                var nameID = filtered[deckIndex].id;
                 var position = deckPos[deckIndex];
-                
-                
                 $(".deckBuilder").find(`[data-position='${position}']`).attr('data-numberid', value);
                 $(".deckBuilder").find(`[data-position='${position}']`).html(`
               <img src="img/disc/icon/${nameID}.png" />
             `);
-        
 
             }
         }
@@ -158,8 +157,8 @@ export default Vue.extend({
                     // We only add new filter it's not equal to "All",
                     if (value.toUpperCase() === filterTextAll) {
                         // Only remove the filter if the filter function is defined
-                        if (func_filter_type) {
-                         this.filterEngine.removeFilter(func_filter_type);
+                        if (this.func_filter_type) {
+                            this.filterEngine.removeFilter(this.func_filter_type);
                         }
                        } else {
                         // Create a new filter
@@ -169,16 +168,16 @@ export default Vue.extend({
                         // First we try to replace the filter.
                         // "replaceFilter" will immediately return false in case the given param is null or empty or undefined
                         if (
-                            this.filterEngine.replaceFilter(func_filter_type, filter_func)
+                            this.filterEngine.replaceFilter(this.func_filter_type, filter_func)
                         ) {
                             // This means the old filter has been found and replaced successfully.
                             // We do not need to do anything further.
                             // Except remember the new defined filter.
-                            func_filter_type = filter_func;
+                            this.func_filter_type = filter_func;
                         } else {
                             // This means the old filter could not be found.
                             // Here, we need to add a the filter instead.
-                            func_filter_type = filter_func;
+                            this.func_filter_type = filter_func;
                             this.filterEngine.addFilter(filter_func);
                         }
                     }
@@ -199,8 +198,8 @@ export default Vue.extend({
                     // We only add new filter it's not equal to "All",
                     if (value.toUpperCase() === filterTextAll) {
                         // Only remove the filter if the filter function is defined
-                        if (func_filter_element) {
-                            this.filterEngine.removeFilter(func_filter_element);
+                        if (this.func_filter_element) {
+                            this.filterEngine.removeFilter(this.func_filter_element);
                         }
                     } else {
                         // Create a new filter
@@ -210,16 +209,16 @@ export default Vue.extend({
                         // First we try to replace the filter.
                         // "replaceFilter" will immediately return false in case the given param is null or empty or undefined
                         if (
-                            this.filterEngine.replaceFilter(func_filter_element, filter_func)
+                            this.filterEngine.replaceFilter(this.func_filter_element, filter_func)
                         ) {
                             // This means the old filter has been found and replaced successfully.
                             // We do not need to do anything further.
                             // Except remember the new defined filter.
-                            func_filter_element = filter_func;
+                            this.func_filter_element = filter_func;
                         } else {
                             // This means the old filter could not be found.
                             // Here, we need to add a the filter instead.
-                            func_filter_element = filter_func;
+                            this.func_filter_element = filter_func;
                             this.filterEngine.addFilter(filter_func);
                         }
                     }
@@ -240,8 +239,8 @@ export default Vue.extend({
                     // We only add new filter it's not equal to "All",
                     if (value.toUpperCase() === filterTextAll) {
                         // Only remove the filter if the filter function is defined
-                        if (func_filter_rarity) {
-                            this.filterEngine.removeFilter(func_filter_rarity);
+                        if (this.func_filter_rarity) {
+                            this.filterEngine.removeFilter(this.func_filter_rarity);
                         }
                     } else {
                         // Create a new filter
@@ -251,16 +250,16 @@ export default Vue.extend({
                         // First we try to replace the filter.
                         // "replaceFilter" will immediately return false in case the given param is null or empty or undefined
                         if (
-                            this.filterEngine.replaceFilter(func_filter_rarity, filter_func)
+                            this.filterEngine.replaceFilter(this.func_filter_rarity, filter_func)
                         ) {
                             // This means the old filter has been found and replaced successfully.
                             // We do not need to do anything further.
                             // Except remember the new defined filter.
-                            func_filter_rarity = filter_func;
+                            this.func_filter_rarity = filter_func;
                         } else {
                             // This means the old filter could not be found.
                             // Here, we need to add a the filter instead.
-                            func_filter_rarity = filter_func;
+                            this.func_filter_rarity = filter_func;
                             this.filterEngine.addFilter(filter_func);
                         }
                     }
@@ -380,20 +379,21 @@ export default Vue.extend({
                 }
             }
         },
-        fillDeck(){
+        fillDeck() {
+            //WHY WONT YOU WORK
             var positions = ["p1", "p2", "p3", "p4"]
             var index = 0;
 
-            for (index; index < 5;index++) {
+            for (index; index < 5; index++) {
                 var position = positions[index];
-                
-                var value =  $(".deckBuilder").find(`[data-position='${position}']`).data("numberid");
-                
+
+                var value = $(".deckBuilder").find(`[data-position='${position}']`).data("numberid");
+
                 $(`.discWrapper[data-numberid="${value}"]`).addClass("inDeck");
 
             };
-           
-            
+
+
         }
     },
     mounted() {
@@ -414,6 +414,6 @@ export default Vue.extend({
         setTimeout(() => {
             this.fillDeck();
         }, 0);
-        
+
     }
 });
