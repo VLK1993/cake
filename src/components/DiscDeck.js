@@ -104,32 +104,39 @@ export default Vue.extend({
             }
             */
 
-            var deckInfo = {}; //Deck Information including Value and Position -> returns Object
+            var deck = {}; //Deck Information including Value and Position -> returns Object
             for (const key in queryData) {
-                deckInfo[key] = queryData[key];
+                deck[key] = queryData[key];
             }
 
-            var deckInfoValue = Object.values(deckInfo); //Deck Info Value = numberID - use to look up Disc from disc -> returns Array
-            var deckInfoPos = Object.keys(deckInfo); //Deck Info Position - use to bind with disc info later -> returns Array
+            
+
+            var deckValue = Object.values(deck); //Deck Info Value = numberID - use to look up Disc from disc -> returns Array
+            var deckPos = Object.keys(deck); //Deck Info Position - use to bind with disc info later -> returns Array
 
             var discs = this.discs;
             var filtered = discs.filter(function (item) {
-                return deckInfoValue.indexOf(item.numberID) !== -1;
+                return deckValue.indexOf(item.numberID) !== -1;
             });
+            
+            
 
             var deckIndex = 0;
-            for (deckIndex; deckIndex < deckInfoPos.length; deckIndex++) {
-                var value = deckInfoValue[deckIndex];
+            
+            for (deckIndex; deckIndex < deckPos.length; deckIndex++) {
+                var value = deckValue[deckIndex];
                 var nameID = filtered[deckIndex].id;
-                var position = deckInfoPos[deckIndex];
+                var position = deckPos[deckIndex];
+                
+                
 
-                //WHY WONT YOU WORK
-                $(`.discWrapper[data-numberid="${value}"]`).addClass("inDeck");
-                // console.log(`.discWrapper[data-numberid="${value}"]`);
 
+                $(".deckBuilder").find(`[data-position='${position}']`).attr('data-numberid', value);
                 $(".deckBuilder").find(`[data-position='${position}']`).html(`
               <img src="img/disc/icon/${nameID}.png" />
             `);
+        
+
             }
         }
     },
@@ -376,6 +383,22 @@ export default Vue.extend({
                     }
                 }
             }
+        },
+        fillDeck(){
+            //WHY WONT YOU WORK
+            var positions = ["p1", "p2", "p3", "p4"]
+            var index = 0;
+
+            for (index; index < 5;index++) {
+                var position = positions[index];
+                
+                var value =  $(".deckBuilder").find(`[data-position='${position}']`).data("numberid");
+                
+                $(`.discWrapper[data-numberid="${value}"]`).addClass("inDeck");
+
+            };
+           
+            
         }
     },
     mounted() {
@@ -392,5 +415,10 @@ export default Vue.extend({
                 buttonGoTop.style.display = "none";
             }
         };
+        //SET TIMEOUT TO MAKE IT RUN AFTER DISC LIST LOADED
+        setTimeout(() => {
+            this.fillDeck();
+        }, 0);
+        
     }
 });
