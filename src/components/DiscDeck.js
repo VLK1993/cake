@@ -110,7 +110,6 @@ export default Vue.extend({
             }
 
             
-
             var deckValue = Object.values(deck); //Deck Info Value = numberID - use to look up Disc from disc -> returns Array
             var deckPos = Object.keys(deck); //Deck Info Position - use to bind with disc info later -> returns Array
 
@@ -120,7 +119,6 @@ export default Vue.extend({
             });
             
             
-
             var deckIndex = 0;
             
             for (deckIndex; deckIndex < deckPos.length; deckIndex++) {
@@ -129,8 +127,6 @@ export default Vue.extend({
                 var position = deckPos[deckIndex];
                 
                 
-
-
                 $(".deckBuilder").find(`[data-position='${position}']`).attr('data-numberid', value);
                 $(".deckBuilder").find(`[data-position='${position}']`).html(`
               <img src="img/disc/icon/${nameID}.png" />
@@ -162,10 +158,10 @@ export default Vue.extend({
                     // We only add new filter it's not equal to "All",
                     if (value.toUpperCase() === filterTextAll) {
                         // Only remove the filter if the filter function is defined
-                        if (func_filter_rarity) {
-                            this.filterEngine.removeFilter(func_filter_type);
+                        if (func_filter_type) {
+                         this.filterEngine.removeFilter(func_filter_type);
                         }
-                    } else {
+                       } else {
                         // Create a new filter
                         const filter_func = function (itemToBeChecked) {
                             return itemToBeChecked.type == value;
@@ -385,7 +381,6 @@ export default Vue.extend({
             }
         },
         fillDeck(){
-            //WHY WONT YOU WORK
             var positions = ["p1", "p2", "p3", "p4"]
             var index = 0;
 
