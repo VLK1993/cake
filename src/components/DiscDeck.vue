@@ -106,29 +106,33 @@
       </div>
     </div>
     <div class="deckBuilderContainer">
-      <button v-clipboard:copy="deckURL">Spawn URL</button>
-      <button v-on:click="clearDeck($event)">Clear All deck</button>
-      <div class="deckBuilder">
-        <div
-          class="discSlot"
-          data-position="p1"
-          v-on:click.capture="assignDisc($event)"
-        ></div>
-        <div
-          class="discSlot"
-          data-position="p2"
-          v-on:click.capture="assignDisc($event)"
-        ></div>
-        <div
-          class="discSlot"
-          data-position="p3"
-          v-on:click.capture="assignDisc($event)"
-        ></div>
-        <div
-          class="discSlot"
-          data-position="p4"
-          v-on:click.capture="assignDisc($event)"
-        ></div>
+      <div class="btnContainer">
+        <button class="copyDeckBtn" v-clipboard:copy="deckURL"><div>Copy Deck URL</div></button>
+        <button class="clearDeckBtn" v-on:click="clearDeck($event)"><div>Clear Deck</div></button>
+      </div>
+      <div class="deckBuilderWrapper">
+        <div class="deckBuilder">
+          <div
+            class="discSlot"
+            data-position="p1"
+            v-on:click.capture="assignDisc($event)"
+          ></div>
+          <div
+            class="discSlot"
+            data-position="p2"
+            v-on:click.capture="assignDisc($event)"
+          ></div>
+          <div
+            class="discSlot"
+            data-position="p3"
+            v-on:click.capture="assignDisc($event)"
+          ></div>
+          <div
+            class="discSlot"
+            data-position="p4"
+            v-on:click.capture="assignDisc($event)"
+          ></div>
+        </div>
       </div>
     </div>
   </div>

@@ -56,9 +56,6 @@
             width: 100%;
         }
     }
-    .discSlot.active {
-        background:none !important;
-    }
 }
 
 .pageContainer {
@@ -270,9 +267,7 @@
 
     &::after {
         content: "Already In Deck";
-        color: white;
-        font-weight: bold;
-        text-transform: uppercase;
+        color: red;
         position: absolute;
         top: 50%;
         left: 50%;

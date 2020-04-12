@@ -7,6 +7,10 @@ import showDiscTag from "../tempt/showDiscTag.vue";
 import sortDiscTag from "../tempt/sortDiscTag.vue";
 import DiscDeck from "../components/DiscDeck.vue";
 
+//Alternative for DiscDeck with Simpler Filter
+import DiscDeckJS from "../components/DiscDeckJS/DiscDeckJS.vue";
+
+
 
 Vue.use(VueRouter);
 
@@ -64,6 +68,11 @@ const routes = [
     path: "/discDeck",
     name: "DiscDeck",
     component: DiscDeck
+  },
+  {
+    path: "/discDeckJS",
+    name: "DiscDeckJS",
+    component: DiscDeckJS
   }
 ];
 
