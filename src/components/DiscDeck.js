@@ -132,7 +132,6 @@ export default Vue.extend({
                 var value = deckValue[deckIndex];
                 var position = deckPos[deckIndex];
                 $(".deckBuilder").find(`[data-position='${position}']`).attr('data-numberid', value);
-                $(".deckBuilder").find(`[data-position='${position}']`).addClass("active");
             }
             for (deckIndex = 0; deckIndex < 4; deckIndex++) {
                 var nameID = filtered[deckIndex]["id"];
@@ -347,7 +346,6 @@ export default Vue.extend({
         },
         clearDeck() {
             $(".discSlot").empty();
-            $(".discSlot").removeClass("active");
             var deck = (this.deck = {});
             var deckURL = (this.deckURL = "");
             $(".discWrapper.active").removeClass("active");
