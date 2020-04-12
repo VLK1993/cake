@@ -1,7 +1,6 @@
 import Vue from "vue";
 import axios from "axios";
 import $ from "jquery";
-
 import { FilterItemChangedEvent, ItemFilter } from "@/classes/ItemFilter.js";
 
 // toUpperCase() of "" (empty string) does actually nothing.
@@ -15,73 +14,72 @@ const filterTextAll = "".toUpperCase();
 // Also, "Vue.extend" because it's recommended way to make a Vue object. Don't juse export a plain object.
 // Instead, export 'an object that is inherit from Vue class'. You can do that through "class inheritance declaration" or through "Vue.extend(myPlainObject)".
 export default Vue.extend({
-    name: "DiscDeck",
-    data() {
-        return {
-            typeLists: [],
-            elementLists: [],
-            rarityLists: [],
-            rarity: "",
-            type: "",
-            element: "",
-            discs: [],
-            activeDiscValue: {},
-            deck: {},
-            chooseDisc: true,
-            deckURL: "",
-            filterEngine: {},
-            func_filter_rarity: Function,
-            func_filter_element: Function,
-            func_filter_type: Function
-        };
-    },
-    async created() {
-        /*
-         *A. GET JSON FILE and form filter around it
-         */
-        try {
-            const res = await axios.get("json/discs.json");
+  name: "DiscDeck",
+  data() {
+    return {
+      typeLists: [],
+      elementLists: [],
+      rarityLists: [],
+      rarity: "",
+      type: "",
+      element: "",
+      discs: [],
+      activeDiscValue: {},
+      deck: {},
+      chooseDisc: true,
+      deckURL: "",
+      filterEngine: {}
+    };
+  },
+  async created() {
+    /*
+     *A. GET JSON FILE and form filter around it
+     */
+    try {
+      const res = await axios.get("json/discs.json");
 
-            // cook the list of elements on the fly
-            const disc = res.data.discs,
-                elementLists = this.elementLists,
-                rarityLists = this.rarityLists,
-                typeLists = this.typeLists;
+      // cook the list of elements on the fly
+      const disc = res.data.discs,
+        elementLists = this.elementLists,
+        rarityLists = this.rarityLists,
+        typeLists = this.typeLists;
 
-            const function_dataCooker = function (discData, propertyName) {
-                if (discData.hasOwnProperty(propertyName)) {
-                    const data = discData[propertyName];
-                    if (!this.includes(data)) {
-                        this.push(data);
-                    }
-                }
-            };
-
-            for (const discData of disc) {
-                function_dataCooker.call(elementLists, discData, "element");
-                function_dataCooker.call(rarityLists, discData, "rarity");
-                function_dataCooker.call(typeLists, discData, "type");
-            }
-            // Finished cooking.
-            // This is to ensure that all the elements, rarities and types that fetched from the JSON data. Will be listed in the variables.
-            // In the future, in case you add more elements or rarities or types, it will just appear in the variable without code changes.
-
-            this.discs = disc;
-
-            // We workaround the [Observer] object problem by setting the object instance directly here.
-            this.filterEngine = new ItemFilter();
-            // We register the event before anything.
-            this.filterEngine.addEventListener(
-                FilterItemChangedEvent.EventName,
-                this.onFilterUpdated
-            );
-
-            // Begin to observe data for filtering
-            this.filterEngine.observe(disc);
-            // console.log(res.data);
-        } catch (e) {
-            console.error(e);
+      const function_dataCooker = function (discData, propertyName) {
+        if (discData.hasOwnProperty(propertyName)) {
+          const data = discData[propertyName];
+          if (!this.includes(data)) {
+            this.push(data);
+          }
         }
+      };
+
+      for (const discData of disc) {
+        function_dataCooker.call(elementLists, discData, "element");
+        function_dataCooker.call(rarityLists, discData, "rarity");
+        function_dataCooker.call(typeLists, discData, "type");
+      }
+      // Finished cooking.
+      // This is to ensure that all the elements, rarities and types that fetched from the JSON data. Will be listed in the variables.
+      // In the future, in case you add more elements or rarities or types, it will just appear in the variable without code changes.
+
+      this.discs = disc;
+
+      // We workaround the [Observer] object problem by setting the object instance directly here.
+      this.filterEngine = new ItemFilter();
+      console.log(this.filterEngine);
+
+      // We register the event before anything.
+      this.filterEngine.addEventListener(
+        FilterItemChangedEvent.EventName,
+        this.onFilterUpdated
+      );
+
+      // Begin to observe data for filtering
+      this.filterEngine.observe(disc);
+      // console.log(res.data);
+    } catch (e) {
+      console.error(e);
+    }
         /*
          * B. FETCH URL, get Position and Value then put it back to Deck Slot
          * Update into DECK{}
@@ -157,129 +155,89 @@ export default Vue.extend({
         //   myobject.filterting_type = something; // This will make JS engine invoke setter function of the "filterting_type" field. With the value data "something" as the first param of the setter function.
         // Note: Is is possible to declare a field with getter and setter through "class declaration" and "Object.defineProperty" method. Vue uses these internally so we can do this and Vue will take care of it.
         filterting_type: {
-            get() {
-                // Returns the current "type" filtering.
-                return this.type;
-            },
-            set(value) {
-                // Check if the current "type" filtering is different from the new value.
-                // We only need to make changes on new value.
-                if (this.type !== value) {
-                    this.type = value;
-
-                    // We only add new filter it's not equal to "All",
-                    if (value.toUpperCase() === filterTextAll) {
-                        // Only remove the filter if the filter function is defined
-                        if (this.func_filter_type) {
-                            this.filterEngine.removeFilter(this.func_filter_type);
-                        }
-                       } else {
-                        // Create a new filter
-                        const filter_func = function (itemToBeChecked) {
-                            return itemToBeChecked.type == value;
-                        };
-                        // First we try to replace the filter.
-                        // "replaceFilter" will immediately return false in case the given param is null or empty or undefined
-                        if (
-                            this.filterEngine.replaceFilter(this.func_filter_type, filter_func)
-                        ) {
-                            // This means the old filter has been found and replaced successfully.
-                            // We do not need to do anything further.
-                            // Except remember the new defined filter.
-                            this.func_filter_type = filter_func;
-                        } else {
-                            // This means the old filter could not be found.
-                            // Here, we need to add a the filter instead.
-                            this.func_filter_type = filter_func;
-                            this.filterEngine.addFilter(filter_func);
-                        }
-                    }
+          get() {
+            // Returns the current "type" filtering.
+            return this.type;
+          },
+          set(value) {
+            // Check if the current "type" filtering is different from the new value.
+            // We only need to make changes on new value.
+            if (this.type !== value) {
+              this.type = value;
+              // We only add new filter it's not equal to "All",
+              if (value.toUpperCase() == filterTextAll) {
+                // Only remove the filter if the filter function is defined
+                this.filterEngine.removeFilter("filter_by_type");
+              } else {
+                try {
+                  // Directly set the anonymous arrow function as filter function, given it a name.
+                  this.filterEngine.setFilter("filter_by_type", (itemToBeChecked) => (itemToBeChecked.type == value));
+                } catch (error) {
+                  // There is no way error would happen here as we use the syntax correctly.
+                  // But I still do it for the sake of example.
+                  console.error(error);
                 }
+              }
             }
+          }
         },
         filterting_element: {
-            get() {
-                // Returns the current "element" filtering.
-                return this.element;
-            },
-            set(value) {
-                // Check if the current "element" filtering is different from the new value.
-                // We only need to make changes on new value.
-                if (this.element !== value) {
-                    this.element = value;
-
-                    // We only add new filter it's not equal to "All",
-                    if (value.toUpperCase() === filterTextAll) {
-                        // Only remove the filter if the filter function is defined
-                        if (this.func_filter_element) {
-                            this.filterEngine.removeFilter(this.func_filter_element);
-                        }
-                    } else {
-                        // Create a new filter
-                        const filter_func = function (itemToBeChecked) {
-                            return itemToBeChecked.element == value;
-                        };
-                        // First we try to replace the filter.
-                        // "replaceFilter" will immediately return false in case the given param is null or empty or undefined
-                        if (
-                            this.filterEngine.replaceFilter(this.func_filter_element, filter_func)
-                        ) {
-                            // This means the old filter has been found and replaced successfully.
-                            // We do not need to do anything further.
-                            // Except remember the new defined filter.
-                            this.func_filter_element = filter_func;
-                        } else {
-                            // This means the old filter could not be found.
-                            // Here, we need to add a the filter instead.
-                            this.func_filter_element = filter_func;
-                            this.filterEngine.addFilter(filter_func);
-                        }
-                    }
+          get() {
+            // Returns the current "element" filtering.
+            return this.element;
+          },
+          set(value) {
+            // Check if the current "element" filtering is different from the new value.
+            // We only need to make changes on new value.
+            if (this.element !== value) {
+              this.element = value;
+    
+              // We only add new filter it's not equal to "All",
+              if (value.toUpperCase() == filterTextAll) {
+                // Only remove the filter if the filter function is defined
+                this.filterEngine.removeFilter("filter_by_element");
+              } else {
+                try {
+                  // Directly set the anonymous arrow function as filter function, given it a name.
+                  this.filterEngine.setFilter("filter_by_element", (itemToBeChecked) => (itemToBeChecked.element == value));
+                } catch (error) {
+                  // There is no way error would happen here as we use the syntax correctly.
+                  // But I still do it for the sake of example.
+                  console.error(error);
                 }
+              }
             }
+          }
         },
         filterting_rarity: {
-            get() {
-                // Returns the current "rarity" filtering.
-                return this.rarity;
-            },
-            set(value) {
-                // Check if the current "rarity" filtering is different from the new value.
-                // We only need to make changes on new value.
-                if (this.rarity !== value) {
-                    this.rarity = value;
-
-                    // We only add new filter it's not equal to "All",
-                    if (value.toUpperCase() === filterTextAll) {
-                        // Only remove the filter if the filter function is defined
-                        if (this.func_filter_rarity) {
-                            this.filterEngine.removeFilter(this.func_filter_rarity);
-                        }
-                    } else {
-                        // Create a new filter
-                        const filter_func = function (itemToBeChecked) {
-                            return itemToBeChecked.rarity == value;
-                        };
-                        // First we try to replace the filter.
-                        // "replaceFilter" will immediately return false in case the given param is null or empty or undefined
-                        if (
-                            this.filterEngine.replaceFilter(this.func_filter_rarity, filter_func)
-                        ) {
-                            // This means the old filter has been found and replaced successfully.
-                            // We do not need to do anything further.
-                            // Except remember the new defined filter.
-                            this.func_filter_rarity = filter_func;
-                        } else {
-                            // This means the old filter could not be found.
-                            // Here, we need to add a the filter instead.
-                            this.func_filter_rarity = filter_func;
-                            this.filterEngine.addFilter(filter_func);
-                        }
-                    }
+          get() {
+            // Returns the current "rarity" filtering.
+            return this.rarity;
+          },
+          set(value) {
+            // Check if the current "rarity" filtering is different from the new value.
+            // We only need to make changes on new value.
+            if (this.rarity !== value) {
+              this.rarity = value;
+    
+              // We only add new filter it's not equal to "All",
+              if (value.toUpperCase() == filterTextAll) {
+                // Only remove the filter if the filter function is defined
+                this.filterEngine.removeFilter("filter_by_rarity");
+              } else {
+                try {
+                  // Directly set the anonymous arrow function as filter function, given it a name.
+                  this.filterEngine.setFilter("filter_by_rarity", (itemToBeChecked) => (itemToBeChecked.rarity == value));
+                } catch (error) {
+                  // There is no way error would happen here as we use the syntax correctly.
+                  // But I still do it for the sake of example.
+                  console.error(error);
                 }
+              }
             }
+          }
         }
-    },
+      },
     methods: {
         goTop() {
             document.body.scrollTop = 0;
