@@ -115,7 +115,7 @@ export default Vue.extend({
                 deck[key] = queryData[key];
             }
 
-
+            console.log(deck);
 
             var deckValue = Object.values(deck); //Deck Info Value = numberID - use to look up Disc from disc -> returns Array
             var deckPos = Object.keys(deck); //Deck Info Position - use to bind with disc info later -> returns Array
@@ -124,19 +124,28 @@ export default Vue.extend({
             var filtered = discs.filter(function (item) {
                 return deckValue.indexOf(item.numberID) !== -1;
             });
-            var deckIndex = 0;
-            for (deckIndex; deckIndex < deckPos.length; deckIndex++) {
+
+            console.log(filtered);
+
+            var deckIndex;
+            for (deckIndex = 0; deckIndex < deckPos.length; deckIndex++) {
                 var value = deckValue[deckIndex];
                 var position = deckPos[deckIndex];
-                var nameID = filtered[deckIndex]["id"];
-
                 $(".deckBuilder").find(`[data-position='${position}']`).attr('data-numberid', value);
                 $(".deckBuilder").find(`[data-position='${position}']`).addClass("active");
-                $(".deckBuilder").find(`[data-position='${position}']`).html(`
-              <img src="img/disc/icon/${nameID}.png" />
-            `);
-            
             }
+            for (deckIndex = 0; deckIndex < 4; deckIndex++) {
+                var nameID = filtered[deckIndex]["id"];
+                var matchingValue = filtered[deckIndex]["numberID"];
+           
+            $(".deckBuilder").find(`[data-numberid='${matchingValue}']`).html(`
+                <img src="img/disc/icon/${nameID}.png" />
+                
+            `);
+
+            }
+
+            
             
         }
     },
@@ -338,6 +347,7 @@ export default Vue.extend({
         },
         clearDeck() {
             $(".discSlot").empty();
+            $(".discSlot").removeClass("active");
             var deck = (this.deck = {});
             var deckURL = (this.deckURL = "");
             $(".discWrapper.active").removeClass("active");
