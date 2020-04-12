@@ -107,46 +107,50 @@ export default Vue.extend({
       */
 
       const deckValue = Object.values(queryData); //Deck Info Value = numberID - use to look up Disc from disc -> returns Array
-      const dictionary = {}; // New object. Which will gonna be used as dictionary object.
-      for (const discData of this.discs) {
-        const indexSearch = deckValue.indexOf(discData.numberID);
-        if (indexSearch !== -1) {
-          // We're currently at the disc Data that has the number ID matched one of the IDs in 'deckValue'
-          // Once we found the disc. We remove the ID from 'deckValue.
-          deckValue.splice(indexSearch, 1);
-          // Also we add the disc data to the dictionary, associate it with a key name which is the number ID of itself.
-          dictionary[discData.numberID] = discData;
+      if (deckValue.length !== 0) {
+        // We only run the code when the query data is not empty.
+
+        const dictionary = {}; // New object. Which will gonna be used as dictionary object.
+        for (const discData of this.discs) {
+          const indexSearch = deckValue.indexOf(discData.numberID);
+          if (indexSearch !== -1) {
+            // We're currently at the disc Data that has the number ID matched one of the IDs in 'deckValue'
+            // Once we found the disc. We remove the ID from 'deckValue.
+            deckValue.splice(indexSearch, 1);
+            // Also we add the disc data to the dictionary, associate it with a key name which is the number ID of itself.
+            dictionary[discData.numberID] = discData;
+          }
+
+          if (deckValue.length === 0) {
+            // As we removed once we found the disc, it will eventually remove all the numbers from the array.
+            // Which means we've filled all the needed disc data.
+            // So we end the loop prematurely, no need to let it run without doing anything.
+            break;
+          }
         }
 
-        if (deckValue.length === 0) {
-          // As we removed once we found the disc, it will eventually remove all the numbers from the array.
-          // Which means we've filled all the needed disc data.
-          // So we end the loop prematurely, no need to let it run without doing anything.
-          break;
+        const deckBuilderjQuery = $(".deckBuilder"); // Just need to find it once.
+
+        for (const positionId in queryData) {
+          const discID = queryData[positionId];
+
+          // Get the DOM of the card slot.
+          const theCardSlotDOM = deckBuilderjQuery.find(
+            `[data-position='${positionId}']`
+          );
+
+          // Get the disc data from the dictionary by the key name, which is disc number ID.
+          const discData = dictionary[discID];
+
+          // Begin to set the image data to the card slot
+          theCardSlotDOM.html(
+            `<img src="img/disc/icon/${discData.id}.png" alt="${discData.id}.png" />`
+          );
         }
+
+        // Basically, "dictionary" is just a term of using an object. We make use the property name as a key identity to get the associated value.
+        // Unlike Array, the order doesn't matter, as long as you give the correct key name, it will return the correct associated value.
       }
-
-      const deckBuilderjQuery = $(".deckBuilder"); // Just need to find it once.
-
-      for (const positionId in queryData) {
-        const discID = queryData[positionId];
-
-        // Get the DOM of the card slot.
-        const theCardSlotDOM = deckBuilderjQuery.find(
-          `[data-position='${positionId}']`
-        );
-
-        // Get the disc data from the dictionary by the key name, which is disc number ID.
-        const discData = dictionary[discID];
-
-        // Begin to set the image data to the card slot
-        theCardSlotDOM.html(
-          `<img src="img/disc/icon/${discData.id}.png" alt="${discData.id}.png" />`
-        );
-      }
-
-      // Basically, "dictionary" is just a term of using an object. We make use the property name as a key identity to get the associated value.
-      // Unlike Array, the order doesn't matter, as long as you give the correct key name, it will return the correct associated value.
     }
   },
   computed: {
