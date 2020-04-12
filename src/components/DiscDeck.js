@@ -138,7 +138,6 @@ export default Vue.extend({
 
         // Get the disc data from the dictionary by the key name, which is disc number ID.
         const discData = dictionary[discID];
-        console.log(discData);
 
         // Begin to set the image data to the card slot
         theCardSlotDOM.html(
