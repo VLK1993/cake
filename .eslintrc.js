@@ -6,16 +6,17 @@ module.exports = {
     browser: true
   },
 
-  extends: ["plugin:vue/essential", "@vue/prettier"],
-
   rules: {
     "no-console": "off",
     "no-debugger": "off",
     "vue/no-unused-components": "warn",
-    "vue/no-unused-vars": "warn"
+    "vue/no-unused-vars": "warn",
+    "no-unused-vars": "warn"
   },
 
   parserOptions: {
     parser: "babel-eslint"
-  }
+  },
+
+  extends: ["plugin:vue/essential", "@vue/prettier"]
 };

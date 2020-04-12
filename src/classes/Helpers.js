@@ -6,6 +6,4 @@
 function isEnumerable(obj) {
   return obj != null && typeof obj[Symbol.iterator] === "function";
 }
-export {
-  isEnumerable
-}
+export { isEnumerable };
