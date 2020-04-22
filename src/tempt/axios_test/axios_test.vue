@@ -2,51 +2,15 @@
     <div class="pageContainer">
         <button v-on:click="goTop()" id="buttonGoTop" title="Go to top">Top</button>
         <div id="discQueryHolder">
-          <!-- TYPE SELECTOR -->
           <div class="field fieldType">
             <div class="fieldLabel">Type</div>
-            <div class="buttonAll buttonFilter"
-            v-on:click="typeFilter('all')"
-            >ALL</div>
-            <div 
-            class="buttonFilter"
-            v-for="typeList in typeLists" :key="typeList" 
-            v-on:click="typeFilter(typeList)"
-            v-bind:class="'type-' + typeList"
-            >           
-            </div>
-          </div>
-          
-          <!-- ELEMENT SELECTOR -->
-          <div class="field fieldElement">
-            <div class="fieldLabel">Element</div>
-            <div class="buttonAll buttonFilter"
-            v-on:click="elementFilter('all')"
-            >ALL</div>
-            <div 
-            class="buttonFilter"
-            v-for="elementList in elementLists" :key="elementList" 
-            v-on:click="elementFilter(elementList)"
-            >      
-            {{elementList}}
+            <div class="buttonAll">ALL</div>
+            <div v-for="typeList in typeLists" :key="typeList">
+              {{typeList}}
             </div>
           </div>
 
-          <!-- RARITY SELECTOR -->
-          <div class="field fieldRarity">
-            <div class="fieldLabel">Rarity</div>
-            <div class="buttonAll buttonFilter"
-            v-on:click="rarityFilter('all')"
-            >ALL</div>
-            <div 
-            class="buttonFilter"
-            v-for="rarityList in rarityLists" :key="rarityList" 
-            v-on:click="rarityFilter(rarityList)"
-            >      
-            {{rarityList}}
-               
-            </div>
-          </div>
+
 
 
 
@@ -59,9 +23,6 @@
                 :key="discData.id"
                 v-bind:data-nameid="discData.id"
                 v-bind:data-numberid="discData.numberID"
-                v-bind:data-type="discData.type"
-                v-bind:data-rarity="discData.rarity"
-                v-bind:data-element="discData.element"
                 v-on:click.capture="clickDisc($event)"              
                 >
                     <div class="discName">{{ discData.nameEN }}</div>
@@ -82,7 +43,7 @@
         </div>
     <div class="deckBuilderContainer">
       <div class="btnContainer">
-        <button class="copyDeckBtn" v-on:click="copyDeckURL"><div>Copy Deck URL</div></button>
+        <button class="copyDeckBtn" v-clipboard:copy="deckURL"><div>Copy Deck URL</div></button>
         <button class="clearDeckBtn" v-on:click="clearDeck($event)"><div>Clear Deck</div></button>
       </div>
       <div class="deckBuilderWrapper">
@@ -93,37 +54,37 @@
             data-numberid="0"
             data-nameid=""
             v-on:click.capture="clickDeck($event)"
-          ></div>
+          >0</div>
           <div
             class="deckSlot"
             data-position="p2"
             data-numberid="0"
             data-nameid=""    
             v-on:click.capture="clickDeck($event)"
-          ></div>
+          >0</div>
           <div
             class="deckSlot"
             data-position="p3"
             data-numberid="0"
             data-nameid=""
             v-on:click.capture="clickDeck($event)"
-          ></div>
+          >0</div>
           <div
             class="deckSlot"
             data-position="p4"
             data-numberid="0"
             data-nameid=""
             v-on:click.capture="clickDeck($event)"
-          ></div>
+          >0</div>
         </div>
       </div>
     </div>
     </div>
 </template>
 <style lang="scss" scoped>
-@import "./DiscDeckJS.scss";
+@import "./axios_test.scss";
 </style>
 <script>
-import DiscDeckJSCode from "./DiscDeckJS.js"
-export default DiscDeckJSCode;
+import AxiosTest from "./axios_test.js"
+export default AxiosTest;
 </script>

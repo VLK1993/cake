@@ -5,11 +5,15 @@ import Kicker from "../components/Kicker.vue";
 import Disc from "../components/Disc.vue";
 import showDiscTag from "../tempt/showDiscTag.vue";
 import sortDiscTag from "../tempt/sortDiscTag.vue";
-import DiscDeck from "../components/DiscDeck.vue";
+
+//
+import DiscDeck from "../components/DiscDeck/DiscDeck.vue";
 
 //Alternative for DiscDeck with Simpler Filter
 import DiscDeckJS from "../components/DiscDeckJS/DiscDeckJS.vue";
 
+//For testing Axios in methods
+import AxiosTest from "../tempt/axios_test/axios_test.vue";
 
 
 Vue.use(VueRouter);
@@ -69,10 +73,17 @@ const routes = [
     name: "DiscDeck",
     component: DiscDeck
   },
+  //For testing Downgraded filter, apply swap cycle
   {
     path: "/discDeckJS",
     name: "DiscDeckJS",
     component: DiscDeckJS
+  },
+  //For testing running axios in methods
+  {
+    path:"/axiostest",
+    name:"AxiosTest",
+    component: AxiosTest
   }
 ];
 

@@ -1,10 +1,8 @@
 import Vue from "vue";
 import axios from "axios";
 import $ from "jquery";
-
-
 export default Vue.extend({
-    name:"DiscDeckJSCode",
+    name:"AxiosTest",
     data(){
         return {
             discs: [],
@@ -16,10 +14,6 @@ export default Vue.extend({
             rarity: "",
             type: "",
             element: "",
-
-            filterType:"all",
-            filterRarity:"all",
-            filterElement:"all",
 
             //Jsoncalled
             disc_called:{},
@@ -34,7 +28,7 @@ export default Vue.extend({
             swapDeck:false,
 
             //For spawn UrL
-            
+            deck:{},
             deckURL:"",
         }
     } ,
@@ -108,7 +102,7 @@ export default Vue.extend({
            for (const key in queryData) {
                deck[key] = queryData[key];
            }
-           console.log("deck from QueryData",deck);
+           console.log(deck);
 
            var deckValue = Object.values(deck); //Deck Info Value = numberID - use to look up Disc from disc -> returns Array
            var deckPos = Object.keys(deck); //Deck Info Position - use to bind with disc info later -> returns Array
@@ -118,7 +112,7 @@ export default Vue.extend({
                return deckValue.indexOf(item.numberID) !== -1;
            });
           
-           console.log("filtered Deck",filtered);
+           console.log(filtered);
 
            var deckIndex;
            for (deckIndex = 0; deckIndex < deckPos.length; deckIndex++) {
@@ -126,7 +120,7 @@ export default Vue.extend({
                var position = deckPos[deckIndex];
                $(".deckBuilder").find(`[data-position='${position}']`).attr('data-numberid', value);
            }
-           for (deckIndex = 0; deckIndex < filtered.length; deckIndex++) {
+           for (deckIndex = 0; deckIndex < 4; deckIndex++) {
                var nameID = filtered[deckIndex]["id"];
                var matchingValue = filtered[deckIndex]["numberID"];
             
@@ -295,12 +289,12 @@ export default Vue.extend({
             var positions = ["p1", "p2", "p3", "p4"];
             var index = 0;
       
-            for (index; index < 4; index++) {
+            for (index; index < 5; index++) {
               var position = positions[index];
       
               var value = $(".deckBuilder")
                 .find(`[data-position='${position}']`)
-                .attr("data-numberid");
+                .data("numberid");
               $(`.discWrapper[data-numberid="${value}"]`).addClass("inDeck");
             }
         },
@@ -308,109 +302,16 @@ export default Vue.extend({
             $(".deckSlot").empty();
             $(".deckSlot").attr("data-numberid",0);
             $(".deckSlot").attr("data-nameid","");
-            
-            
+            var deck = (this.deck = {});
+            var deckURL = (this.deckURL = "");
             $(".discWrapper.active").removeClass("active");
             $(".discWrapper.inDeck").removeClass("inDeck");
-            
+            var chooseDisc = (this.chooseDisc = true);
       
             console.log("deck URL Removed");
-            
-        },
-
-        //FILTER
-        typeFilter(type){
-            $(".discWrapper").removeClass("showDisc");
-            $(".fieldType .buttonFilter").removeClass("activeFilter");
-            $(event.target).addClass("activeFilter");
-            
-            var element = this.filterElement;
-            var rarity = this.filterRarity;
-            //Cook to string, F = Filter
-            var Felement = "[data-element="+ element +"]";
-            var Frarity = "[data-rarity="+ rarity +"]";
-            var Ftype = "[data-type="+ type +"]";
-
-            if (element == "all") Felement = "[data-element]" ;
-            if (rarity == "all") Frarity = "[data-rarity]";
-            if (type == "all") Ftype = "[data-type]";
-            
-            var Filter =  Ftype + Felement + Frarity;
-            
-            //DOES NOT WORK WITH DATA-ATTRIBUTE  = "", NEED TO COOK THEM INTO STRING
-            //$(`.discWrapper[data-type="${type}"][data-element="${element}"][data-rarity="${rarity}"]`).addClass("showDisc");
-            
-            $(".discWrapper").filter(Filter).addClass("showDisc");
-
-
-            return this.filterType = type;
-        },
-        elementFilter(element) {
-            $(".discWrapper").removeClass("showDisc");
-            $(".fieldElement .buttonFilter").removeClass("activeFilter");
-            $(event.target).addClass("activeFilter");
-
-            var type = this.filterType;
-            var rarity = this.filterRarity;
-
-            var Felement = "[data-element="+ element +"]";
-            var Frarity = "[data-rarity="+ rarity +"]";
-            var Ftype = "[data-type="+ type +"]";
-
-            if (element == "all") Felement = "[data-element]" ;
-            if (rarity == "all") Frarity = "[data-rarity]";
-            if (type == "all") Ftype = "[data-type]";
-
-            var Filter =  Ftype + Felement + Frarity;
-            
-            $(".discWrapper").filter(Filter).addClass("showDisc");
-
-
-            return this.filterElement = element;
-        },
-        rarityFilter(rarity){
-            $(".discWrapper").removeClass("showDisc");
-            $(".fieldRarity .buttonFilter").removeClass("activeFilter");
-            $(event.target).addClass("activeFilter");
-
-            var type = this.filterType;
-            var element = this.filterElement;
-
-            var Felement = "[data-element="+ element +"]";
-            var Frarity = "[data-rarity="+ rarity +"]";
-            var Ftype = "[data-type="+ type +"]";
-
-            if (element == "all") Felement = "[data-element]" ;
-            if (rarity == "all") Frarity = "[data-rarity]";
-            if (type == "all") Ftype = "[data-type]";
-
-            var Filter =  Ftype + Felement + Frarity;
-
-            $(".discWrapper").filter(Filter).addClass("showDisc");
-
-            return this.filterRarity = rarity;
-        },
-
-        //COPY DECK URL
-        copyDeckURL: function() {
-            //READ VALUE AND POSITION OF DECK SLOT
-            var positions = ["p1", "p2", "p3", "p4"];
-            var index = 0;
-            var deck = {};
-            for (index; index < 4; index++) {
-              var position = positions[index];
-              var value = $(".deckBuilder")
-                .find(`[data-position='${position}']`)
-                .attr("data-numberid");
-                if (value == 0 ) { continue }
-                var updateDeck = {[position]:value};
-                deck = Object.assign(deck, updateDeck);
-            }
-            
-            var deckURL = window.location.href.split("?")[0] + "?" + $.param(deck); // MAKE DECK URL BASED ON DECK
-            console.log(deckURL)
-            this.$copyText(deckURL);
-        }
+            return deck & deckURL & chooseDisc;
+          },
+        
     },
     mounted() {
         //Go TOP BUTTON
@@ -427,14 +328,7 @@ export default Vue.extend({
             }
         };
         //SET TIMEOUT TO MAKE IT RUN AFTER DISC LIST LOADED
-        setTimeout(
-            function(){
-                this.fillDeck();
-                $(".discWrapper").addClass("showDisc");
-                $(".field .buttonAll").addClass("activeFilter");
-            }.bind(this), 200);
-            
-            
+        setTimeout(this.fillDeck.bind(this), 100);
 
     }
 
