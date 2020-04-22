@@ -149,7 +149,7 @@
 				{
 				"id": "ab",
 				"skillName":"Boot Nanomachine",
-				"description": "Regenerates by 3% every 2 seconds when HP falls below 30%"
+				"description": "Regenerates by 5% every 1 second when HP falls below 50%"
 				},
 				{
 				"id":"dc",

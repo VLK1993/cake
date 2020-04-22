@@ -305,6 +305,14 @@
 import axios from "axios";
 import _ from "lodash";
 export default {
+  metaInfo: {
+      title: "Disc | Kick-Flight Wiki",
+      meta: [
+        { name: "description", content: "Contains Discs information, with filter through type, rarity and elements" },
+        { name: "keywords", content: "Kick-Flight, disc, ATK, BUFF, HEAL, WARP, TRAP, MOVE" }
+        //you can also add open graph tags here
+      ]
+    },
   data() {
     return {
       typeLists: [],

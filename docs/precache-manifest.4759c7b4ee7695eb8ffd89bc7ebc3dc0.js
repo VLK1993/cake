@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "70e766f9e9e26aa94f4b",
-    "url": "/cake/css/app.522c0c56.css"
+    "revision": "b73b97c6066cd14200db",
+    "url": "/cake/css/app.b242a111.css"
   },
   {
     "revision": "52d298c49a3b61ded159ba704bf9e159",
@@ -312,6 +312,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/disc/icon/horwhale.png"
   },
   {
+    "revision": "a0b59ba1633b5f128c42c503119dcf35",
+    "url": "/cake/img/disc/icon/hotrod-launcher.png"
+  },
+  {
     "revision": "b7922658627b8bd6635b5c95ec5c00ed",
     "url": "/cake/img/disc/icon/hyper-bomb.png"
   },
@@ -338,6 +342,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "296aba8b3ae105774c5712fe74813cae",
     "url": "/cake/img/disc/icon/leeta.png"
+  },
+  {
+    "revision": "c98f16c2bf5dd349689a524e5e50244e",
+    "url": "/cake/img/disc/icon/leorex.png"
   },
   {
     "revision": "015598983a3dc028a094f44dad28960b",
@@ -460,8 +468,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/disc/icon/spunkle.png"
   },
   {
+    "revision": "5f1931134ee9b5cf37723f838d94ab9c",
+    "url": "/cake/img/disc/icon/starion.png"
+  },
+  {
+    "revision": "38958fea4de3c9c18663fcf5d49be671",
+    "url": "/cake/img/disc/icon/starnova.png"
+  },
+  {
     "revision": "2bb7fc77c268ec8864b8cb8c918c0956",
     "url": "/cake/img/disc/icon/start-gate.png"
+  },
+  {
+    "revision": "a58b2ddd05bd748de9816bf18a95fb4b",
+    "url": "/cake/img/disc/icon/sybilidra.png"
   },
   {
     "revision": "b6657dd8754649b5e5d16740119b9c8b",
@@ -812,28 +832,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/list/valkyrja/mei_c2.png"
   },
   {
-    "revision": "0ca3e45c393b044e9c39fa79d2a01b3f",
+    "revision": "1d89a26c7407c315256015fff4489626",
     "url": "/cake/index.html"
   },
   {
-    "revision": "70e766f9e9e26aa94f4b",
-    "url": "/cake/js/app.6bd76cca.js"
+    "revision": "b73b97c6066cd14200db",
+    "url": "/cake/js/app.2551e260.js"
   },
   {
     "revision": "49853d776aaecf54486f",
     "url": "/cake/js/chunk-vendors.5e59392f.js"
   },
   {
-    "revision": "f23207e1bffeefa07b9eb3fa952e2ce6",
+    "revision": "7ea12622dcc8f6e2152a6d2f82e1f5f5",
     "url": "/cake/json/discs.json"
   },
   {
-    "revision": "8a350f086c9ece844dd6c9b54ac68018",
-    "url": "/cake/json/discs_old.json"
+    "revision": "0767f8edb0428d4f6a51c3c1af3a894e",
+    "url": "/cake/json/kickers.json"
   },
   {
-    "revision": "036e9e14c0bbd2d1d42e468d42953a20",
-    "url": "/cake/json/kickers.json"
+    "revision": "4608bf252c7728490ffeec0e8aaa7727",
+    "url": "/cake/json/old_discs.json"
   },
   {
     "revision": "f724a5cd2ee68bb2e2055904497d03a9",

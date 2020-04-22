@@ -6,7 +6,12 @@ import store from "./store";
 import VueMeta from "vue-meta";
 import VueClipboard from "vue-clipboard2";
 
-Vue.use(VueMeta);
+ 
+Vue.use(VueMeta, {
+  // optional pluginOptions
+  refreshOnceOnNavigation: true
+});
+
 Vue.use(VueClipboard);
 
 Vue.config.productionTip = false;

@@ -1,4 +1,5 @@
 .deckBuilderContainer {
+
     position: fixed;
     right: 0;
     left: 0;
@@ -86,39 +87,39 @@
 }
 
 .type {
-    &-atk-l:before {
+    &-atk-l:after {
         content: "ATK (Long Distance)";
     }
 
-    &-atk-s:before {
+    &-atk-s:after {
         content: "ATK (Short Distance)";
     }
 
-    &-atk-r:before {
+    &-atk-r:after {
         content: "ATK (Rush)";
     }
 
-    &-atk-c:before {
+    &-atk-c:after {
         content: "ATK (Circumference)";
     }
 
-    &-warp:before {
+    &-warp:after {
         content: "WARP";
     }
 
-    &-buff:before {
+    &-buff:after {
         content: "BUFF";
     }
 
-    &-move:before {
+    &-move:after {
         content: "MOVE";
     }
 
-    &-heal:before {
+    &-heal:after {
         content: "HEAL";
     }
 
-    &-trap:before {
+    &-trap:after {
         content: "TRAP";
     }
 }
@@ -335,15 +336,15 @@
 
 @media screen and (max-width: 376px) {
     .type {
-        &-atk-l:before {
+        &-atk-l:after {
             content: "ATK (Long)";
         }
 
-        &-atk-s:before {
+        &-atk-s:after {
             content: "ATK (Short)";
         }
 
-        &-atk-c:before {
+        &-atk-c:after {
             content: "ATK (Circle)";
         }
     }
@@ -413,5 +414,23 @@
 
         }
     }
-
+        
+#discQueryHolder{
+    .field{
+        &.fieldType {
+            width:400px;
+        }
+        .buttonFilter {
+            &.activeFilter {
+                &:before {
+                    content:"◈ ";
+        
+                }
+            }
+        }
+    }
 }
+  
+    
+}
+ 
