@@ -266,12 +266,14 @@ export default Vue.extend({
                     $(clickdedDeckDOM).parent().find(`[data-numberid="${temptnumberID}"]`).html(
                         `<img src="img/disc/icon/${deckNameID}.png" />`
                      );
+                    $(clickdedDeckDOM).parent().find(`[data-numberid="${temptnumberID}"]`).attr("data-nameid",deckNameID);
                     $(clickdedDeckDOM).parent().find(`[data-numberid="${temptnumberID}"]`).attr("data-numberid",deckNumberID);
                     
                     
                     $(clickdedDeckDOM).html(
                         `<img src="img/disc/icon/${temptnameID}.png" />`
                     );
+                    $(clickdedDeckDOM).attr("data-nameid",temptnameID);
                     $(clickdedDeckDOM).attr("data-numberid",temptnumberID);
                     
                     
