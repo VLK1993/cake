@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../components/Home.vue";
 import Kicker from "../components/Kicker.vue";
-import Disc from "../components/Disc.vue";
+//import Disc from "../components/Disc.vue";
 import showDiscTag from "../tempt/showDiscTag.vue";
 import sortDiscTag from "../tempt/sortDiscTag.vue";
 
@@ -34,7 +34,7 @@ const routes = [
   {
     path: "/disc",
     name: "Disc",
-    component: Disc,
+    component: DiscDeckJS,
     
   },
   {

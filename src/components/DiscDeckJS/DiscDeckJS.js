@@ -9,6 +9,8 @@ export default Vue.extend({
         return {
             discs: [],
 
+            hideDeck:false,
+
             //For Filter
             typeLists: [],
             elementLists: [],
@@ -307,9 +309,9 @@ export default Vue.extend({
             }
         },
         clearDeck() {
-            $(".deckSlot").empty();
+            $(".deckSlot").html(` <img src="img/disc/icon/empty.png" />  `);
             $(".deckSlot").attr("data-numberid",0);
-            $(".deckSlot").attr("data-nameid","");
+            $(".deckSlot").attr("data-nameid","empty");
             
             
             $(".discWrapper.active").removeClass("active");
@@ -412,6 +414,10 @@ export default Vue.extend({
             var deckURL = window.location.href.split("?")[0] + "?" + $.param(deck); // MAKE DECK URL BASED ON DECK
             console.log(deckURL)
             this.$copyText(deckURL);
+            $(".copyDeckBtn > div").html("COPIED!");
+            setTimeout(function(){
+                $(".copyDeckBtn > div").html("COPY DECK URL");
+            }, 1000);
         }
     },
     mounted() {

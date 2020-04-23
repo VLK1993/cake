@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b73b97c6066cd14200db",
-    "url": "/cake/css/app.b242a111.css"
+    "revision": "df42335e039598d697be",
+    "url": "/cake/css/app.969db8b0.css"
   },
   {
     "revision": "52d298c49a3b61ded159ba704bf9e159",
@@ -250,6 +250,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5cf11f3bdcf5df42a486a9979a3cf8a2",
     "url": "/cake/img/disc/icon/deviathan.png"
+  },
+  {
+    "revision": "9a71515aade3176e4b267ce12ea04308",
+    "url": "/cake/img/disc/icon/empty.png"
   },
   {
     "revision": "b24ae806182fbe79f6712de84b72ef45",
@@ -832,12 +836,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cake/img/list/valkyrja/mei_c2.png"
   },
   {
-    "revision": "1d89a26c7407c315256015fff4489626",
+    "revision": "aa824437bc79a84252e4219460677188",
     "url": "/cake/index.html"
   },
   {
-    "revision": "b73b97c6066cd14200db",
-    "url": "/cake/js/app.2551e260.js"
+    "revision": "df42335e039598d697be",
+    "url": "/cake/js/app.3fd0b188.js"
   },
   {
     "revision": "49853d776aaecf54486f",

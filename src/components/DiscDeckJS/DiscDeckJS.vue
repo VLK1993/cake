@@ -1,6 +1,6 @@
 <template>
     <div class="pageContainer">
-        <button v-on:click="goTop()" id="buttonGoTop" title="Go to top">Top</button>
+        <button v-on:click="goTop()" id="buttonGoTop" title="Go to top" :class="{'moveDown': hideDeck}">▲</button>
         <div id="discQueryHolder">
           <!-- TYPE SELECTOR -->
           <div class="field fieldType">
@@ -80,8 +80,11 @@
 
 
         </div>
-    <div class="deckBuilderContainer">
+    <div class="hideDeckBuilder" @click="hideDeck = !hideDeck"  :class="{'active': hideDeck}"  >D</div>
+    <div class="deckBuilderContainer " :class="{'hideDeckBuilder': hideDeck}">
+      
       <div class="btnContainer">
+        <div class="messageModal"></div>
         <button class="copyDeckBtn" v-on:click="copyDeckURL"><div>Copy Deck URL</div></button>
         <button class="clearDeckBtn" v-on:click="clearDeck($event)"><div>Clear Deck</div></button>
       </div>
@@ -91,30 +94,30 @@
             class="deckSlot"
             data-position="p1"
             data-numberid="0"
-            data-nameid=""
+            data-nameid="empty"
             v-on:click.capture="clickDeck($event)"
-          ></div>
+          ><img src="img/disc/icon/empty.png" /></div>
           <div
             class="deckSlot"
             data-position="p2"
             data-numberid="0"
-            data-nameid=""    
+            data-nameid="empty"    
             v-on:click.capture="clickDeck($event)"
-          ></div>
+          ><img src="img/disc/icon/empty.png" /></div>
           <div
             class="deckSlot"
             data-position="p3"
             data-numberid="0"
-            data-nameid=""
+            data-nameid="empty"
             v-on:click.capture="clickDeck($event)"
-          ></div>
+          ><img src="img/disc/icon/empty.png" /></div>
           <div
             class="deckSlot"
             data-position="p4"
             data-numberid="0"
-            data-nameid=""
+            data-nameid="empty"
             v-on:click.capture="clickDeck($event)"
-          ></div>
+          ><img src="img/disc/icon/empty.png" /></div>
         </div>
       </div>
     </div>
